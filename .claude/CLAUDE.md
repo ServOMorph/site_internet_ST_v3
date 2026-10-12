@@ -111,3 +111,7 @@ Pour les tâches répétitives et templated (commits, posts, changelogs, donnée
 ## Spécificités projet
 
 Section réservée aux règles propres à ce projet, hors périmètre du kit. Cette section est préservée intégralement par `/update` (jamais écrasée ni fusionnée avec le contenu du kit). Convention : toute règle liée à une section précise du fichier doit la référencer explicitement par son titre (ex: "Section Roadmap : ..."), plutôt que compter sur la position physique de cette section (toujours en fin de fichier).
+
+- Section Délégation Ollama / mise à jour automatique : la seule source lue pour mettre à jour le site est le fichier `site_com.md` de chaque projet suivi. Aucun scan de dossier.
+- Section Données sensibles : aucune donnée client ou nominative n'est publiée. Pour un événement, seuls date, lieu et titre, avec accord du client.
+- Priorité aux outils d'IA locale sur le cloud (éco-responsabilité).
