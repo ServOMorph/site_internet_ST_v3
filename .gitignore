@@ -5,6 +5,7 @@ node_modules/
 _site/
 *.key
 *.pem
-credentials*
-token*
+credentials*.json
+*token*.json
+*.token
 .claude/settings.local.json
