@@ -1,0 +1,58 @@
+[
+  {
+    "id": "foret-lumineuse",
+    "w": 1344,
+    "h": 768,
+    "prompt": "A serene enchanted forest at night, glowing turquoise and amber mushrooms and fireflies, soft mist, gentle curved trees, joyful and calm mood, luminous subject surrounded by deep dark teal-black background fading to near black at the edges, rich saturated colors, soft glow, painterly digital art",
+    "alt": "Forêt nocturne apaisante avec champignons lumineux turquoise et ambre"
+  },
+  {
+    "id": "baleine-ciel",
+    "w": 1344,
+    "h": 768,
+    "prompt": "A gentle whale made of soft turquoise light floating through a starry dark teal night sky, tiny amber stars, peaceful and very joyful, smooth flowing curves, glowing subject on a deep near-black teal background, edges fading to darkness, vibrant but soft colors, bright cheerful and uplifting atmosphere, radiant luminous subject with plenty of light, vibrant saturated joyful colors, warm golden highlights, clear well-lit midtones, only the outer edges fade to dark teal-black",
+    "alt": "Baleine de lumière turquoise flottant dans un ciel étoilé"
+  },
+  {
+    "id": "lanternes-eau",
+    "w": 1344,
+    "h": 768,
+    "prompt": "Floating paper lanterns in amber, coral and turquoise reflected on a calm dark lake at night, serene and happy atmosphere, soft glow, deep dark teal-black background with vignette fading to near black, gentle bokeh, vibrant warm and cool colors, bright cheerful and uplifting atmosphere, radiant luminous subject with plenty of light, vibrant saturated joyful colors, warm golden highlights, clear well-lit midtones, only the outer edges fade to dark teal-black",
+    "alt": "Lanternes colorées reflétées sur un lac calme la nuit"
+  },
+  {
+    "id": "robot-jardinier",
+    "w": 1024,
+    "h": 1024,
+    "prompt": "A friendly small round robot gardener watering glowing flowers in turquoise, amber and soft violet, cheerful and tender mood, soft light, dark teal-black background fading to near black at the edges, cute illustration, rich colors, bright cheerful and uplifting atmosphere, radiant luminous subject with plenty of light, vibrant saturated joyful colors, warm golden highlights, clear well-lit midtones, only the outer edges fade to dark teal-black",
+    "alt": "Petit robot bienveillant arrosant des fleurs lumineuses"
+  },
+  {
+    "id": "papillons-lumiere",
+    "w": 1024,
+    "h": 1024,
+    "prompt": "A swarm of glowing butterflies in turquoise, amber and coral rising from a dark meadow, joyful and peaceful, soft light trails, dark teal-black background with strong vignette to near black, luminous and colorful, delicate details, bright cheerful and uplifting atmosphere, radiant luminous subject with plenty of light, vibrant saturated joyful colors, warm golden highlights, clear well-lit midtones, only the outer edges fade to dark teal-black",
+    "alt": "Papillons lumineux s'envolant d'une prairie nocturne"
+  },
+  {
+    "id": "montagnes-aurore",
+    "w": 1344,
+    "h": 768,
+    "prompt": "A small glowing island of gentle rounded mountains floating in the center of the frame, soft aurora ribbons in turquoise, green and warm amber curling above it, tiny cheerful lights, stylized illustration, serene and joyful, bright luminous subject surrounded by deep dark teal-black empty space, edges and corners fade completely to dark teal-black, vibrant saturated colors",
+    "alt": "Petite île de collines lumineuses sous une aurore douce"
+  },
+  {
+    "id": "ville-douce",
+    "w": 1344,
+    "h": 768,
+    "prompt": "A tiny cozy fairytale village of round mushroom-shaped cottages with smooth rounded roofs topped with small glowing round lanterns, warm amber windows, a winding glowing turquoise stream, floating fireflies, peaceful and very joyful, soft curves, dark teal-black background with vignette fading to near black, colorful and calm, bright cheerful and uplifting atmosphere, radiant luminous subject, vibrant saturated colors, warm golden highlights",
+    "alt": "Village de maisons-champignons aux fenêtres ambrées et ruisseau lumineux"
+  },
+  {
+    "id": "meduses-danse",
+    "w": 1024,
+    "h": 1024,
+    "prompt": "Graceful jellyfish dancing in a dark deep-sea, glowing turquoise, amber and soft pink, serene and joyful, flowing translucent tentacles, near-black teal background with vignette, luminous subject, vivid soft colors, bright cheerful and uplifting atmosphere, radiant luminous subject with plenty of light, vibrant saturated joyful colors, warm golden highlights, clear well-lit midtones, only the outer edges fade to dark teal-black",
+    "alt": "Méduses lumineuses dansant dans une mer sombre"
+  }
+]

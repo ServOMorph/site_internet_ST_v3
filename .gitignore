@@ -9,3 +9,6 @@ credentials*.json
 *token*.json
 *.token
 .claude/settings.local.json
+
+.playwright-mcp/
+src/assets/brut/

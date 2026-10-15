@@ -1,0 +1,8 @@
+---
+layout: base.njk
+---
+<article class="fiche">
+  <h1>{{ title }}</h1>
+  {% if lieu %}<p class="event"><strong>{{ page.date | dateFr }}</strong> — {{ lieu }}</p>{% endif %}
+  {{ content | safe }}
+</article>

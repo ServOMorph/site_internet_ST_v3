@@ -1,0 +1,1 @@
+{"layout":"fiche.njk","tags":"formations","schema":"Course","permalink":"/formations/{{ page.fileSlug }}/","description":"Formation proposée par SéréniaTech."}
