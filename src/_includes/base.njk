@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="{{ site.lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }} | {{ site.name }}</title>
+  <meta name="description" content="{{ description or site.description }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <link rel="stylesheet" href="/css/site.css">
+  <script type="application/ld+json">{{ { "@context": "https://schema.org", "@type": "Organization", "name": site.name, "url": site.url } | dump | safe }}</script>
+  {% if schema == "Course" %}
+  <script type="application/ld+json">{{ { "@context": "https://schema.org", "@type": "Course", "name": title, "description": description or site.description, "url": site.url + page.url, "provider": { "@type": "Organization", "name": site.name } } | dump | safe }}</script>
+  {% elif schema == "Event" %}
+  <script type="application/ld+json">{{ { "@context": "https://schema.org", "@type": "Event", "name": title, "description": description or site.description, "url": site.url + page.url, "startDate": page.date | dateIso, "location": { "@type": "Place", "name": lieu } } | dump | safe }}</script>
+  {% endif %}
+</head>
+<body>
+  <main>
+    <header class="top">
+      <a class="brand" href="/">{{ site.name }}</a>
+      <nav aria-label="Navigation principale">
+        <a href="/#projets">Projets</a>
+        <a href="/#formations">Formations</a>
+        <a href="/#evenements">Événements</a>
+      </nav>
+    </header>
+    {{ content | safe }}
+    <footer>
+      <p>{{ site.name }}</p>
+    </footer>
+  </main>
+</body>
+</html>

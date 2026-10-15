@@ -4,13 +4,13 @@ Créée le : 2026-10-12
 
 ---
 
-## Phase 1 — Socle 11ty et direction artistique [TODO]
-- [ ] Inventaire du V2 réutilisable (textes formations, mentions légales, assets, galerie IA, formulaire contact Express) — lecture seule, aucune copie de `.env`
-- [ ] Initialiser 11ty (zéro JS par défaut), structure contenus en Markdown (`content/projets/`, `content/formations/`, `content/evenements/`)
-- [ ] Proposer 3 directions artistiques (palette, typographie, principe visuel) ; choix utilisateur
-- [ ] Générer un premier lot de visuels avec Qwen local selon la direction retenue
-- [ ] Maquette de l'accueil
-- [ ] Tests : build sans erreur, poids de page accueil mesuré, rendu mobile/desktop (Playwright)
+## Phase 1 — Socle 11ty et direction artistique [EN COURS]
+- [x] Inventaire du V2 réutilisable (textes formations, mentions légales, assets, galerie IA, formulaire contact Express) — lecture seule, aucune copie de `.env`
+- [x] Initialiser 11ty (zéro JS par défaut), structure contenus en Markdown (`content/projets/`, `content/formations/`, `content/evenements/`)
+- [x] Proposer 3 directions artistiques (palette, typographie, principe visuel) ; choix utilisateur (B « Nuit de laboratoire »)
+- [x] Générer un premier lot de visuels avec Qwen local selon la direction retenue (8 images dans `src/assets/brut/`, non intégrées au site)
+- [ ] Maquette de l'accueil (faite sans images dans le site, avec images dans l'artefact claude.ai ; intégration WebP 640/1200 au site restante)
+- [ ] Tests : build sans erreur, poids de page accueil mesuré, rendu mobile/desktop (Playwright) — fait : `npm test` (97 contrôles OK), mobile 390 et PC 1280 ; reste : poids avec images, rendu 1920 (voir `tests_manuels.md`)
 
 **⏸ Checkpoint** — Demander à l'utilisateur de faire `/compact` avant de continuer. Attendre sa réponse écrite. Ne pas commencer la phase suivante sans confirmation.
 
