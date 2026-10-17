@@ -1,20 +1,17 @@
-# site_internet_ST_v3
+# site_st — Portail IA éco-responsable (serenia-tech.fr)
 
 ## Objectif
-Refonte de serenia-tech.fr : vitrine d'art IA locale et éco-responsable, formations, portfolio et newsletter.
+Un site façon appli (cartes à toucher, animations, parcours guidé et exploration libre) pour découvrir l'IA éco-responsable. Intègre le contenu du site V2, réorganisé et réécrit avec l'auteur.
 
 ## Stack
-11ty (site statique), HTML/CSS sans JavaScript, Express sur Render (contact, newsletter), Vercel, Qwen local (images).
+11ty (site statique), HTML/CSS/JS minimal, Vercel (frontend), Express sur Render (contact). Une URL HTML par carte, JavaScript en amélioration seulement.
 
 ## Structure
-- `src/` : gabarits, CSS, contenus Markdown (`src/content/`).
-- `scripts/` : tests (`test_phase1.js`) et génération d'images (`gen_images.py`).
-- `roadmap_site_v3.md`, `_contexte/` : suivi du projet.
-
-## Commandes
-- `npm run build` : génère `_site/`.
-- `npm start` : serveur de test sur le port 5000.
-- `npm test` : contrôles de la phase 1.
+- `_contexte/` : protocole vibecoding (contexte, signals)
+- `roadmap_portail_ia.md` : roadmap en 10 phases
+- `cadrage_phase1.md` : arborescence, arbitrage immersion/SEO, budget de poids
+- `inventaire_v2.md` : inventaire du site V2
+- Ancien travail : branche `archive/v3-direction-b`
 
 ## État actuel
-Phase 1 en cours : socle 11ty en place, 8 visuels générés, intégration des images et mesures de poids restantes.
+Pivot du 2026-10-17. Phase 1 (cadrage) terminée. Phase 2 (socle et maquette) à venir. Aucun code V3 pour l'instant.

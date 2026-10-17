@@ -1,1 +1,0 @@
-{"layout":"fiche.njk","tags":"projets","permalink":"/projets/{{ page.fileSlug }}/","description":"Projet présenté sur le site de SéréniaTech."}
