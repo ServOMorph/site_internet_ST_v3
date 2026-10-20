@@ -1,0 +1,222 @@
+<title>Revue du site SéréniaTech</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Disposition : sélecteur de page en haut, aperçu du site à gauche, commentaires et questions à droite ; une seule colonne sur téléphone. */
+:root{
+  --bg:#f3f6f6;--surface:#ffffff;--fg:#17302f;--muted:#4c6463;--line:#d3e0df;
+  --accent:#1f5a5c;--on-accent:#ffffff;--soft:#dcecec;--warn:#9a5b00;--ok:#1d6b3a;
+  --font-ui:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0e1b1b;--surface:#152727;--fg:#e4efee;--muted:#9fb6b5;--line:#2a4443;--accent:#8fc4c5;--on-accent:#0e1b1b;--soft:#1e3a3a;--warn:#e0a84a;--ok:#6fcf93;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#0e1b1b;--surface:#152727;--fg:#e4efee;--muted:#9fb6b5;--line:#2a4443;--accent:#8fc4c5;--on-accent:#0e1b1b;--soft:#1e3a3a;--warn:#e0a84a;--ok:#6fcf93;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:15px/1.55 var(--font-ui);padding-block:16px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1{font-size:1.35rem;margin:0;text-wrap:balance}
+h2{font-size:1rem;margin:0 0 .5rem}
+.wrap{max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+.top{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px}
+.meta{font:12px var(--font-mono);color:var(--muted)}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;flex:1;min-width:0}
+button,select,textarea,input{font:inherit;color:inherit}
+.tab,.btn{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:6px 11px;cursor:pointer;min-height:36px}
+.tab[aria-pressed="true"],.btn.primary{background:var(--accent);color:var(--on-accent);border-color:var(--accent)}
+.tab .n{font:11px var(--font-mono);margin-left:6px;opacity:.8}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.grid{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+@media(min-width:900px){.grid{grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr)}}
+.stage{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:14px;display:flex;justify-content:center}
+.frame{width:390px;max-width:100%;height:640px;border:1px solid var(--line);border-radius:14px;background:#fff;overflow:hidden}
+.frame.pc{width:100%;height:560px}
+iframe{width:100%;height:100%;border:0;display:block}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.list{display:flex;flex-direction:column;gap:8px}
+.item{border:1px solid var(--line);border-radius:8px;padding:9px 11px;display:flex;flex-direction:column;gap:6px}
+.item.done{opacity:.6}
+.item .txt{white-space:pre-wrap;overflow-wrap:anywhere}
+.row{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.small{font-size:12.5px;color:var(--muted)}
+.q label{display:flex;gap:8px;align-items:flex-start;padding:2px 0}
+textarea{width:100%;min-height:68px;border:1px solid var(--line);border-radius:8px;background:var(--bg);padding:8px;resize:vertical}
+.pill{font:11px var(--font-mono);padding:1px 7px;border-radius:99px;background:var(--soft)}
+.notice{border:1px dashed var(--warn);color:var(--warn);border-radius:8px;padding:8px 10px}
+.empty{color:var(--muted);font-size:13.5px}
+.link{background:none;border:0;color:var(--accent);padding:2px 4px;cursor:pointer;text-decoration:underline;min-height:0}
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;600&display=swap">
+
+<div class="wrap">
+  <div class="top">
+    <h1>Revue du site SéréniaTech</h1>
+    <span class="meta">v0.2 · phase 2 · maquette sans texte définitif</span>
+  </div>
+  <div class="notice" id="notice" hidden>Les commentaires et les questions ne sont pas disponibles dans cette vue (connexion requise). L'aperçu reste utilisable.</div>
+  <div class="bar">
+    <div class="tabs" id="tabs" role="group" aria-label="Pages du site"></div>
+    <button class="btn" id="mode" type="button" aria-pressed="false">Aperçu PC</button>
+  </div>
+  <div class="grid">
+    <div class="stage"><div class="frame" id="frame"><iframe id="site" title="Aperçu du site"></iframe></div></div>
+    <div class="panel">
+      <section aria-labelledby="hq">
+        <h2 id="hq">Questions de Claude</h2>
+        <div class="list" id="questions"></div>
+      </section>
+      <section aria-labelledby="hc">
+        <h2 id="hc">Commentaires sur <span id="curlabel" class="pill"></span></h2>
+        <div class="list" id="comments"></div>
+        <label for="ctext" class="small">Votre commentaire sur cette page</label>
+        <textarea id="ctext" placeholder="Ce qui ne va pas, ce qui manque, ce que vous aimez"></textarea>
+        <div class="row"><button class="btn primary" id="cadd" type="button">Ajouter</button><label class="small"><input type="checkbox" id="showdone"> Afficher les traités</label></div>
+      </section>
+      <section aria-labelledby="hs">
+        <h2 id="hs">Envoyer à Claude</h2>
+        <p class="small" id="sendinfo">Enregistre vos réponses et prévient Claude, qui traite tous les commentaires non traités, toutes pages confondues.</p>
+        <div class="row"><button class="btn primary" id="send" type="button">Envoyer les commentaires à Claude</button></div>
+        <p class="small" id="sendmsg" role="status"></p>
+      </section>
+    </div>
+  </div>
+</div>
+
+<script type="text/plain" id="site-data">__SITE_JSON__</script>
+<script>
+(function () {
+  var bin = atob(document.getElementById("site-data").textContent.trim()), bytes = new Uint8Array(bin.length);
+  for (var k = 0; k < bin.length; k++) bytes[k] = bin.charCodeAt(k);
+  var data = JSON.parse(new TextDecoder("utf-8").decode(bytes));
+  var pages = data.pages, current = "/";
+  var $ = function (id) { return document.getElementById(id); };
+  var iframe = $("site");
+  iframe.srcdoc = data.doc;
+
+  function send() { try { iframe.contentWindow.postMessage({ go: current }, "*"); } catch (e) {} }
+  iframe.addEventListener("load", send);
+  window.addEventListener("message", function (e) {
+    if (e.source !== iframe.contentWindow || !e.data || typeof e.data.route !== "string") return;
+    if (pages.some(function (p) { return p.route === e.data.route; })) { current = e.data.route; render(); }
+  });
+
+  var comments = [], questions = [], answers = {}, db = null, showDone = false, drafts = {};
+
+  function label(route) { var p = pages.filter(function (x) { return x.route === route; })[0]; return p ? p.label : route; }
+  function count(route) { return comments.filter(function (c) { return c.page === route && !c.resolu; }).length; }
+
+  function renderTabs() {
+    var box = $("tabs"); box.textContent = "";
+    pages.forEach(function (p) {
+      var b = document.createElement("button");
+      b.type = "button"; b.className = "tab"; b.setAttribute("aria-pressed", p.route === current ? "true" : "false");
+      b.appendChild(document.createTextNode(p.label));
+      var n = count(p.route);
+      if (n) { var s = document.createElement("span"); s.className = "n"; s.textContent = n; b.appendChild(s); }
+      b.addEventListener("click", function () { current = p.route; render(); send(); });
+      box.appendChild(b);
+    });
+  }
+
+  function renderComments() {
+    $("curlabel").textContent = label(current);
+    var box = $("comments"); box.textContent = "";
+    var list = comments.filter(function (c) { return c.page === current && (showDone || !c.resolu); });
+    if (!list.length) { var e = document.createElement("div"); e.className = "empty"; e.textContent = "Aucun commentaire sur cette page. Ajoutez le premier ci-dessous."; box.appendChild(e); return; }
+    list.forEach(function (c) {
+      var it = document.createElement("div"); it.className = "item" + (c.resolu ? " done" : "");
+      var t = document.createElement("div"); t.className = "txt"; t.textContent = c.texte; it.appendChild(t);
+      var r = document.createElement("div"); r.className = "row";
+      var d = document.createElement("span"); d.className = "small"; d.textContent = new Date(c.creeLe).toLocaleDateString("fr-FR"); r.appendChild(d);
+      var ok = document.createElement("button"); ok.type = "button"; ok.className = "link"; ok.textContent = c.resolu ? "Rouvrir" : "Traité";
+      ok.addEventListener("click", function () { if (db) db.doc("commentaires/" + c.id).update({ resolu: !c.resolu }); });
+      var del = document.createElement("button"); del.type = "button"; del.className = "link"; del.textContent = "Supprimer";
+      del.addEventListener("click", function () { if (db) db.doc("commentaires/" + c.id).delete(); });
+      r.appendChild(ok); r.appendChild(del); it.appendChild(r); box.appendChild(it);
+    });
+  }
+
+  function renderQuestions() {
+    var box = $("questions"); box.textContent = "";
+    var list = questions.filter(function (q) { return !q.page || q.page === "general" || q.page === current; });
+    var open = list.filter(function (q) { return !answers[q.id]; });
+    var done = list.filter(function (q) { return answers[q.id]; });
+    if (!list.length) { var e = document.createElement("div"); e.className = "empty"; e.textContent = "Aucune question pour cette page."; box.appendChild(e); return; }
+    open.concat(done).forEach(function (q) {
+      var a = answers[q.id], it = document.createElement("div"); it.className = "item q" + (a ? " done" : "");
+      var t = document.createElement("div"); t.className = "txt"; t.textContent = q.texte; it.appendChild(t);
+      var choix = (a && a.valeur) || drafts[q.id] || "";
+      var opts = document.createElement("div"); opts.className = "row"; opts.setAttribute("role", "group");
+      (q.options || []).forEach(function (o) {
+        var b = document.createElement("button");
+        b.type = "button"; b.className = "tab"; b.textContent = o;
+        b.setAttribute("aria-pressed", choix === o ? "true" : "false");
+        b.addEventListener("click", function () { drafts[q.id] = o; save(q, o); renderQuestions(); });
+        opts.appendChild(b);
+      });
+      it.appendChild(opts);
+      var f = document.createElement("textarea"); f.id = "note_" + q.id; f.placeholder = "Précision (facultatif)"; f.value = a ? (a.note || "") : "";
+      f.setAttribute("aria-label", "Précision pour la question");
+      f.addEventListener("change", function () { save(q, (answers[q.id] && answers[q.id].valeur) || drafts[q.id] || "", f.value); });
+      it.appendChild(f); box.appendChild(it);
+    });
+  }
+
+  function save(q, valeur, note) {
+    if (!db) return;
+    var prev = answers[q.id] || {};
+    db.doc("reponses/" + q.id).set({ page: q.page || "general", valeur: valeur, note: note === undefined ? (prev.note || "") : note, maj: Date.now() }).catch(function () {});
+  }
+
+  function render() { renderTabs(); renderComments(); renderQuestions(); }
+
+  $("cadd").addEventListener("click", function () {
+    var v = $("ctext").value.trim(); if (!v || !db) return;
+    db.collection("commentaires").add({ page: current, texte: v, creeLe: Date.now(), resolu: false }).then(function () { $("ctext").value = ""; });
+  });
+  $("showdone").addEventListener("change", function (e) { showDone = e.target.checked; renderComments(); });
+  $("mode").addEventListener("click", function () {
+    var pc = $("frame").classList.toggle("pc");
+    this.setAttribute("aria-pressed", pc ? "true" : "false");
+    this.textContent = pc ? "Aperçu mobile" : "Aperçu PC";
+  });
+
+  var sending = false;
+  $("send").addEventListener("click", function () {
+    if (sending) return;
+    var btn = $("send"), msg = $("sendmsg");
+    var open = comments.filter(function (c) { return !c.resolu; }).length;
+    var nrep = Object.keys(answers).length;
+    var text = "Revue du site terminée : " + open + " commentaire(s) non traité(s), " + nrep + " réponse(s) aux questions. Tu peux traiter directement.";
+    sending = true; btn.disabled = true; msg.textContent = "Envoi en cours…";
+    if (db) db.doc("signaux/pret").set({ t: Date.now(), commentaires: open, reponses: nrep }).catch(function () {});
+    window.claude.use("comments").then(function (cm) {
+      if (!cm) throw { code: "not_granted" };
+      return cm.canSendToClaude().then(function (st) {
+        if (st !== "available") throw { code: "claude_unavailable" };
+        return cm.anchorFor($("send"));
+      }).then(function (anchor) { return cm.sendToClaude({ anchor: anchor, text: text }); });
+    }).then(function () {
+      var h = new Date();
+      msg.textContent = "Claude est prévenu à " + h.getHours() + ":" + String(h.getMinutes()).padStart(2, "0") + ". Il traite et répond ici.";
+    }).catch(function (e) {
+      var c = e && e.code;
+      msg.textContent = c === "consent_required"
+        ? "Envoi refusé : autorisez les commentaires de la page, ou dites-le-moi dans la conversation."
+        : "Retours enregistrés, mais Claude n'a pas pu être prévenu depuis la page : dites-le-moi dans la conversation.";
+    }).then(function () { sending = false; btn.disabled = false; });
+  });
+
+  function toList(s) { return s.docs.map(function (d) { var o = Object.assign({}, d.data() || {}); o.id = d.id; return o; }); }
+  render();
+  if (window.claude && window.claude.use) {
+    window.claude.use("db").then(function (d) {
+      if (!d) { $("notice").hidden = false; return; }
+      db = d;
+      db.collection("commentaires").orderBy("creeLe").onSnapshot(function (s) { comments = toList(s); render(); }, function () { $("notice").hidden = false; });
+      db.collection("questions").orderBy("ordre").onSnapshot(function (s) { questions = toList(s); renderQuestions(); }, function () {});
+      db.collection("reponses").onSnapshot(function (s) { var m = {}; s.docs.forEach(function (x) { m[x.id] = x.data(); }); answers = m; renderQuestions(); }, function () {});
+    }).catch(function () { $("notice").hidden = false; });
+  } else { $("notice").hidden = false; }
+})();
+</script>

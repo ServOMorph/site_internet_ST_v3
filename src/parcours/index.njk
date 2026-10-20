@@ -1,0 +1,17 @@
+---
+layout: base.njk
+titre: "Parcours guidé"
+description: "Parcours guidé en 6 cartes pour comprendre l'IA éco-responsable."
+section: parcours
+---
+<section class="hero">
+  <p class="eyebrow">Parcours guidé</p>
+  <h1>Comprendre l'IA éco-responsable</h1>
+  <p class="lead">Six cartes, dans l'ordre. Vous pouvez aussi sauter directement à l'une d'elles.</p>
+  <p><a class="btn" href="/parcours/{{ parcours[0].slug }}/" data-resume>Commencer</a></p>
+</section>
+<ol class="cards">
+{% for c in parcours %}
+  <li><a class="card card--tint" style="--tint:var(--c-{{ c.slug }})" href="/parcours/{{ c.slug }}/" data-card="{{ c.slug }}"><img class="card__img" src="{{ c.image }}" alt="" width="480" height="480" loading="lazy"><span class="card__tag">{{ loop.index }} / {{ parcours | length }}</span><span class="card__title">{{ c.titre }}</span><span class="card__text">{{ c.resume }}</span></a></li>
+{% endfor %}
+</ol>

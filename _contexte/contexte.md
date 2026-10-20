@@ -7,15 +7,12 @@ Portail vers l'IA éco-responsable pour serenia-tech.fr : un site qui ressemble 
 Stack de diffusion conservée : 11ty (site statique), HTML/CSS/JS, Express sur Render (contact), Vercel. Équilibre à trouver entre immersion (appli) et référencement classique + moteurs IA. Pas de PWA prévue. Mobile-first puis PC/télé.
 
 ## État actuel (réécrit intégralement à chaque /close)
-Pivot du 2026-10-17 : portail IA éco-responsable façon appli. Ancien travail archivé (branche `archive/v3-direction-b`), code retiré de `main`.
-Phase 1 (cadrage) terminée et validée : `cadrage_phase1.md`. Roadmap `roadmap_portail_ia.md` en 10 phases.
-Phase suivante : 2 (socle et maquette). Aucun code V3 pour l'instant.
-Les 8 PNG Qwen restent sur disque (`src/assets/brut/`, non versionnés), écartés.
+Phase 2 en cours (socle et maquette) : socle 11ty buildé (10 pages, gabarit mobile-first, navigation en barre basse sur mobile), tests `scripts/test_phase2.js` OK (poids, h1, liens, reduced-motion).
+Direction « plus expressive » choisie par l'utilisateur : illustrations Qwen locales (9 WebP, 1 à 3 Ko) et teinte par carte ; niveau de saturation à confirmer (question 4 de l'artefact de revue).
+Artefact de revue du site publié (aperçu, commentaires, questions, bouton « Envoyer à Claude » qui réveille la session) : URL dans `signals.md`.
+Aucun texte définitif : cartes et pages Explorer/Se former sont des maquettes (phase 3).
 
 ## Décisions structurantes (append only — 10 entrées max, 5 lignes max/entrée, archiver au-delà)
-- 2026-10-12 : Initialisation du protocole vibecoding.
-- 2026-10-17 : Pivot vers un portail « IA éco-responsable » façon appli ; redémarrage à zéro, ancien travail archivé (branche `archive/v3-direction-b`). Visuels Qwen et direction B écartés.
-- 2026-10-17 : Hypothèse de travail (validée) : public = curieux et professionnels découvrant l'IA locale ; objectif = comprendre l'IA éco-responsable puis découvrir les formations. Définition : IA locale, modèles modestes, sobriété d'usage (ex. écrire sa demande avant d'interroger l'IA), souveraineté des données.
 - 2026-10-17 : Roadmap `roadmap_portail_ia.md` validée. Les anciennes fonctions (mise à jour automatique `site_com.md`, veille IA locales, newsletter, extraits CreaZik) sont intégrées au site, dans des phases ultérieures à ajouter. Source du contenu V2 : voir `.claude/memory.md`.
 - 2026-10-17 : Sources retenues pour d'éventuels chiffres (lues via outil, à citer avec leur date et leurs limites) :
   - AIE, *Energy and AI* (2025) : centres de données ~415 TWh en 2024 (~1,5 % de l'électricité mondiale), ~945 TWh attendus en 2030 ; l'IA est le principal moteur de la hausse (pas de part chiffrée sur la page lue). https://www.iea.org/reports/energy-and-ai/executive-summary
@@ -28,3 +25,5 @@ Les 8 PNG Qwen restent sur disque (`src/assets/brut/`, non versionnés), écart�
 - 2026-10-17 : Galerie V2 (`data/galerie.json`, 4 images) : Ollama n'a pas été utilisé pour Flux.1 ; tous les badges (« Flux.1 », « Ollama local ») sont supprimés à la reprise dans la V3. V2 non modifié (le site V2 publié affiche encore ces badges).
 - 2026-10-17 : Contenu réécrit à deux ; source éditoriale : `C:\Users\raph6\Documents\SerenIATech\SérénIATech_dev\Communication\SHORTS\prompts\TSERENIATECH_Prompt_Maitre_Production.docx` (série de 10 Shorts, règles de rigueur : pas d'affirmation absolue, pas de résultat inventé).
 - 2026-10-17 : Cadrage phase 1 validé (`cadrage_phase1.md`) : parcours guidé 6 cartes + Explorer + Se former ; une URL HTML par carte, JS en amélioration ; budget page ≤ 100 Ko hors images, JS ≤ 20 Ko, images ≤ 100 Ko ; polices Inter/Space Grotesk hébergées (repli système si budget dépassé) ; blog à part, formations en entrée directe.
+- 2026-10-17 : Direction visuelle « plus expressive » (réponse de l'utilisateur dans l'artefact) : illustrations simples générées avec Qwen local (`scripts/gen_illustrations.py`, ComfyUI sur le port 8189, WebP <= 100 Ko) et teinte pastel par carte. Accueil : « Se former » en premier.
+- 2026-10-17 : Revue du site par artefact (`revue/revue_site.html`, URL stable, base `commentaires`/`questions`/`reponses`, bouton « Envoyer à Claude » = fonction `comments` de la page) ; régénéré par `scripts/build_revue.js` après `npm run build` ; règle enregistrée dans `.claude/memory.md`.

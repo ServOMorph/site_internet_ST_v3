@@ -19,9 +19,9 @@ Attendre sa réponse écrite. Ne pas commencer la phase suivante sans confirmati
 ---
 
 ## Phase 2 — Socle et maquette appli [EN COURS]
-- [ ] Socle 11ty, gabarit mobile-first, navigation type appli (cartes, transitions)
-- [ ] Direction visuelle (à proposer, pas reprise de l'ancienne direction B)
-- [ ] Tests : build, poids de page, rendu mobile / PC (Playwright), HTML lisible sans JavaScript
+- [x] Socle 11ty, gabarit mobile-first, navigation type appli (cartes, transitions CSS)
+- [ ] Direction visuelle : proposée puis rendue « plus expressive » (illustrations Qwen, teinte par carte) ; validation du niveau d'expressivité en attente (question 4 de l'artefact)
+- [x] Tests : build, poids de page, HTML lisible sans JavaScript (`scripts/test_phase2.js`) ; rendu mobile / PC vu avec Playwright ; contrôles visuels restants dans `tests_manuels.md`
 
 **⏸ Checkpoint** — Demander à l'utilisateur de faire `/compact` avant de continuer.
 Attendre sa réponse écrite. Ne pas commencer la phase suivante sans confirmation.
