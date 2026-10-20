@@ -1,0 +1,38 @@
+[
+  {
+    "slug": "pourquoi",
+    "titre": "Pourquoi",
+    "resume": "L'impact de l'IA, avec des chiffres sourcés et leurs limites.",
+    "image": "/assets/img/pourquoi.webp"
+  },
+  {
+    "slug": "leviers",
+    "titre": "Les leviers",
+    "resume": "Modèles modestes, IA locale, sobriété d'usage.",
+    "image": "/assets/img/leviers.webp"
+  },
+  {
+    "slug": "essayer",
+    "titre": "Essayer",
+    "resume": "Une méthode en 3 étapes et la recette du prompt.",
+    "image": "/assets/img/essayer.webp"
+  },
+  {
+    "slug": "outils",
+    "titre": "Les outils",
+    "resume": "Vibe-Mistral, Ollama, Qwen-Image.",
+    "image": "/assets/img/outils.webp"
+  },
+  {
+    "slug": "donnees",
+    "titre": "Données et souveraineté",
+    "resume": "RGPD et IA locale open source.",
+    "image": "/assets/img/donnees.webp"
+  },
+  {
+    "slug": "aller-plus-loin",
+    "titre": "Aller plus loin",
+    "resume": "Formations et contact.",
+    "image": "/assets/img/aller-plus-loin.webp"
+  }
+]

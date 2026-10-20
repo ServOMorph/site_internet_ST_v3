@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.3 — 2026-10-20
+
+### Ajouté
+- Socle 11ty (10 pages : accueil, parcours en 6 cartes, explorer, se former), gabarit mobile-first avec barre d'onglets, polices Inter et Space Grotesk hébergées, JS de 0,4 Ko, tests de phase 2.
+- Direction visuelle expressive : 9 illustrations Qwen locales (`scripts/gen_illustrations.py`) et teinte par carte ; « Se former » en premier sur l'accueil.
+- Artefact de revue du site (aperçu, commentaires, questions, bouton « Envoyer à Claude ») : `revue/`, `scripts/build_revue.js`.
+- `tests_manuels.md`, `_contexte/archive_decisions.md`, `_contexte/archive_sessions.md`.
+
 ## v0.2 — 2026-10-17
 
 ### Modifié
