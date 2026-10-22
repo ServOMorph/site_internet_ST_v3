@@ -1,0 +1,29 @@
+---
+layout: base.njk
+titre: "Fiches"
+description: "Une question précise sur l'IA éco-responsable et humaniste, une réponse sourcée."
+section: fiches
+pagination:
+  data: fiches
+  size: 6
+  alias: page_fiches
+permalink: "/fiches/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
+---
+<section class="hero">
+  <p class="eyebrow">Fiches</p>
+  <h1>Une question, une réponse sourcée</h1>
+</section>
+<ul class="cards">
+{% for f in page_fiches %}
+  <li><a class="card card--main" href="/fiches/{{ f.slug }}/"><span class="card__tag">{% if pagination.pageNumber == 0 and loop.first %}Dernière fiche{% else %}Fiche{% endif %}</span><span class="card__title">{{ f.titre }}</span><span class="card__text">{{ f.reponse }}</span></a></li>
+{% endfor %}
+{% if pagination.pageNumber == 0 and fiches_a_venir.length %}
+  <li><span class="card card--soon"><span class="card__tag">{{ fiches_a_venir[0].mois }}</span><span class="card__title">{{ fiches_a_venir[0].titre }}</span></span></li>
+{% endif %}
+</ul>
+{% if pagination.pages.length > 1 %}
+<nav class="pager pager--liste" aria-label="Pages de fiches">
+  {% if pagination.href.previous %}<a class="btn btn--ghost" href="{{ pagination.href.previous }}" rel="prev">Fiches plus récentes</a>{% else %}<span></span>{% endif %}
+  {% if pagination.href.next %}<a class="btn" href="{{ pagination.href.next }}" rel="next">Fiches plus anciennes</a>{% endif %}
+</nav>
+{% endif %}

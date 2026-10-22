@@ -1,0 +1,32 @@
+---
+layout: base.njk
+titre: "Quiz : votre usage de l'IA est-il sobre ?"
+description: "Un auto-diagnostic en trois questions pour repérer vos marges de progrès."
+section: quiz
+---
+<section class="hero">
+  <p class="eyebrow">Quiz</p>
+  <h1>Votre usage de l'IA est-il sobre ?</h1>
+  <p class="lead">Trois questions. Choisissez une réponse pour voir le conseil associé. Aucune donnée n'est envoyée.</p>
+</section>
+<form class="quiz">
+  <fieldset class="q">
+    <legend>1. Pour une question simple, quel modèle utilisez-vous ?</legend>
+    <label class="opt"><input type="radio" name="q1"><span>Toujours le plus puissant</span><small class="tip">Les plus grands modèles sont les plus gourmands, et des modèles plus sobres peuvent répondre aussi bien (Arcep, mai 2026).</small></label>
+    <label class="opt"><input type="radio" name="q1"><span>Un modèle adapté à la tâche</span><small class="tip">C'est le bon réflexe : choisir la taille du modèle selon la difficulté de la demande.</small></label>
+    <label class="opt"><input type="radio" name="q1"><span>Je ne sais pas</span><small class="tip">Voir la carte « Les leviers » du parcours.</small></label>
+  </fieldset>
+  <fieldset class="q">
+    <legend>2. Où sont traitées vos demandes ?</legend>
+    <label class="opt"><input type="radio" name="q2"><span>Sur un service en ligne</span><small class="tip">Pratique, mais vos données quittent votre machine. Voir la carte « Données et souveraineté ».</small></label>
+    <label class="opt"><input type="radio" name="q2"><span>Sur ma propre machine (IA locale)</span><small class="tip">Vos données restent chez vous. Voir la carte « Les outils ».</small></label>
+    <label class="opt"><input type="radio" name="q2"><span>Je ne sais pas</span><small class="tip">C'est une bonne question à se poser avant d'envoyer des données sensibles.</small></label>
+  </fieldset>
+  <fieldset class="q">
+    <legend>3. Demandez-vous des images ou des vidéos ?</legend>
+    <label class="opt"><input type="radio" name="q3"><span>Souvent</span><small class="tip">Les estimations citées sur ce site excluent les images : leur coût n'est pas couvert par ces chiffres.</small></label>
+    <label class="opt"><input type="radio" name="q3"><span>Rarement, quand c'est utile</span><small class="tip">Bon réflexe : générer seulement ce dont vous avez besoin.</small></label>
+    <label class="opt"><input type="radio" name="q3"><span>Jamais</span><small class="tip">Alors le texte est l'essentiel de votre usage : voir la fiche sur la consommation d'une requête.</small></label>
+  </fieldset>
+  <p class="placeholder">Maquette : conseils indicatifs, à rédiger et à sourcer avec vous.</p>
+</form>

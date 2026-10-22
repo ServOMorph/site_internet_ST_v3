@@ -14,10 +14,10 @@
   }
   var resume = document.querySelector("[data-resume]");
   if (resume && seen.length) {
-    var all = document.querySelectorAll("a.card[data-card]");
-    for (var j = 0; j < all.length; j++) {
-      if (seen.indexOf(all[j].getAttribute("data-card")) === -1) {
-        resume.setAttribute("href", all[j].getAttribute("href"));
+    var slugs = (resume.getAttribute("data-slugs") || "").split(",");
+    for (var j = 0; j < slugs.length; j++) {
+      if (seen.indexOf(slugs[j]) === -1) {
+        resume.setAttribute("href", "/parcours/" + slugs[j] + "/");
         resume.textContent = "Reprendre";
         break;
       }

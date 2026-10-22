@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "consommation-requete",
+    "titre": "Combien d'énergie consomme une requête à une IA ?",
+    "reponse": "Une estimation indépendante situe une requête texte typique autour de 0,3 Wh, avec une fourchette de 0,1 à 4 Wh selon les hypothèses. C'est un ordre de grandeur, pas une mesure.",
+    "retenir": [
+      "L'estimation varie d'un facteur 40 selon les hypothèses retenues (0,1 à 4 Wh).",
+      "Cette valeur exclut les images, la voix, l'entraînement des modèles et la fabrication des machines.",
+      "Les acteurs du secteur manquent de transparence : les chiffres publics restent des estimations."
+    ],
+    "detail": "Texte de la fiche à rédiger avec vous. Cette page montre le gabarit : la réponse courte en haut, les points à retenir, le détail, puis les sources datées et leurs limites.",
+    "sources": [
+      {"nom": "Epoch AI, « How much energy does ChatGPT use? »", "date": "7 février 2025", "limite": "Estimation, pas une mesure. Exclut images, voix, entraînement et fabrication.", "url": "https://epoch.ai/gradient-updates/how-much-energy-does-chatgpt-use"},
+      {"nom": "Arcep, « IA générative : quels défis environnementaux ? »", "date": "21 mai 2026", "limite": "Pas de valeur par requête sur la page consultée.", "url": "https://www.arcep.fr/la-regulation/grands-dossiers-thematiques-transverses/lempreinte-environnementale-du-numerique/le-rapport-intelligence-artificielle-generative-quels-defis-environnementaux.html"}
+    ],
+    "maj": "[date à renseigner]"
+  }
+]

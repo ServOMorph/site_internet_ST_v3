@@ -1,0 +1,31 @@
+---
+layout: base.njk
+section: fiches
+pagination:
+  data: fiches
+  size: 1
+  alias: fiche
+permalink: "/fiches/{{ fiche.slug }}/"
+eleventyComputed:
+  titre: "{{ fiche.titre }}"
+  description: "{{ fiche.reponse }}"
+---
+<article class="fiche">
+  <p class="eyebrow">Fiche</p>
+  <h1>{{ fiche.titre }}</h1>
+  <p class="reponse"><strong>En deux phrases.</strong> {{ fiche.reponse }}</p>
+  <h2>À retenir</h2>
+  <ul class="retenir">
+  {% for r in fiche.retenir %}<li>{{ r }}</li>{% endfor %}
+  </ul>
+  <h2>En détail</h2>
+  <p class="placeholder">Maquette : {{ fiche.detail }}</p>
+  <h2>Sources et limites</h2>
+  <ul class="sources">
+  {% for s in fiche.sources %}
+    <li><a href="{{ s.url }}" rel="noopener">{{ s.nom }}</a><span class="sources__date">{{ s.date }}</span><span class="sources__limite">Limite : {{ s.limite }}</span></li>
+  {% endfor %}
+  </ul>
+  <p class="maj">Mis à jour le {{ fiche.maj }}. <a href="/sources/">Notre méthode</a></p>
+  <p><a class="btn btn--ghost" href="/fiches/">Toutes les fiches</a></p>
+</article>

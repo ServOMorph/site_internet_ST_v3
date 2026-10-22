@@ -12,6 +12,18 @@
     "image": "/assets/img/leviers.webp"
   },
   {
+    "slug": "donnees",
+    "titre": "Données et souveraineté",
+    "resume": "RGPD et IA locale open source.",
+    "image": "/assets/img/donnees.webp"
+  },
+  {
+    "slug": "garder-la-main",
+    "titre": "Garder la main",
+    "resume": "L'humain décide : vérifier, garder son esprit critique.",
+    "image": "/assets/img/garder-la-main.webp"
+  },
+  {
     "slug": "essayer",
     "titre": "Essayer",
     "resume": "Une méthode en 3 étapes et la recette du prompt.",
@@ -22,12 +34,6 @@
     "titre": "Les outils",
     "resume": "Vibe-Mistral, Ollama, Qwen-Image.",
     "image": "/assets/img/outils.webp"
-  },
-  {
-    "slug": "donnees",
-    "titre": "Données et souveraineté",
-    "resume": "RGPD et IA locale open source.",
-    "image": "/assets/img/donnees.webp"
   },
   {
     "slug": "aller-plus-loin",

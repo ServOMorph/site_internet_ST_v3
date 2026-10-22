@@ -1,5 +1,16 @@
 # Changelog
 
+## v0.4 — 2026-10-22
+
+### Ajouté
+- Thème C (sombre, feuille-circuit, vert néon, particules et animations CSS), 10 illustrations Qwen sur fond sombre dont « Garder la main », logo SéréniaTech (repris du V2) en pied de page et favicon.
+- Pages Fiches (gabarit, pagination par 6), Quiz, Glossaire, Sources et méthode, À propos ; bloc « chiffre clé » animé sur l'accueil.
+- `run.py` (serveur local, port 8765, rechargement automatique), `scripts/gen_theme_c.py`, `scripts/gen_propositions.py`, `humanisme_numerique_ia.md`.
+
+### Modifié
+- Titre du site : « IA éco-responsable et humaniste » ; parcours à 7 cartes (ajout de « Garder la main »), page réduite au bouton Commencer ; Explorer supprimé ; textes allégés ; mode sombre uniquement.
+- Artefact de revue republié (version 19) ; `tests_manuels.md` réécrit.
+
 ## v0.3 — 2026-10-20
 
 ### Ajouté
