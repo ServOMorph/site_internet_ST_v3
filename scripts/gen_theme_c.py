@@ -19,6 +19,9 @@ ITEMS = [
     ("donnees", "a shield with a keyhole and a tiny leaf", "violet and lilac"),
     ("aller-plus-loin", "a signpost with two arrows pointing toward a small sun", "teal and aqua"),
     ("formation", "a young sprout growing out of an open book, two round leaves", "mint and lime"),
+    ("en-pratique", "a pair of open hands gently shaping a small glowing leaf out of light, with a few tiny sparks floating above", "lime green and gold"),
+    ("actualites", "a radar sweep screen with rising concentric signal waves and a small glowing leaf blip", "cyan and mint"),
+    ("evenements", "a stage spotlight beam shining down onto a small glowing leaf on a dark floor, scattered particles of light", "warm amber and coral"),
     ("garder-main-a", "a human hand gently holding a small glowing leaf whose veins are circuit lines", "coral and warm peach"),
     ("garder-main-b", "a level balance scale with a glowing leaf on one side and a small glowing circuit chip on the other", "coral and warm peach"),
 ]
