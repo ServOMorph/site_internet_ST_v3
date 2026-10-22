@@ -1,5 +1,5 @@
-# Roadmap — Portail IA éco-responsable (serenia-tech.fr)
-Objectif : un site qui ressemble à une appli pour découvrir l'IA éco-responsable, contenu V2 intégré et réécrit, puis anciennes fonctionnalités intégrées.
+# Roadmap — Portail IA éco-responsable et humaniste (serenia-tech.fr)
+Objectif : un site qui ressemble à une appli pour découvrir l'IA éco-responsable et humaniste, contenu V2 intégré et réécrit, puis anciennes fonctionnalités intégrées (phases 6 à 9 à reconsidérer, voir `signals.md`).
 Créée le : 2026-10-17 (validée le même jour). Ancienne roadmap : branche `archive/v3-direction-b`.
 
 ---
@@ -20,7 +20,9 @@ Attendre sa réponse écrite. Ne pas commencer la phase suivante sans confirmati
 
 ## Phase 2 — Socle et maquette appli [EN COURS]
 - [x] Socle 11ty, gabarit mobile-first, navigation type appli (cartes, transitions CSS)
-- [ ] Direction visuelle : proposée puis rendue « plus expressive » (illustrations Qwen, teinte par carte) ; validation du niveau d'expressivité en attente (question 4 de l'artefact)
+- [x] Direction visuelle : thème C (sombre, feuille-circuit, vert néon, illustrations Qwen, particules CSS) validé par l'utilisateur le 2026-10-22, mode sombre uniquement
+- [x] Arborescence refondue : Comprendre (7 cartes dont « Garder la main »), Fiches, Quiz, Sources, Glossaire, À propos ; Explorer supprimé ; titre « IA éco-responsable et humaniste »
+- [ ] Refonte humanisme numérique : page « Notre approche », étiquettes de thème des fiches, bloc « Un principe », quiz à deux axes, glossaire enrichi (décisions en attente, voir `signals.md`)
 - [x] Tests : build, poids de page, HTML lisible sans JavaScript (`scripts/test_phase2.js`) ; rendu mobile / PC vu avec Playwright ; contrôles visuels restants dans `tests_manuels.md`
 
 **⏸ Checkpoint** — Demander à l'utilisateur de faire `/compact` avant de continuer.
@@ -30,10 +32,10 @@ Attendre sa réponse écrite. Ne pas commencer la phase suivante sans confirmati
 
 ## Phase 3 — Contenus réécrits [TODO]
 - [ ] Textes écrits avec l'utilisateur, faits validés un par un
-- [ ] Reprise du contenu V2 réorganisé (formations, services, ressources, portfolio, blog, événement)
+- [ ] Reprise du contenu V2 réorganisé (formations, services, ressources, portfolio, fiches, événement) ; peu de texte, textes courts
 - [ ] Événement « 1 jour moins numérique » (8 nov. 2026) : date, lieu, titre, avec accord du client
 - [ ] Reprendre tarifs de formation, mention OPCO et témoignage Réseau Toiles (validés le 2026-10-17, voir `_contexte/contexte.md`) ; autres prestations « sur devis »
-- [ ] Chiffres sur l'impact énergétique : sources retenues dans `_contexte/contexte.md` (AIE, Arcep, Epoch AI), citées avec date et limites
+- [ ] Chiffres sur l'impact énergétique : sources retenues dans `_contexte/archive_decisions.md` et page Sources du site (AIE, Arcep, Epoch AI), citées avec date et limites
 - [ ] Tests : liens internes, SEO de base, JSON-LD, accessibilité
 
 **⏸ Checkpoint** — Demander à l'utilisateur de faire `/compact` avant de continuer.

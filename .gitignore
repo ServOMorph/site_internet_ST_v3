@@ -12,3 +12,4 @@ credentials*.json
 
 .playwright-mcp/
 src/assets/brut/
+__pycache__/

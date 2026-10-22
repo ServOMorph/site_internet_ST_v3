@@ -4,9 +4,10 @@ const path = require("path");
 const ROOT = path.join(__dirname, "..");
 const SITE = path.join(ROOT, "_site");
 const labels = {
-  "/": "Accueil", "/parcours/": "Parcours", "/parcours/pourquoi/": "1 Pourquoi", "/parcours/leviers/": "2 Leviers",
-  "/parcours/essayer/": "3 Essayer", "/parcours/outils/": "4 Outils", "/parcours/donnees/": "5 Données",
-  "/parcours/aller-plus-loin/": "6 Aller plus loin", "/explorer/": "Explorer", "/se-former/": "Se former",
+  "/": "Accueil", "/parcours/": "Comprendre", "/parcours/pourquoi/": "1 Pourquoi", "/parcours/leviers/": "2 Leviers",
+  "/parcours/donnees/": "3 Données", "/parcours/garder-la-main/": "4 Garder la main", "/parcours/essayer/": "5 Essayer",
+  "/parcours/outils/": "6 Outils", "/parcours/aller-plus-loin/": "7 Aller plus loin", "/fiches/": "Fiches", "/fiches/consommation-requete/": "Fiche exemple",
+  "/quiz/": "Quiz", "/glossaire/": "Glossaire", "/sources/": "Sources", "/a-propos/": "À propos", "/se-former/": "Se former",
 };
 const sectionOf = (r) => (r === "/" ? "/" : "/" + r.split("/")[1] + "/");
 
@@ -20,7 +21,10 @@ css = css.replace(/url\((\/assets\/fonts\/([^)]+))\)/g, (_, u, f) => {
   return "url(data:font/woff2;base64," + b + ")";
 });
 
-const header = first.match(/<header class="topbar">[\s\S]*?<\/header>/)[0].replace(/ aria-current="page"/g, "");
+const header = first.match(/<header class="topbar">[\s\S]*?<\/header>/)[0].replace(/ aria-current="page"/g, "")
+  .replace(/src="(\/assets\/img\/[^"]+)"/g, (_, u) => 'src="data:image/webp;base64,' + fs.readFileSync(path.join(SITE, u)).toString("base64") + '"');
+const footer = first.match(/<footer class="pied">[\s\S]*?<\/footer>/)[0]
+  .replace(/src="(\/assets\/img\/[^"]+)"/g, (_, u) => 'src="data:image/webp;base64,' + fs.readFileSync(path.join(SITE, u)).toString("base64") + '"');
 const sections = routes.map((r) => {
   const main = read(r).match(/<main id="contenu">([\s\S]*?)<\/main>/)[1];
   const inlined = main.replace(/src="(\/assets\/img\/[^"]+)"/g, (_, u) => 'src="data:image/webp;base64,' + fs.readFileSync(path.join(SITE, u)).toString("base64") + '"');
@@ -52,7 +56,7 @@ show("/");
 `;
 
 const doc = '<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>'
-  + css + "</style></head><body>" + header + "<main>" + sections + "</main><script>" + script.replace(/<\//g, "<\/") + "</script></body></html>";
+  + css + "</style></head><body>" + header + "<main>" + sections + "</main>" + footer + "<script>" + script.replace(/<\//g, "<\/") + "</script></body></html>";
 
 const data = { doc, pages: routes.map((r) => ({ route: r, label: labels[r] })) };
 const json = Buffer.from(JSON.stringify(data), "utf8").toString("base64");
