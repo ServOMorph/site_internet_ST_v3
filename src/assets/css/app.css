@@ -8,7 +8,7 @@
   --radius:20px;--gap:1rem;--bar:4.25rem;
   --font-body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   --font-title:"Space Grotesk",var(--font-body);
-  --c-pourquoi:#ffb347;--c-leviers:#9bff7a;--c-essayer:#ffe066;--c-outils:#5fd4ff;--c-donnees:#b69cff;--c-aller-plus-loin:#3de0b5;--c-garder-la-main:#ff9d7a;--c-garder-la-main:#ff9d7a;
+  --c-pourquoi:#ffb347;--c-leviers:#9bff7a;--c-essayer:#ffe066;--c-outils:#5fd4ff;--c-donnees:#b69cff;--c-aller-plus-loin:#3de0b5;--c-ia-locale:#ff7ad9;--c-garder-la-main:#ff9d7a;--c-garder-la-main:#ff9d7a;
 }
 @view-transition{navigation:auto}
 *{box-sizing:border-box}
@@ -45,14 +45,13 @@ main{max-width:46rem;margin:0 auto;padding:0 1.25rem 2rem}
 .eyebrow{margin:0;font-size:.8125rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
 .lead{font-size:1.125rem;color:var(--muted);margin:0 0 1.25rem}
 .hero{padding:1rem 0 .5rem}
-.hero--visuel{position:relative;isolation:isolate;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:4rem 1.5rem 1.5rem;margin-top:.5rem;border-radius:var(--radius);border:1px solid var(--line);box-shadow:0 0 60px rgb(61 224 181 / .12)}
+.hero--visuel{position:relative;isolation:isolate;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:2.5rem 1.5rem 1.25rem;margin-top:.5rem;border-radius:var(--radius);border:1px solid var(--line);box-shadow:0 0 60px rgb(61 224 181 / .12)}
 .hero--visuel::before{content:"";position:absolute;inset:0;z-index:-2;background:url(/assets/img/hero-feuille-mobile.webp) center/cover;animation:zoom 28s ease-in-out infinite alternate}
 .hero--visuel::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgb(5 13 8 / .05) 0%,rgb(5 13 8 / .35) 45%,rgb(5 13 8 / .94) 100%)}
 @keyframes zoom{to{transform:scale(1.1) translate3d(-1%,-1%,0)}}
 .hero--visuel h1{font-size:min(3.4rem,6.2vw);white-space:nowrap;text-shadow:0 2px 30px rgb(0 0 0 / .7)}
 .hero--visuel h1 em{font-style:normal;background:linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero--visuel .lead{color:#c9ddd0;max-width:34rem}
-.hero__cta{display:flex;flex-wrap:wrap;gap:.75rem;margin:0}
 .cards{list-style:none;margin:0;padding:0;display:grid;gap:var(--gap)}
 .hero--visuel+.cards{margin-top:1.25rem}
 .card{position:relative;display:flex;flex-direction:column;gap:.25rem;min-height:7rem;padding:1.25rem;border-radius:var(--radius);background:linear-gradient(160deg,rgb(26 52 37 / .72),rgb(9 20 14 / .78));backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid var(--line);color:var(--text);text-decoration:none;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
@@ -77,7 +76,9 @@ progress::-webkit-progress-bar{background:transparent}
 progress::-webkit-progress-value{background:linear-gradient(90deg,var(--accent-2),var(--accent));border-radius:999px;box-shadow:0 0 12px rgb(155 255 122 / .7)}
 progress::-moz-progress-bar{background:linear-gradient(90deg,var(--accent-2),var(--accent));border-radius:999px}
 .placeholder{padding:1rem;border:2px dashed var(--line);border-radius:12px;color:var(--muted)}
-.card--seen .card__tag::after{content:" · vu"}
+.carte__sources{margin-top:1.5rem;padding-top:.75rem;border-top:1px solid var(--line);font-size:.75rem;color:var(--muted)}
+.carte__sources p{margin:0 0 .25rem}
+.carte__sources ul{margin:0;padding-left:1rem}
 .card__img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:center 55%;border-radius:12px;margin-bottom:.5rem;background:#08140d;-webkit-mask-image:linear-gradient(#000 78%,transparent);mask-image:linear-gradient(#000 78%,transparent)}
 .card--tint{border-color:color-mix(in srgb,var(--tint) 35%,transparent);background:linear-gradient(160deg,color-mix(in srgb,var(--tint) 14%,rgb(10 22 15 / .8)),rgb(9 20 14 / .8))}
 .carte--tint{background:linear-gradient(160deg,color-mix(in srgb,var(--tint) 14%,rgb(10 22 15 / .85)),rgb(9 20 14 / .85));border:1px solid color-mix(in srgb,var(--tint) 35%,transparent);border-radius:var(--radius);padding:1.25rem;box-shadow:0 0 50px color-mix(in srgb,var(--tint) 14%,transparent)}
@@ -126,7 +127,7 @@ h2{font-family:var(--font-title);font-size:1.35rem;margin:2rem 0 .75rem}
   .cards{grid-template-columns:repeat(2,1fr)}
   main{padding-top:1rem}
   .carte--tint{padding:1.75rem}
-  .hero--visuel{padding:5rem 2.5rem 2.5rem}
+  .hero--visuel{padding:3.5rem 2.5rem 2rem}
   .hero--visuel::before{background-image:url(/assets/img/hero-feuille.webp)}
 }
 @media (min-width:75rem){main{max-width:64rem}.cards{grid-template-columns:repeat(3,1fr)}.cards--4{grid-template-columns:repeat(4,1fr)}}

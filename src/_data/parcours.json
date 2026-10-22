@@ -3,42 +3,95 @@
     "slug": "pourquoi",
     "titre": "Pourquoi",
     "resume": "L'impact de l'IA, avec des chiffres sourcés et leurs limites.",
-    "image": "/assets/img/pourquoi.webp"
+    "image": "/assets/img/pourquoi.webp",
+    "paragraphes": [
+      "Les centres de données ont consommé environ 415 TWh en 2024, soit environ 1,5&nbsp;% de l'électricité mondiale.",
+      "En 2025, leur consommation a augmenté de 17&nbsp;%, alors que la demande mondiale d'électricité a crû d'environ 3&nbsp;%. L'AIE prévoit un doublement d'ici 2030, soit environ 945 TWh.",
+      "Ces chiffres concernent les centres de données, pas l'IA seule : l'AIE ne donne pas de part distincte pour l'IA."
+    ],
+    "sources": ["AIE, « Energy and AI », 2025", "AIE, « Key Questions on Energy and AI », avril 2026"]
+  },
+  {
+    "slug": "ia-locale",
+    "titre": "L'IA locale",
+    "resume": "Ce qu'est une IA locale, et ce qu'elle change pour vos données.",
+    "image": "/assets/img/outils.webp",
+    "paragraphes": [
+      "Une IA locale est un modèle qui fonctionne sur votre ordinateur ou sur votre réseau, sans envoyer vos textes à un service distant.",
+      "Une IA en ligne fonctionne à l'inverse : votre requête part vers des serveurs appartenant à un fournisseur.",
+      "Vos données restent chez vous. En contrepartie, une IA locale dépend de la puissance de votre machine."
+    ],
+    "sources": []
   },
   {
     "slug": "leviers",
     "titre": "Les leviers",
     "resume": "Modèles modestes, IA locale, sobriété d'usage.",
-    "image": "/assets/img/leviers.webp"
+    "image": "/assets/img/leviers.webp",
+    "paragraphes": [
+      "Les acteurs de l'IA publient peu leur empreinte environnementale, surtout pour l'usage courant.",
+      "Une requête texte typique consommerait environ 0,3 Wh selon Epoch AI (fourchette de 0,1 à 4 Wh). OpenAI a annoncé environ 0,34 Wh en juin 2025. Ce sont des ordres de grandeur, pas des mesures vérifiables.",
+      "Trois leviers : choisir un modèle adapté à la tâche, utiliser une IA locale quand c'est possible, et limiter les requêtes inutiles."
+    ],
+    "sources": ["Arcep, « IA générative : quels défis environnementaux ? », 21 mai 2026", "Epoch AI, « How much energy does ChatGPT use? », 7 février 2025"]
   },
   {
     "slug": "donnees",
     "titre": "Données et souveraineté",
     "resume": "RGPD et IA locale open source.",
-    "image": "/assets/img/donnees.webp"
+    "image": "/assets/img/donnees.webp",
+    "paragraphes": [
+      "Un service d'IA en ligne reçoit vos textes et vos fichiers sur des serveurs que vous ne contrôlez pas. Le RGPD s'applique au traitement des données de personnes situées dans l'Union européenne, même lorsque le service est établi hors de l'UE.",
+      "Le Manifeste de Vienne sur l'humanisme numérique demande de façonner la technologie selon les valeurs et les besoins humains, plutôt que de laisser la technologie façonner les personnes. Protéger ses données, c'est garder la maîtrise de ce qui vous concerne.",
+      "Une IA locale fonctionne sur votre machine ou votre réseau : les données restent chez vous."
+    ],
+    "sources": ["Règlement (UE) 2016/679 (RGPD), article 3", "CEPD, lignes directrices 3/2018 sur le champ d'application territorial", "TU Wien, Vienna Manifesto on Digital Humanism, 2019"]
   },
   {
     "slug": "garder-la-main",
     "titre": "Garder la main",
     "resume": "L'humain décide : vérifier, garder son esprit critique.",
-    "image": "/assets/img/garder-la-main.webp"
+    "image": "/assets/img/garder-la-main.webp",
+    "paragraphes": [
+      "L'humanisme numérique considère l'IA comme un outil qui doit renforcer l'autonomie, la dignité et le jugement humains, sans les remplacer.",
+      "L'IA propose, l'humain décide. Pour les décisions à fort impact (emploi, santé, justice, éducation, crédit, services publics), une supervision humaine reste nécessaire.",
+      "Vérifiez les affirmations importantes avant de les reprendre. Demandez à l'IA ses objections, ses incertitudes et ses contre-exemples. Gardez des moments de réflexion sans IA."
+    ],
+    "sources": ["UNESCO, Recommandation sur l'éthique de l'intelligence artificielle, 2021", "TU Wien, Vienna Manifesto on Digital Humanism, 2019"]
   },
   {
     "slug": "essayer",
     "titre": "Essayer",
     "resume": "Une méthode en 3 étapes et la recette du prompt.",
-    "image": "/assets/img/essayer.webp"
+    "image": "/assets/img/essayer.webp",
+    "paragraphes": [
+      "Méthode en trois étapes : 1. définir le besoin réel avant d'utiliser l'IA ; 2. demander une réponse courte, avec ses limites ; 3. vérifier, puis décider soi-même.",
+      "Recette du prompt : donnez le contexte, la tâche attendue, les contraintes, puis ajoutez : « Quelles sont les limites de ta réponse ? »",
+      "Utilisez l'IA comme contradicteur, pas seulement comme validateur : demandez-lui ce qui pourrait être faux dans votre idée."
+    ],
+    "sources": []
   },
   {
     "slug": "outils",
     "titre": "Les outils",
     "resume": "Vibe-Mistral, Ollama, Qwen-Image.",
-    "image": "/assets/img/outils.webp"
+    "image": "/assets/img/outils.webp",
+    "paragraphes": [
+      "Ollama permet de faire tourner des modèles ouverts sur votre machine.",
+      "Qwen-Image génère des images à partir d'une description.",
+      "Vibe-Mistral : [description à rédiger avec vous]."
+    ],
+    "sources": []
   },
   {
     "slug": "aller-plus-loin",
     "titre": "Aller plus loin",
     "resume": "Formations et contact.",
-    "image": "/assets/img/aller-plus-loin.webp"
+    "image": "/assets/img/aller-plus-loin.webp",
+    "paragraphes": [
+      "Pour approfondir, la page Se former présente les formations proposées.",
+      "Une question sur ce parcours ? Écrivez-nous depuis la page À propos."
+    ],
+    "sources": []
   }
 ]
