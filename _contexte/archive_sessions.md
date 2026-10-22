@@ -44,3 +44,28 @@ Lire la réponse à la question 4 de l'artefact, ajuster si besoin, valider la d
 
 ## Question bloquante pour la session suivante
 Aucune
+
+---
+# Session du 2026-10-22
+
+## Décisions prises
+- Thème C validé (sombre, feuille-circuit, vert néon, particules) ; mode sombre uniquement.
+- Titre du site : « IA éco-responsable et humaniste ».
+- Arborescence : Comprendre (parcours en 7 cartes, ajout « Garder la main »), Fiches, Quiz ; Explorer supprimé ; Se former en carte d'accueil et pied de page ; Sources, Glossaire, À propos en pied.
+- Peu de texte sur le site ; aucun rythme de fiches annoncé ; logo en pied de page.
+
+## Livrables produits ou modifiés
+- `src/`, CSS thème C, 16 pages (fiches, quiz, glossaire, sources, à propos), 10 illustrations, hero, logo : créés ou modifiés ; tests OK
+- `run.py`, `scripts/gen_theme_c.py`, `scripts/gen_propositions.py`, `scripts/build_revue.js`, `humanisme_numerique_ia.md`, `tests_manuels.md` : créés ou modifiés
+- Artefact de revue republié (v19) ; commentaires traités
+
+## Hypothèses validées / invalidées
+- VALIDE : budget de poids (4 à 5 Ko par page hors polices) ; rendu mobile et PC contrôlé à l'écran (accueil, fiche, parcours, carte 4).
+- INVALIDE : titre du hero sur une ligne en mobile -> deux lignes ; document humanisme : source 6 datée 2026 (en fait 2025), principe 6 attribué au Manifeste.
+- EN ATTENTE : quiz, glossaire, page Sources, animations sur téléphone réel ; formule officielle ; bloc « Un principe ».
+
+## Prochaine étape exacte
+Faire valider les décisions de la refonte humanisme et corriger le document, puis construire « Notre approche », les thèmes de fiches et le quiz à deux axes.
+
+## Question bloquante pour la session suivante
+Votre formule (« Une IA humaniste est une IA au service de l'autonomie humaine… ») devient-elle la définition officielle du site ?

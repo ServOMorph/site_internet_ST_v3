@@ -1,5 +1,14 @@
 # Changelog
 
+## v0.5 — 2026-10-22
+
+### Ajouté
+- Accueil : carte « En pratique » (remplace « Dernière fiche ») et cartes pleine largeur « Actualités » et « Événements » ; pages `/en-pratique/`, `/actualites/`, `/evenements/` (« Contenu à venir ») ; 3 illustrations Qwen du thème C (`scripts/gen_theme_c.py`).
+
+### Modifié
+- Hero de l'accueil : hauteur adaptée au texte (hauteur minimale supprimée).
+- Artefact de revue republié (version 20) ; `roadmap_portail_ia.md` et `tests_manuels.md` mis à jour.
+
 ## v0.4 — 2026-10-22
 
 ### Ajouté

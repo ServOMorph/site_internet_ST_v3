@@ -12,4 +12,4 @@
 - Sur un navigateur compatible, vérifier que le passage d'une page à l'autre est fluide (`@view-transition`).
 
 ## Arborescence
-- Parcourir Accueil, Comprendre, Fiches, Quiz et les liens du pied de page (Sources, Glossaire, À propos, Se former) ; vérifier que rien ne manque ou ne prête à confusion.
+- Parcourir Accueil (dont les cartes En pratique, Actualités et Événements, sur téléphone réel), Comprendre, Fiches, Quiz et les liens du pied de page (Sources, Glossaire, À propos, Se former) ; vérifier que rien ne manque ou ne prête à confusion.

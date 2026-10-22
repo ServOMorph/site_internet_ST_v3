@@ -22,6 +22,7 @@ Attendre sa réponse écrite. Ne pas commencer la phase suivante sans confirmati
 - [x] Socle 11ty, gabarit mobile-first, navigation type appli (cartes, transitions CSS)
 - [x] Direction visuelle : thème C (sombre, feuille-circuit, vert néon, illustrations Qwen, particules CSS) validé par l'utilisateur le 2026-10-22, mode sombre uniquement
 - [x] Arborescence refondue : Comprendre (7 cartes dont « Garder la main »), Fiches, Quiz, Sources, Glossaire, À propos ; Explorer supprimé ; titre « IA éco-responsable et humaniste »
+- [x] Accueil : carte « En pratique », cartes pleine largeur « Actualités » et « Événements » (pages vides), validé par l'utilisateur le 2026-10-22
 - [ ] Refonte humanisme numérique : page « Notre approche », étiquettes de thème des fiches, bloc « Un principe », quiz à deux axes, glossaire enrichi (décisions en attente, voir `signals.md`)
 - [x] Tests : build, poids de page, HTML lisible sans JavaScript (`scripts/test_phase2.js`) ; rendu mobile / PC vu avec Playwright ; contrôles visuels restants dans `tests_manuels.md`
 
@@ -33,7 +34,8 @@ Attendre sa réponse écrite. Ne pas commencer la phase suivante sans confirmati
 ## Phase 3 — Contenus réécrits [TODO]
 - [ ] Textes écrits avec l'utilisateur, faits validés un par un
 - [ ] Reprise du contenu V2 réorganisé (formations, services, ressources, portfolio, fiches, événement) ; peu de texte, textes courts
-- [ ] Événement « 1 jour moins numérique » (8 nov. 2026) : date, lieu, titre, avec accord du client
+- [ ] Sections « En pratique » (pratiques de SérénIATech, fournies par l'utilisateur), « Actualités » (veille à mettre en place) et « Événements » : gabarit d'entrée, contenus réels uniquement
+- [ ] Événement « 1 jour moins numérique » (8 nov. 2026) dans `/evenements/` : date, lieu, titre, avec accord du client
 - [ ] Reprendre tarifs de formation, mention OPCO et témoignage Réseau Toiles (validés le 2026-10-17, voir `_contexte/contexte.md`) ; autres prestations « sur devis »
 - [ ] Chiffres sur l'impact énergétique : sources retenues dans `_contexte/archive_decisions.md` et page Sources du site (AIE, Arcep, Epoch AI), citées avec date et limites
 - [ ] Tests : liens internes, SEO de base, JSON-LD, accessibilité

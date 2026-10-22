@@ -7,9 +7,9 @@ Portail vers l'IA éco-responsable et humaniste pour serenia-tech.fr : un site q
 Stack de diffusion conservée : 11ty (site statique), HTML/CSS/JS, Express sur Render (contact), Vercel. Équilibre à trouver entre immersion (appli) et référencement classique + moteurs IA. Pas de PWA prévue. Mobile-first puis PC/télé.
 
 ## État actuel (réécrit intégralement à chaque /close)
-Phase 2 en cours (socle et maquette) : thème C validé (sombre, feuille-circuit), 16 pages buildées (Accueil, Comprendre en 7 cartes, Fiches, Quiz, Glossaire, Sources, À propos, Se former), tests `scripts/test_phase2.js` OK, artefact de revue en version 19.
-Titre du site « IA éco-responsable et humaniste » ; peu de texte voulu, aucun rythme de fiches annoncé. Textes non définitifs (phase 3).
-Refonte humanisme numérique en attente de décisions (formule officielle, bloc « Un principe ») et de la correction de `humanisme_numerique_ia.md`.
+Phase 2 en cours (socle et maquette) : thème C et accueil validés (cartes Comprendre, En pratique, Quiz, Se former, puis Actualités et Événements pleine largeur), 20 pages buildées, tests `scripts/test_phase2.js` OK, artefact de revue en version 20.
+Titre du site « IA éco-responsable et humaniste » ; peu de texte voulu. Pages En pratique, Actualités et Événements vides (« Contenu à venir ») ; textes non définitifs (phase 3).
+Refonte humanisme numérique en attente de décisions (formule officielle, bloc « Un principe ») et de la correction de `humanisme_numerique_ia.md` ; nom de la section « Fiches » à trancher.
 Contrôles manuels sur téléphone réel restants (`tests_manuels.md`).
 
 ## Décisions structurantes (append only — 10 entrées max, 5 lignes max/entrée, archiver au-delà)
@@ -22,3 +22,4 @@ Contrôles manuels sur téléphone réel restants (`tests_manuels.md`).
 - 2026-10-22 : Thème C validé : sombre uniquement, feuille-circuit, vert néon, particules CSS, illustrations Qwen sur fond sombre (`scripts/gen_theme_c.py`). Titre du site : « IA éco-responsable et humaniste ». Principes éditoriaux : peu de texte, aucun rythme de fiches annoncé sur le site.
 - 2026-10-22 : Arborescence refondue (but référence, public grand public) : Comprendre (`/parcours/`, 7 cartes dont « Garder la main », page réduite au bouton Commencer), Fiches (6 par page), Quiz, Sources et méthode, Glossaire, À propos ; Explorer supprimé ; Se former en carte d'accueil et en pied ; logo V2 en pied de page.
 - 2026-10-22 : Humanisme numérique : `humanisme_numerique_ia.md` importé. Vérifiés par lecture : Manifeste de Vienne (mai 2019, citation exacte), UNESCO (nov. 2021). À corriger : source 6 (conférence 2025), principe 6, phrase « grand public ». Refonte (page « Notre approche », thèmes de fiches, quiz à deux axes) en attente de validation.
+- 2026-10-22 (suite) : Accueil : carte « En pratique » (pratiques de SérénIATech) remplace « Dernière fiche » ; cartes pleine largeur « Actualités » et « Événements » sous la grille (pages `/en-pratique/`, `/actualites/`, `/evenements/` créées vides, aucun contenu inventé). Fiches reste en navigation sans carte d'accueil ; le mot « fiche » déplaît (renommage à trancher, « Questions » proposé). Veille d'actualité à mettre en place plus tard.

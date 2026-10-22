@@ -19,7 +19,7 @@ Un site façon appli (cartes à toucher, animations, parcours guidé) pour déco
 - Ancien travail : branche `archive/v3-direction-b`
 
 ## État actuel
-Phase 2 en cours (socle et maquette) : thème C validé (sombre, feuille-circuit), 16 pages buildées (Accueil, Comprendre en 7 cartes, Fiches, Quiz, Glossaire, Sources, À propos, Se former). Refonte humanisme numérique en attente de décisions. Textes non définitifs (phase 3).
+Phase 2 en cours (socle et maquette) : thème C et accueil validés, 20 pages buildées (Accueil, Comprendre en 7 cartes, Fiches, Quiz, En pratique, Actualités, Événements, Glossaire, Sources, À propos, Se former ; les trois nouvelles sections sont vides). Refonte humanisme numérique en attente de décisions. Textes non définitifs (phase 3).
 
 ## Commandes
 - `python run.py` : serveur local avec rechargement automatique, ouvre le navigateur sur http://localhost:8765/
