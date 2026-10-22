@@ -1,11 +1,13 @@
 ---
 layout: base.njk
 titre: "Parcours guidé"
-description: "Parcours guidé en 6 cartes pour comprendre l'IA éco-responsable."
+description: "Parcours guidé pour comprendre l'IA éco-responsable et humaniste : impact, leviers, données, esprit critique."
 section: parcours
 ---
 <section class="hero hero--commencer">
   <p class="eyebrow">Comprendre · parcours guidé</p>
-  <h1>Comprendre l'IA éco-responsable</h1>
-  <p><a class="btn" href="/parcours/{{ parcours[0].slug }}/" data-resume data-slugs="{% for c in parcours %}{{ c.slug }}{% if not loop.last %},{% endif %}{% endfor %}">Commencer</a></p>
+  <h1>Comprendre l'IA <span style="white-space:nowrap">éco-responsable</span> et humaniste</h1>
 </section>
+<ul class="cards">
+  {% for c in parcours %}<li><a class="card" href="/parcours/{{ c.slug }}/"><img class="card__img" src="{{ c.image }}" alt="" width="480" height="480" loading="lazy"><span class="card__title">{{ c.titre }}</span></a></li>
+  {% endfor %}</ul>

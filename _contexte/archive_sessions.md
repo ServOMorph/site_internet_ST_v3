@@ -69,3 +69,27 @@ Faire valider les décisions de la refonte humanisme et corriger le document, pu
 
 ## Question bloquante pour la session suivante
 Votre formule (« Une IA humaniste est une IA au service de l'autonomie humaine… ») devient-elle la définition officielle du site ?
+
+---
+
+# Session du 2026-10-22
+
+## Décisions prises
+- Accueil : la carte « Dernière fiche » devient « En pratique » (pratiques de SérénIATech) ; deux cartes pleine largeur « Actualités » et « Événements » (hauteur 7 rem, image à gauche) sous la grille ; accueil validé par l'utilisateur.
+- Fiches reste dans la navigation, sans carte d'accueil ; le mot « fiche » déplaît à l'utilisateur (renommage à trancher).
+- Veille d'actualité à mettre en place plus tard ; hero : hauteur minimale supprimée (hauteur = texte).
+
+## Livrables produits ou modifiés
+- `src/index.njk`, `src/assets/css/app.css`, `scripts/gen_theme_c.py` : modifiés ; `src/en-pratique/`, `src/actualites/`, `src/evenements/` (pages « Contenu à venir ») et 3 images Qwen (`en-pratique`, `actualites`, `evenements`) : créés ; tests OK (20 pages)
+- Artefact de revue republié (version 20) ; `roadmap_portail_ia.md`, `tests_manuels.md` : mis à jour
+
+## Hypothèses validées / invalidées
+- VALIDE : accueil et images validés à l'écran par l'utilisateur ; `scripts/test_phase2.js` OK.
+- INVALIDE : « En pratique » comme nouveau nom de la section Fiches (contenu différent) -> section dédiée aux pratiques.
+- EN ATTENTE : nom de la section « Fiches » ; formule officielle ; contenus des trois nouvelles sections ; contrôles sur téléphone réel.
+
+## Prochaine étape exacte
+Faire valider la formule officielle et corriger `humanisme_numerique_ia.md`, trancher le nom de « Fiches », puis construire « Notre approche », les thèmes de fiches et le quiz à deux axes.
+
+## Question bloquante pour la session suivante
+Votre formule (« Une IA humaniste est une IA au service de l'autonomie humaine… ») devient-elle la définition officielle du site ?

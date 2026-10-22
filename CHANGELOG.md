@@ -1,5 +1,19 @@
 # Changelog
 
+## v0.6 — 2026-10-22
+
+### Ajouté
+- Comprendre : carte « L'IA locale » en position 2 (parcours à 8 cartes), textes en brouillon pour les 8 cartes (éco-responsabilité et humanisme numérique, sources AIE, Arcep, Epoch AI, RGPD, Manifeste de Vienne, UNESCO) dans `src/_data/parcours.json` ; page sommaire = liste des cartes.
+- Bloc « Sources » en petit, une source par ligne, séparé par un filet, sous chaque carte.
+
+### Modifié
+- En-tête aligné sur l'accueil : Accueil, Comprendre, En pratique, Quiz, Actualités, Événements (Fiches retirée de la navigation).
+- Accueil : hero sans boutons et moins haut ; chiffre : 415 TWh (2024), +17 % (2025), doublement d'ici 2030 (AIE, avril 2026) ; page Sources complétée. Titre de Comprendre : « … éco-responsable et humaniste ».
+- `scripts/build_revue.js` : libellés des 8 cartes.
+
+### Supprimé
+- Suivi du parcours en local (`app.js`, « Reprendre », marque « vu ») et bouton « Commencer ».
+
 ## v0.5 — 2026-10-22
 
 ### Ajouté

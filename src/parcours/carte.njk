@@ -11,13 +11,17 @@ eleventyComputed:
   description: "{{ carte.resume }}"
 ---
 {% set i = pagination.pageNumber %}
-<article class="carte carte--tint" style="--tint:var(--c-{{ carte.slug }})" data-card="{{ carte.slug }}">
+<article class="carte carte--tint" style="--tint:var(--c-{{ carte.slug }})">
   <img class="carte__img" src="{{ carte.image }}" alt="" width="480" height="480">
   <p class="eyebrow">Carte {{ i + 1 }} sur {{ parcours | length }}</p>
   <progress max="{{ parcours | length }}" value="{{ i + 1 }}" aria-label="Progression du parcours"></progress>
   <h1>{{ carte.titre }}</h1>
   <p class="lead">{{ carte.resume }}</p>
-  <p class="placeholder">Maquette : le texte de cette carte sera rédigé en phase 3.</p>
+  {% for p in carte.paragraphes %}<p>{{ p | safe }}</p>
+  {% endfor %}{% if carte.sources | length %}<div class="carte__sources">
+    <p>Sources :</p>
+    <ul>{% for s in carte.sources %}<li>{{ s }}</li>{% endfor %}</ul>
+  </div>{% endif %}
   <nav class="pager" aria-label="Navigation du parcours">
     {% if i > 0 %}<a class="btn btn--ghost" href="/parcours/{{ parcours[i - 1].slug }}/" rel="prev">Précédent</a>{% else %}<a class="btn btn--ghost" href="/parcours/">Sommaire</a>{% endif %}
     {% if i < (parcours | length) - 1 %}<a class="btn" href="/parcours/{{ parcours[i + 1].slug }}/" rel="next">Suivant</a>{% else %}<a class="btn" href="/se-former/">Voir les formations</a>{% endif %}

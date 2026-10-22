@@ -11,7 +11,6 @@
 <link rel="icon" type="image/png" href="/assets/img/logo.png">
 <link rel="preload" href="/assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/app.css">
-<script src="/assets/js/app.js" defer></script>
 </head>
 <body data-section="{{ section }}">
 <a class="skip" href="#contenu">Aller au contenu</a>
@@ -20,8 +19,10 @@
   <nav class="nav" aria-label="Navigation principale">
     <a href="/"{% if section == "accueil" %} aria-current="page"{% endif %}>Accueil</a>
     <a href="/parcours/"{% if section == "parcours" %} aria-current="page"{% endif %}>Comprendre</a>
-    <a href="/fiches/"{% if section == "fiches" %} aria-current="page"{% endif %}>Fiches</a>
+    <a href="/en-pratique/"{% if section == "en-pratique" %} aria-current="page"{% endif %}>En pratique</a>
     <a href="/quiz/"{% if section == "quiz" %} aria-current="page"{% endif %}>Quiz</a>
+    <a href="/actualites/"{% if section == "actualites" %} aria-current="page"{% endif %}>Actualités</a>
+    <a href="/evenements/"{% if section == "evenements" %} aria-current="page"{% endif %}>Événements</a>
   </nav>
 </header>
 <main id="contenu">
