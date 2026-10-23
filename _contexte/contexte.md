@@ -8,8 +8,8 @@ Stack de diffusion conservée : 11ty (site statique), HTML/CSS/JS, Express sur R
 
 ## État actuel (réécrit intégralement à chaque /close)
 Phase 2 en cours (socle et maquette) : thème C et accueil validés ; en-tête aligné sur l'accueil (Accueil, Comprendre, En pratique, Quiz, Actualités, Événements) ; 21 pages buildées, tests `scripts/test_phase2.js` OK.
-Comprendre : 8 cartes (éco-responsabilité et humanisme numérique, « L'IA locale » en carte 2), textes en brouillon dans `src/_data/parcours.json`, relecture de l'utilisateur en cours ; sources en petit sous chaque carte ; suivi local du parcours supprimé.
-Chiffre d'accueil mis à jour (AIE : 415 TWh en 2024, +17 % en 2025, doublement d'ici 2030), +17 % recoupé par la presse, non lu sur iea.org.
+Comprendre : 8 cartes (éco-responsabilité et humanisme numérique, « L'IA locale » en carte 2), textes en brouillon dans `src/_data/parcours.json`, relecture de l'utilisateur en cours (cartes 1, 4, 6, 7, 8 retouchées le 2026-10-23 : comparaisons Allemagne et Japon, RGPD défini, outils Ollama / ComfyUI / Vibe-Mistral avec liens, sites de référence en carte 8) ; sources en petit sous chaque carte.
+Chiffre d'accueil (AIE : 415 TWh en 2024, +17 % en 2025, doublement d'ici 2030), +17 % recoupé par la presse, non lu sur iea.org.
 En attente : formule officielle humaniste, nom de « Fiches », contenus d'En pratique, Actualités et Événements (pages vides), contrôles sur téléphone réel.
 
 ## Décisions structurantes (append only — 10 entrées max, 5 lignes max/entrée, archiver au-delà)

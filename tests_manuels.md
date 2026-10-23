@@ -11,6 +11,11 @@
 - Page Comprendre : titre « Comprendre l'IA éco-responsable et humaniste » avec « éco-responsable » sur une seule ligne ; liste des 8 cartes.
 - Cartes du parcours : bloc « Sources » en petit sous un filet, une source par ligne ; Précédent / Suivant / Sommaire ; lecture des textes en brouillon (retour de l'utilisateur en cours).
 
+## Liens et mise en forme des cartes (téléphone réel)
+- Carte 7 : ouvrir les liens Ollama, ComfyUI et Vibe-Mistral (`chat.mistral.ai`) et vérifier qu'ils mènent aux bons sites.
+- Carte 8 : ouvrir les liens Se former, À propos (ancre `#contact`), Arcep, CNIL, UNESCO et TU Wien ; lisibilité de la liste de sites séparés par des retours à la ligne.
+- Carte 6 : les trois étapes de la méthode s'affichent chacune sur leur ligne.
+
 ## Quiz
 - Sur un téléphone et un navigateur de bureau : le conseil s'affiche au choix d'une réponse, la navigation au clavier fonctionne (focus visible).
 

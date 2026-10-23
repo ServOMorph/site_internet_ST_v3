@@ -5,11 +5,11 @@
     "resume": "L'impact de l'IA, avec des chiffres sourcés et leurs limites.",
     "image": "/assets/img/pourquoi.webp",
     "paragraphes": [
-      "Les centres de données ont consommé environ 415 TWh en 2024, soit environ 1,5&nbsp;% de l'électricité mondiale.",
-      "En 2025, leur consommation a augmenté de 17&nbsp;%, alors que la demande mondiale d'électricité a crû d'environ 3&nbsp;%. L'AIE prévoit un doublement d'ici 2030, soit environ 945 TWh.",
+      "Les centres de données ont consommé environ 415 TWh en 2024, soit environ 1,5&nbsp;% de l'électricité mondiale et environ les quatre cinquièmes de la consommation brute d'électricité de l'Allemagne en 2024 (environ 512 TWh).",
+      "En 2025, leur consommation a augmenté de 17&nbsp;%, alors que la demande mondiale d'électricité a crû d'environ 3&nbsp;%. L'AIE prévoit un doublement d'ici 2030, soit environ 945 TWh, un peu plus que la consommation électrique actuelle du Japon.",
       "Ces chiffres concernent les centres de données, pas l'IA seule : l'AIE ne donne pas de part distincte pour l'IA."
     ],
-    "sources": ["AIE, « Energy and AI », 2025", "AIE, « Key Questions on Energy and AI », avril 2026"]
+    "sources": ["AIE, « Energy and AI », 2025", "AIE, « Key Questions on Energy and AI », avril 2026", "BDEW, consommation brute d'électricité en Allemagne, 2024 (estimation préliminaire)"]
   },
   {
     "slug": "ia-locale",
@@ -41,7 +41,7 @@
     "resume": "RGPD et IA locale open source.",
     "image": "/assets/img/donnees.webp",
     "paragraphes": [
-      "Un service d'IA en ligne reçoit vos textes et vos fichiers sur des serveurs que vous ne contrôlez pas. Le RGPD s'applique au traitement des données de personnes situées dans l'Union européenne, même lorsque le service est établi hors de l'UE.",
+      "Un service d'IA en ligne reçoit vos textes et vos fichiers sur des serveurs que vous ne contrôlez pas. Le RGPD (Règlement général sur la protection des données) est le règlement européen qui encadre l'usage des données personnelles. Il s'applique au traitement des données de personnes situées dans l'Union européenne, même lorsque le service est établi hors de l'UE.",
       "Le Manifeste de Vienne sur l'humanisme numérique demande de façonner la technologie selon les valeurs et les besoins humains, plutôt que de laisser la technologie façonner les personnes. Protéger ses données, c'est garder la maîtrise de ce qui vous concerne.",
       "Une IA locale fonctionne sur votre machine ou votre réseau : les données restent chez vous."
     ],
@@ -65,7 +65,8 @@
     "resume": "Une méthode en 3 étapes et la recette du prompt.",
     "image": "/assets/img/essayer.webp",
     "paragraphes": [
-      "Méthode en trois étapes : 1. définir le besoin réel avant d'utiliser l'IA ; 2. demander une réponse courte, avec ses limites ; 3. vérifier, puis décider soi-même.",
+      "Méthode en trois étapes :<br>1. définir le besoin réel avant d'utiliser l'IA ;<br>2. demander une réponse courte, avec ses limites ;<br>3. vérifier, puis décider soi-même.",
+      "Rédiger d'abord votre demande dans un bloc-notes, avant de l'envoyer à l'IA, peut vous aider à rester maître de la démarche. Cela permet aussi de constater, parfois, que vous n'avez pas besoin de l'IA.",
       "Recette du prompt : donnez le contexte, la tâche attendue, les contraintes, puis ajoutez : « Quelles sont les limites de ta réponse ? »",
       "Utilisez l'IA comme contradicteur, pas seulement comme validateur : demandez-lui ce qui pourrait être faux dans votre idée."
     ],
@@ -74,12 +75,12 @@
   {
     "slug": "outils",
     "titre": "Les outils",
-    "resume": "Vibe-Mistral, Ollama, Qwen-Image.",
+    "resume": "Ollama, ComfyUI, Vibe-Mistral.",
     "image": "/assets/img/outils.webp",
     "paragraphes": [
-      "Ollama permet de faire tourner des modèles ouverts sur votre machine.",
-      "Qwen-Image génère des images à partir d'une description.",
-      "Vibe-Mistral : [description à rédiger avec vous]."
+      "<a href=\"https://ollama.com\" rel=\"noopener\">Ollama</a> permet de faire tourner des modèles de chat ouverts sur votre machine.",
+      "<a href=\"https://www.comfy.org\" rel=\"noopener\">ComfyUI</a> permet de faire tourner des modèles de génération d'images et de musique sur votre machine.",
+      "Si vous devez utiliser un chat plutôt qu'une IA locale, <a href=\"https://chat.mistral.ai\" rel=\"noopener\">Vibe-Mistral</a> est une IA française."
     ],
     "sources": []
   },
@@ -89,8 +90,9 @@
     "resume": "Formations et contact.",
     "image": "/assets/img/aller-plus-loin.webp",
     "paragraphes": [
-      "Pour approfondir, la page Se former présente les formations proposées.",
-      "Une question sur ce parcours ? Écrivez-nous depuis la page À propos."
+      "Pour approfondir, la page <a href=\"/se-former/\">Se former</a> présente les formations proposées.",
+      "Pour approfondir, sur des sites de référence :<br><a href=\"https://www.arcep.fr/la-regulation/grands-dossiers-thematiques-transverses/lempreinte-environnementale-du-numerique/le-rapport-intelligence-artificielle-generative-quels-defis-environnementaux.html\" rel=\"noopener\">Arcep, l'IA générative et l'environnement</a><br><a href=\"https://www.cnil.fr/fr/intelligence-artificielle\" rel=\"noopener\">CNIL, l'intelligence artificielle et vos données</a><br><a href=\"https://www.unesco.org/fr/artificial-intelligence/recommendation-ethics\" rel=\"noopener\">UNESCO, l'éthique de l'intelligence artificielle</a><br><a href=\"https://dighum.ec.tuwien.ac.at/dighum-manifesto\" rel=\"noopener\">TU Wien, le Manifeste de Vienne sur l'humanisme numérique (en anglais)</a>",
+      "Une question sur ce parcours ? Écrivez-nous depuis la page <a href=\"/a-propos/#contact\">À propos</a>."
     ],
     "sources": []
   }

@@ -93,3 +93,26 @@ Faire valider la formule officielle et corriger `humanisme_numerique_ia.md`, tra
 
 ## Question bloquante pour la session suivante
 Votre formule (« Une IA humaniste est une IA au service de l'autonomie humaine… ») devient-elle la définition officielle du site ?
+
+---
+# Session du 2026-10-22
+
+## Décisions prises
+- En-tête aligné sur l'accueil : Accueil, Comprendre, En pratique, Quiz, Actualités, Événements ; Fiches retirée de la navigation, Se former reste en pied de page.
+- Comprendre passe à 8 cartes (ajout « L'IA locale » en 2e position, avant la première mention) ; textes éco-responsabilité et humanisme numérique en brouillon dans `src/_data/parcours.json` ; sources en petit, une par ligne, sous un filet.
+- Suivi du parcours en local (« Reprendre », « vu ») et bouton « Commencer » supprimés ; page sommaire = liste des cartes ; titre « … éco-responsable et humaniste ».
+- Accueil : hero sans boutons et moins haut ; chiffre d'accueil = AIE 415 TWh (2024), +17 % (2025), doublement d'ici 2030 ; 485 TWh non repris.
+
+## Livrables produits ou modifiés
+- `src/_includes/base.njk`, `src/index.njk`, `src/assets/css/app.css`, `src/sources/index.njk`, `src/parcours/index.njk`, `src/parcours/carte.njk`, `src/_data/parcours.json`, `scripts/build_revue.js` : modifiés ; `src/assets/js/app.js` : supprimé ; tests OK (21 pages)
+- Artefact de revue republié (version 21) ; `roadmap_portail_ia.md`, `tests_manuels.md`, `README.md`, `CHANGELOG.md` (v0.6) : mis à jour
+
+## Hypothèses validées / invalidées
+- VALIDE : Manifeste de Vienne (phrase exacte), 415 TWh et 945 TWh (AIE 2025), 0,3 Wh (Epoch AI) recoupés par recherche web ; `scripts/test_phase2.js` OK.
+- EN ATTENTE : +17 % (2025) non lu sur iea.org ; textes des cartes 3 à 8 à valider par l'utilisateur ; rendu navigateur non vérifié (barre à 6 entrées, sources, titre).
+
+## Prochaine étape exacte
+Recueillir le retour de l'utilisateur sur les cartes 3 à 8 de Comprendre, puis vérifier le +17 % sur iea.org et faire valider la formule officielle humaniste (corriger `humanisme_numerique_ia.md`).
+
+## Question bloquante pour la session suivante
+Votre formule (« Une IA humaniste est une IA au service de l'autonomie humaine… ») devient-elle la définition officielle du site ?

@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.7 — 2026-10-23
+
+### Ajouté
+- Carte « Pourquoi » : comparaisons avec la consommation électrique de l'Allemagne (2024, BDEW) et du Japon (2030, AIE).
+- Carte « Données » : définition du RGPD. Carte « Essayer » : paragraphe sur le bloc-notes avant le prompt.
+- Carte « Aller plus loin » : liens vers Se former et À propos, sites de référence (Arcep, CNIL, UNESCO, TU Wien).
+
+### Modifié
+- Carte « Les outils » : Ollama, ComfyUI et Vibe-Mistral avec liens ; Qwen-Image retiré. Carte « Essayer » : étapes de la méthode sur des lignes séparées.
+
 ## v0.6 — 2026-10-22
 
 ### Ajouté

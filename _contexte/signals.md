@@ -1,8 +1,8 @@
-# Signals — site_st   (MAJ 2026-10-22)
+# Signals — site_st   (MAJ 2026-10-23)
 
 ## Actions ouvertes
-- [P1|ouvert] Recueillir le retour de l'utilisateur sur les cartes 3 à 8 de Comprendre (texte en brouillon dans `src/_data/parcours.json` ; cartes 1 et 2 corrigées, carte « L'IA locale » ajoutée) ; compléter « Vibe-Mistral » (blanc volontaire, aucune description sourcée) ; fournir une illustration dédiée à « L'IA locale » (réutilise `outils.webp`) ; sourcer la définition de l'IA locale si l'utilisateur le veut
-  - fait quand: textes des 8 cartes validés par l'utilisateur, image dédiée en place, plus de blanc « Vibe-Mistral ».
+- [P1|ouvert] Recueillir le retour de l'utilisateur sur les 8 cartes de Comprendre (texte en brouillon dans `src/_data/parcours.json` ; cartes 1, 4, 6, 7 et 8 retouchées le 2026-10-23 à la demande de l'utilisateur, aucune validation formelle exprimée ; cartes 3 et 5 non relues cette session) ; fournir une illustration dédiée à « L'IA locale » (réutilise `outils.webp`) ; sourcer la définition de l'IA locale et les descriptions des outils (carte 7, sans source) si l'utilisateur le veut
+  - fait quand: textes des 8 cartes validés par l'utilisateur, image dédiée en place.
   - réf: `src/_data/parcours.json`, `src/parcours/`, `roadmap_portail_ia.md` Phase 3.
 - [P1|ouvert] Vérifier le +17 % (2025) et le doublement d'ici 2030 sur le communiqué ou le rapport AIE d'avril 2026 sur iea.org (non lu en source primaire : recoupé par la presse, une source donne 15 % et 485 TWh) ; chiffre affiché sur l'accueil, la carte « Pourquoi » et la page Sources
   - fait quand: chiffre lu sur iea.org et confirmé, ou texte corrigé.
@@ -39,34 +39,35 @@
   - réf: `_contexte/archive_decisions.md` (hébergement V2), V2 `render.yaml`, `server.js`.
 
 ## Contexte chaud
-- Artefact de revue du site (URL stable) : https://claude.ai/artifact/J4AEiAdJgip9J1Y6WetTZg (version 21, publiée cette session ; libellés des 8 cartes mis à jour dans `scripts/build_revue.js`). Republier : `npm run build`, `node scripts/build_revue.js`, republier `revue/revue_site.html`. Base commentaires/questions non relue cette session (dernier état connu : 9 commentaires traités, q1 répondue, q3 non répondue).
+- Artefact de revue du site (URL stable) : https://claude.ai/artifact/J4AEiAdJgip9J1Y6WetTZg (version 22, publiée le 2026-10-23, après retouche des cartes 1, 4, 6, 7 et 8). Republier : `npm run build`, `node scripts/build_revue.js`, republier `revue/revue_site.html`. Base commentaires/questions non relue cette session (dernier état connu : 9 commentaires traités, q1 répondue, q3 non répondue).
 - Serveur local : `python run.py` (port fixe 8765, Eleventy en rechargement automatique).
 - Génération d'images : ComfyUI-Qwen sur `http://127.0.0.1:8189` (`D:\ServOMorph\ComfyUI-Qwen`, `lancer.bat`), `scripts/gen_theme_c.py` ; non lancé cette session ; un blocage de 45 min a été observé une fois (VRAM saturée) : redémarrer ComfyUI. Demander avant de lancer.
 - Branche `archive/v3-direction-b` sur `bc53de8`. PNG Qwen non versionnés dans `src/assets/brut/`. `explorer.webp` n'est plus utilisée.
+- Comparaisons de pays (carte 1) : Japon pour 945 TWh en 2030 (phrase AIE lue, résumé WebFetch) ; Allemagne pour 415 TWh en 2024 (environ 512 TWh bruts, estimation préliminaire BDEW lue dans un résumé de recherche, non lue sur bdew.de ; rapport 415/512 calculé par nous, pas par l'AIE). Liens carte 8 : Arcep, CNIL, UNESCO ouverts ; TU Wien et `chat.mistral.ai` (Vibe = Le Chat renommé) non ouverts ; page ADEME en erreur 403, pas de guide grand public trouvé.
 - Logo SéréniaTech repris du V2 (`assets/logo_optimized`), en pied de page et en favicon.
 - Humanisme numérique : sources vérifiées par lecture/recherche = Manifeste de Vienne (mai 2019, phrase « shape technologies… » retrouvée dans la copie TU Wien), UNESCO Recommandation (nov. 2021, supervision humaine confirmée par résumés secondaires, texte officiel non lu cette session). Non vérifiées : phrase de la version grand public, chapitre Springer.
 - Chiffres éco (recoupés par recherche web cette session, sources secondaires) : AIE 415 TWh (2024), environ 945 TWh (2030), +17 % en 2025 contre environ 3 % pour la demande mondiale ; Epoch AI 0,3 Wh ; OpenAI environ 0,34 Wh (juin 2025) ; Arcep (21 mai 2026) : peu de transparence sur l'inférence. Source brésilienne divergente (15 %, 485 TWh) non retenue.
 - V2 reste en ligne jusqu'à la bascule ; il affiche encore les badges « Flux.1 » / « Ollama local » (non modifié, à votre décision). `.env` V2 non lu.
 
-## Dernière session (2026-10-22, session 3)
-# Session du 2026-10-22
+## Dernière session (2026-10-23)
+# Session du 2026-10-23
 
 ## Décisions prises
-- En-tête aligné sur l'accueil : Accueil, Comprendre, En pratique, Quiz, Actualités, Événements ; Fiches retirée de la navigation, Se former reste en pied de page.
-- Comprendre passe à 8 cartes (ajout « L'IA locale » en 2e position, avant la première mention) ; textes éco-responsabilité et humanisme numérique en brouillon dans `src/_data/parcours.json` ; sources en petit, une par ligne, sous un filet.
-- Suivi du parcours en local (« Reprendre », « vu ») et bouton « Commencer » supprimés ; page sommaire = liste des cartes ; titre « … éco-responsable et humaniste ».
-- Accueil : hero sans boutons et moins haut ; chiffre d'accueil = AIE 415 TWh (2024), +17 % (2025), doublement d'ici 2030 ; 485 TWh non repris.
+- Carte 1 « Pourquoi » : comparaisons de pays ajoutées (415 TWh en 2024 = environ les quatre cinquièmes de la consommation brute de l'Allemagne, environ 512 TWh, BDEW ; 945 TWh en 2030 = un peu plus que le Japon, phrase AIE).
+- Carte 4 : définition du RGPD ajoutée. Carte 6 : étapes de la méthode sur des lignes séparées, paragraphe « bloc-notes avant le prompt ».
+- Carte 7 « Les outils » réécrite : Ollama (chat), ComfyUI (images et musique), Vibe-Mistral (chat français) ; Qwen-Image retiré ; liens ajoutés.
+- Carte 8 : liens vers Se former et À propos ; paragraphe de sites de référence (Arcep, CNIL, UNESCO, TU Wien).
 
 ## Livrables produits ou modifiés
-- `src/_includes/base.njk`, `src/index.njk`, `src/assets/css/app.css`, `src/sources/index.njk`, `src/parcours/index.njk`, `src/parcours/carte.njk`, `src/_data/parcours.json`, `scripts/build_revue.js` : modifiés ; `src/assets/js/app.js` : supprimé ; tests OK (21 pages)
-- Artefact de revue republié (version 21) ; `roadmap_portail_ia.md`, `tests_manuels.md`, `README.md`, `CHANGELOG.md` (v0.6) : mis à jour
+- `src/_data/parcours.json` : modifié (cartes 1, 4, 6, 7, 8) ; build et `scripts/test_phase2.js` OK (21 pages)
+- `README.md`, `CHANGELOG.md` (v0.7), `roadmap_portail_ia.md`, `tests_manuels.md` : mis à jour
 
 ## Hypothèses validées / invalidées
-- VALIDE : Manifeste de Vienne (phrase exacte), 415 TWh et 945 TWh (AIE 2025), 0,3 Wh (Epoch AI) recoupés par recherche web ; `scripts/test_phase2.js` OK.
-- EN ATTENTE : +17 % (2025) non lu sur iea.org ; textes des cartes 3 à 8 à valider par l'utilisateur ; rendu navigateur non vérifié (barre à 6 entrées, sources, titre).
+- VALIDE : phrase AIE « slightly more than Japan's total electricity consumption today » (résumé WebFetch de la page AIE).
+- EN ATTENTE : 512 TWh BDEW lu dans un résumé de recherche, non sur bdew.de ; +17 % non lu sur iea.org ; liens TU Wien et chat.mistral.ai non ouverts ; rendu navigateur non contrôlé.
 
 ## Prochaine étape exacte
-Recueillir le retour de l'utilisateur sur les cartes 3 à 8 de Comprendre, puis vérifier le +17 % sur iea.org et faire valider la formule officielle humaniste (corriger `humanisme_numerique_ia.md`).
+Recueillir le retour de l'utilisateur sur les cartes de Comprendre, vérifier le +17 % sur iea.org, puis faire valider la formule officielle humaniste.
 
 ## Question bloquante pour la session suivante
 Votre formule (« Une IA humaniste est une IA au service de l'autonomie humaine… ») devient-elle la définition officielle du site ?
