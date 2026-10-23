@@ -32,7 +32,7 @@ Attendre sa réponse écrite. Ne pas commencer la phase suivante sans confirmati
 ---
 
 ## Phase 3 — Contenus réécrits [TODO]
-- [ ] Textes écrits avec l'utilisateur, faits validés un par un (Comprendre : brouillon des 8 cartes écrit, relecture de l'utilisateur en cours)
+- [ ] Textes écrits avec l'utilisateur, faits validés un par un (Comprendre : brouillon des 8 cartes écrit, cartes 1, 4, 6, 7 et 8 retouchées le 2026-10-23, relecture de l'utilisateur en cours)
 - [ ] Reprise du contenu V2 réorganisé (formations, services, ressources, portfolio, fiches, événement) ; peu de texte, textes courts
 - [ ] Sections « En pratique » (pratiques de SérénIATech, fournies par l'utilisateur), « Actualités » (veille à mettre en place) et « Événements » : gabarit d'entrée, contenus réels uniquement
 - [ ] Événement « 1 jour moins numérique » (8 nov. 2026) dans `/evenements/` : date, lieu, titre, avec accord du client
