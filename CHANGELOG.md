@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.8 — 2026-10-24
+
+### Ajouté
+- `netlify.toml` : build `npm run build`, publication `dist/`.
+
+### Modifié
+- Sortie du build 11ty : `_site/` remplacé par `dist/` (`.eleventy.js`, `.gitignore`, `scripts/build_revue.js`, `scripts/test_phase2.js`, README).
+
 ## v0.7 — 2026-10-23
 
 ### Ajouté

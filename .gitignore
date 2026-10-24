@@ -2,7 +2,7 @@
 .env.*
 !.env.example
 node_modules/
-_site/
+dist/
 *.key
 *.pem
 credentials*.json

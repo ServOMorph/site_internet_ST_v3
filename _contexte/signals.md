@@ -1,4 +1,4 @@
-# Signals — site_st   (MAJ 2026-10-23)
+# Signals — site_st   (MAJ 2026-10-24)
 
 ## Actions ouvertes
 - [P1|ouvert] Recueillir le retour de l'utilisateur sur les 8 cartes de Comprendre (texte en brouillon dans `src/_data/parcours.json` ; cartes 1, 4, 6, 7 et 8 retouchées le 2026-10-23 à la demande de l'utilisateur, aucune validation formelle exprimée ; cartes 3 et 5 non relues cette session) ; fournir une illustration dédiée à « L'IA locale » (réutilise `outils.webp`) ; sourcer la définition de l'IA locale et les descriptions des outils (carte 7, sans source) si l'utilisateur le veut
@@ -13,6 +13,9 @@
 - [P1|ouvert] Faire les contrôles manuels de `tests_manuels.md` sur téléphone réel (hero sans boutons, carte chiffre, barre basse à 6 entrées, Comprendre et ses 8 cartes, animations, quiz, transitions, arborescence), puis clore la phase 2 (thème C et accueil déjà validés)
   - fait quand: `tests_manuels.md` vidé et Phase 2 marquée [FAIT] dans la roadmap.
   - réf: `tests_manuels.md`, `roadmap_portail_ia.md` Phase 2.
+- [P2|ouvert] Déployer sur Netlify (préproduction) : choisir entre dépôt Git relié (build par `netlify.toml`) et glisser-déposer de `dist/` ; trancher Netlify vs Vercel (roadmap phase 5) ; contact Render non relié ; textes de Comprendre en brouillon et +17 % non lu sur iea.org, donc URL non publique
+  - fait quand : site en ligne sur une URL Netlify de préproduction, ou décision d'hébergeur actée dans la roadmap.
+  - réf : `netlify.toml`, `.eleventy.js`, `roadmap_portail_ia.md` Phase 5.
 - [P2|ouvert] Trancher le nom de la section « Fiches » (l'utilisateur n'aime pas le mot ; proposition « Questions ») et l'URL `/fiches/` ; Fiches n'est plus dans l'en-tête (ni sur l'accueil) : la section n'est plus liée que depuis ses propres pages et la page Sources, à décider (la remettre dans la navigation, ou la lier autrement)
   - fait quand: nom, URL et emplacement dans la navigation choisis, puis appliqués partout.
   - réf: `src/fiches/index.njk`, `src/_includes/base.njk`, `src/_data/fiches.json`.
@@ -39,8 +42,8 @@
   - réf: `_contexte/archive_decisions.md` (hébergement V2), V2 `render.yaml`, `server.js`.
 
 ## Contexte chaud
-- Artefact de revue du site (URL stable) : https://claude.ai/artifact/J4AEiAdJgip9J1Y6WetTZg (version 22, publiée le 2026-10-23, après retouche des cartes 1, 4, 6, 7 et 8). Republier : `npm run build`, `node scripts/build_revue.js`, republier `revue/revue_site.html`. Base commentaires/questions non relue cette session (dernier état connu : 9 commentaires traités, q1 répondue, q3 non répondue).
-- Serveur local : `python run.py` (port fixe 8765, Eleventy en rechargement automatique).
+- Artefact de revue du site (URL stable) : https://claude.ai/artifact/J4AEiAdJgip9J1Y6WetTZg (version 22, publiée le 2026-10-23, après retouche des cartes 1, 4, 6, 7 et 8). Republier : `npm run build` (sortie `dist/`), `node scripts/build_revue.js` (lit `dist/`, non relancé depuis le changement), republier `revue/revue_site.html`. Base commentaires/questions non relue cette session (dernier état connu : 9 commentaires traités, q1 répondue, q3 non répondue).
+- Serveur local : `python run.py` (port fixe 8765, Eleventy en rechargement automatique ; sortie dans `dist/`, ancien `_site/` supprimé).
 - Génération d'images : ComfyUI-Qwen sur `http://127.0.0.1:8189` (`D:\ServOMorph\ComfyUI-Qwen`, `lancer.bat`), `scripts/gen_theme_c.py` ; non lancé cette session ; un blocage de 45 min a été observé une fois (VRAM saturée) : redémarrer ComfyUI. Demander avant de lancer.
 - Branche `archive/v3-direction-b` sur `bc53de8`. PNG Qwen non versionnés dans `src/assets/brut/`. `explorer.webp` n'est plus utilisée.
 - Comparaisons de pays (carte 1) : Japon pour 945 TWh en 2030 (phrase AIE lue, résumé WebFetch) ; Allemagne pour 415 TWh en 2024 (environ 512 TWh bruts, estimation préliminaire BDEW lue dans un résumé de recherche, non lue sur bdew.de ; rapport 415/512 calculé par nous, pas par l'AIE). Liens carte 8 : Arcep, CNIL, UNESCO ouverts ; TU Wien et `chat.mistral.ai` (Vibe = Le Chat renommé) non ouverts ; page ADEME en erreur 403, pas de guide grand public trouvé.
@@ -49,25 +52,22 @@
 - Chiffres éco (recoupés par recherche web cette session, sources secondaires) : AIE 415 TWh (2024), environ 945 TWh (2030), +17 % en 2025 contre environ 3 % pour la demande mondiale ; Epoch AI 0,3 Wh ; OpenAI environ 0,34 Wh (juin 2025) ; Arcep (21 mai 2026) : peu de transparence sur l'inférence. Source brésilienne divergente (15 %, 485 TWh) non retenue.
 - V2 reste en ligne jusqu'à la bascule ; il affiche encore les badges « Flux.1 » / « Ollama local » (non modifié, à votre décision). `.env` V2 non lu.
 
-## Dernière session (2026-10-23)
-# Session du 2026-10-23
+## Dernière session (2026-10-24)
+# Session du 2026-10-24
 
 ## Décisions prises
-- Carte 1 « Pourquoi » : comparaisons de pays ajoutées (415 TWh en 2024 = environ les quatre cinquièmes de la consommation brute de l'Allemagne, environ 512 TWh, BDEW ; 945 TWh en 2030 = un peu plus que le Japon, phrase AIE).
-- Carte 4 : définition du RGPD ajoutée. Carte 6 : étapes de la méthode sur des lignes séparées, paragraphe « bloc-notes avant le prompt ».
-- Carte 7 « Les outils » réécrite : Ollama (chat), ComfyUI (images et musique), Vibe-Mistral (chat français) ; Qwen-Image retiré ; liens ajoutés.
-- Carte 8 : liens vers Se former et À propos ; paragraphe de sites de référence (Arcep, CNIL, UNESCO, TU Wien).
+- Sortie du build 11ty passée de `_site/` à `dist/` pour un déploiement Netlify ; `netlify.toml` créé (build `npm run build`, publication `dist`).
 
 ## Livrables produits ou modifiés
-- `src/_data/parcours.json` : modifié (cartes 1, 4, 6, 7, 8) ; build et `scripts/test_phase2.js` OK (21 pages)
-- `README.md`, `CHANGELOG.md` (v0.7), `roadmap_portail_ia.md`, `tests_manuels.md` : mis à jour
+- `.eleventy.js`, `.gitignore`, `scripts/build_revue.js`, `scripts/test_phase2.js`, `README.md` : sortie `dist/` ; `netlify.toml` : créé
+- Build (20 pages, 384 Ko) et `npm test` OK ; `CHANGELOG.md` (v0.8), `roadmap_portail_ia.md`, `contexte.md` : mis à jour
 
 ## Hypothèses validées / invalidées
-- VALIDE : phrase AIE « slightly more than Japan's total electricity consumption today » (résumé WebFetch de la page AIE).
-- EN ATTENTE : 512 TWh BDEW lu dans un résumé de recherche, non sur bdew.de ; +17 % non lu sur iea.org ; liens TU Wien et chat.mistral.ai non ouverts ; rendu navigateur non contrôlé.
+- VALIDE : build et `npm test` passent avec `dist/`.
+- EN ATTENTE : déploiement Netlify non effectué ni testé ; `build_revue.js` non relancé après le changement de dossier.
 
 ## Prochaine étape exacte
-Recueillir le retour de l'utilisateur sur les cartes de Comprendre, vérifier le +17 % sur iea.org, puis faire valider la formule officielle humaniste.
+Choisir le mode de déploiement Netlify (dépôt relié ou glisser-déposer de `dist/`) et trancher Netlify vs Vercel ; sinon recueillir le retour sur les cartes de Comprendre, vérifier le +17 % sur iea.org, faire valider la formule humaniste.
 
 ## Question bloquante pour la session suivante
 Votre formule (« Une IA humaniste est une IA au service de l'autonomie humaine… ») devient-elle la définition officielle du site ?

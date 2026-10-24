@@ -36,7 +36,7 @@ Attendre sa réponse écrite. Ne pas commencer la phase suivante sans confirmati
 - [ ] Reprise du contenu V2 réorganisé (formations, services, ressources, portfolio, fiches, événement) ; peu de texte, textes courts
 - [ ] Sections « En pratique » (pratiques de SérénIATech, fournies par l'utilisateur), « Actualités » (veille à mettre en place) et « Événements » : gabarit d'entrée, contenus réels uniquement
 - [ ] Événement « 1 jour moins numérique » (8 nov. 2026) dans `/evenements/` : date, lieu, titre, avec accord du client
-- [ ] Reprendre tarifs de formation, mention OPCO et témoignage Réseau Toiles (validés le 2026-10-17, voir `_contexte/contexte.md`) ; autres prestations « sur devis »
+- [ ] Reprendre tarifs de formation, mention OPCO et témoignage Réseau Toiles (validés le 2026-10-17, voir `_contexte/archive_decisions.md`) ; autres prestations « sur devis »
 - [ ] Chiffres sur l'impact énergétique : sources retenues dans `_contexte/archive_decisions.md` et page Sources du site (AIE, Arcep, Epoch AI), citées avec date et limites
 - [ ] Tests : liens internes, SEO de base, JSON-LD, accessibilité
 
@@ -56,7 +56,7 @@ Attendre sa réponse écrite. Ne pas commencer la phase suivante sans confirmati
 ---
 
 ## Phase 5 — Mise en ligne sur serenia-tech.fr [TODO]
-- [ ] Projet Vercel relié au dépôt (préproduction d'abord)
+- [ ] Hébergeur à trancher (Vercel prévu, Netlify demandé le 2026-10-24 : `netlify.toml` et `dist/` prêts) ; projet relié au dépôt (préproduction d'abord)
 - [ ] Redirections 301/308 des URLs V2 vers les nouvelles (préserver le SEO)
 - [ ] Bascule du domaine, V2 conservé en repli
 - [ ] Tests manuels : formulaire en production, Search Console, redirections

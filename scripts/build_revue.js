@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
-const SITE = path.join(ROOT, "_site");
+const SITE = path.join(ROOT, "dist");
 const labels = {
   "/": "Accueil", "/parcours/": "Comprendre", "/parcours/pourquoi/": "1 Pourquoi", "/parcours/ia-locale/": "2 IA locale",
   "/parcours/leviers/": "3 Leviers", "/parcours/donnees/": "4 Données", "/parcours/garder-la-main/": "5 Garder la main",
