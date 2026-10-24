@@ -116,3 +116,26 @@ Recueillir le retour de l'utilisateur sur les cartes 3 à 8 de Comprendre, puis 
 
 ## Question bloquante pour la session suivante
 Votre formule (« Une IA humaniste est une IA au service de l'autonomie humaine… ») devient-elle la définition officielle du site ?
+
+---
+# Session du 2026-10-23
+
+## Décisions prises
+- Carte 1 « Pourquoi » : comparaisons de pays ajoutées (415 TWh en 2024 = environ les quatre cinquièmes de la consommation brute de l'Allemagne, environ 512 TWh, BDEW ; 945 TWh en 2030 = un peu plus que le Japon, phrase AIE).
+- Carte 4 : définition du RGPD ajoutée. Carte 6 : étapes de la méthode sur des lignes séparées, paragraphe « bloc-notes avant le prompt ».
+- Carte 7 « Les outils » réécrite : Ollama (chat), ComfyUI (images et musique), Vibe-Mistral (chat français) ; Qwen-Image retiré ; liens ajoutés.
+- Carte 8 : liens vers Se former et À propos ; paragraphe de sites de référence (Arcep, CNIL, UNESCO, TU Wien).
+
+## Livrables produits ou modifiés
+- `src/_data/parcours.json` : modifié (cartes 1, 4, 6, 7, 8) ; build et `scripts/test_phase2.js` OK (21 pages)
+- `README.md`, `CHANGELOG.md` (v0.7), `roadmap_portail_ia.md`, `tests_manuels.md` : mis à jour
+
+## Hypothèses validées / invalidées
+- VALIDE : phrase AIE « slightly more than Japan's total electricity consumption today » (résumé WebFetch de la page AIE).
+- EN ATTENTE : 512 TWh BDEW lu dans un résumé de recherche, non sur bdew.de ; +17 % non lu sur iea.org ; liens TU Wien et chat.mistral.ai non ouverts ; rendu navigateur non contrôlé.
+
+## Prochaine étape exacte
+Recueillir le retour de l'utilisateur sur les cartes de Comprendre, vérifier le +17 % sur iea.org, puis faire valider la formule officielle humaniste.
+
+## Question bloquante pour la session suivante
+Votre formule (« Une IA humaniste est une IA au service de l'autonomie humaine… ») devient-elle la définition officielle du site ?

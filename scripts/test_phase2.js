@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const zlib = require("zlib");
 
-const OUT = path.join(__dirname, "..", "_site");
+const OUT = path.join(__dirname, "..", "dist");
 const BUDGET_PAGE = 100 * 1024;
 const BUDGET_JS = 20 * 1024;
 let failures = 0;
