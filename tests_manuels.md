@@ -24,3 +24,11 @@
 
 ## Arborescence
 - Parcourir Accueil (dont les cartes En pratique, Actualités et Événements, sur téléphone réel), Comprendre, Fiches, Quiz et les liens du pied de page (Sources, Glossaire, À propos, Se former) ; vérifier que rien ne manque ou ne prête à confusion.
+
+## Accueil : bandeau et cartes (téléphone réel)
+- Bandeau « Ils en parlent » : lisibilité des deux témoignages sur l'image de fond (bulles derrière le texte), une colonne sur téléphone, deux colonnes sur PC.
+- Quatre cartes (Comprendre, En pratique, Quiz, Se former) : même hauteur, étiquette et titre alignés ; accroche sous le titre lisible.
+
+## Ressources, À propos, En pratique (téléphone réel et PC)
+- `/ressources/` : les trois blocs se déplient sans second clic, sous-blocs imbriqués lisibles, blocs de code et liens sans débordement horizontal.
+- À propos : texte long (parcours, anecdote, indépendance) lisible ; En pratique : listes lisibles.

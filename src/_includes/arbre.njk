@@ -1,0 +1,4 @@
+{% macro liste(items) %}<ul class="arbre__liste">
+{% for it in items %}{% if it.l %}<li class="arbre__feuille">{{ it.l | safe }}</li>
+{% else %}<li><details class="arbre__noeud arbre__noeud--sous"><summary>{{ it.t | safe }}</summary>{% if it.note %}<p class="arbre__note">{{ it.note }}</p>{% endif %}{{ liste(it.k) }}</details></li>
+{% endif %}{% endfor %}</ul>{% endmacro %}

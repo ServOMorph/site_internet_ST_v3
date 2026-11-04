@@ -1,0 +1,770 @@
+{
+  "mention": "Ce guide s'appuie sur des outils en ligne, comme Claude Code. Je choisis chaque outil selon ce qu'il sait faire. Quand vos données sont sensibles, une IA locale est une autre option.",
+  "pages": [
+    {
+      "slug": "installer-et-prompter",
+      "titre": "Installer et prompter",
+      "h1": "Installer et <em>prompter</em>",
+      "T": [
+        {
+          "t": "Installer VS Code",
+          "k": [
+            {
+              "l": "Télécharger sur <a href='https://code.visualstudio.com/'>code.visualstudio.com</a>, installer avec les options par défaut."
+            },
+            {
+              "l": "VS Code est l'éditeur : il affiche vos fichiers, Claude Code s'y ajoute."
+            }
+          ]
+        },
+        {
+          "t": "Ajouter l'extension Claude Code",
+          "k": [
+            {
+              "l": "Panneau Extensions (<code>Ctrl+Maj+X</code>), chercher « Claude Code », éditeur Anthropic, installer."
+            },
+            {
+              "l": "Se connecter avec son compte Claude."
+            }
+          ]
+        },
+        {
+          "t": "Ouvrir un dossier de travail",
+          "k": [
+            {
+              "l": "<strong>Fichier &gt; Ouvrir le dossier</strong>. Claude travaille uniquement dans ce dossier."
+            },
+            {
+              "l": "Pour s'entraîner : un dossier dédié, vide, sans document personnel."
+            }
+          ]
+        },
+        {
+          "t": "Voir les fichiers",
+          "k": [
+            {
+              "l": "L'explorateur, à gauche (<code>Ctrl+Maj+E</code>), montre le contenu du dossier."
+            },
+            {
+              "l": "Les fichiers créés ou modifiés par Claude y apparaissent : c'est là qu'on vérifie son travail."
+            }
+          ]
+        },
+        {
+          "t": "Envoyer un premier prompt",
+          "k": [
+            {
+              "l": "Ouvrir le panneau Claude Code, écrire une demande simple."
+            },
+            {
+              "l": "Exemple : <code>Crée un fichier idees.md avec trois idées de sujets pour mon activité</code>"
+            },
+            {
+              "l": "Lire la réponse en entier avant d'aller plus loin."
+            }
+          ]
+        },
+        {
+          "t": "Garder la main",
+          "k": [
+            {
+              "l": "Avant de modifier un fichier, Claude demande l'autorisation : lire ce qu'il propose."
+            },
+            {
+              "l": "Trois choix : accepter, refuser, ou demander une correction."
+            }
+          ]
+        },
+        {
+          "t": "Pièges fréquents",
+          "k": [
+            {
+              "l": "Ouvrir un dossier qui contient des documents personnels ou sensibles."
+            },
+            {
+              "l": "Accepter une modification sans la lire."
+            },
+            {
+              "l": "Ne pas savoir où se trouvent les fichiers créés."
+            }
+          ]
+        }
+      ],
+      "guide": "agents",
+      "partie": 1,
+      "parties": 5,
+      "description": "Installer et prompter : guide pratique pour créer et organiser des agents IA avec Claude Code."
+    },
+    {
+      "slug": "bases-creation-agents",
+      "titre": "Les bases de la création d'agents",
+      "h1": "Les bases de la <em>création d'agents</em>",
+      "T": [
+        {
+          "t": "Token",
+          "k": [
+            {
+              "l": "L'unité de texte lue et écrite par le modèle. Tout est compté."
+            }
+          ]
+        },
+        {
+          "t": "Contexte",
+          "k": [
+            {
+              "l": "Toute la conversation est renvoyée à chaque message. Plus elle grossit, plus chaque message coûte."
+            },
+            {
+              "l": "Pour le voir : <code>/usage</code> ou <code>/context</code>."
+            }
+          ]
+        },
+        {
+          "t": "Prompt système",
+          "k": [
+            {
+              "l": "Les consignes de base données par l'outil au modèle, avant votre premier message."
+            },
+            {
+              "l": "Vous ne les écrivez pas : votre <code>CLAUDE.md</code> et vos prompts viennent s'ajouter."
+            }
+          ]
+        },
+        {
+          "t": "Fichier d'instructions (CLAUDE.md)",
+          "k": [
+            {
+              "l": "Un fichier texte à la racine du projet, lu par Claude au début de chaque session."
+            },
+            {
+              "l": "<strong>Où le trouver</strong> : <code>&lt;dossier_du_projet&gt;/CLAUDE.md</code> ou <code>&lt;dossier_du_projet&gt;/.claude/CLAUDE.md</code>"
+            },
+            {
+              "l": "Version personnelle, pour tous vos projets : <code>~/.claude/CLAUDE.md</code> (sous Windows : <code>C:&#92;Users&#92;&lt;votre_nom&gt;&#92;.claude&#92;CLAUDE.md</code>)"
+            },
+            {
+              "l": "On y met les règles qui valent à chaque fois : langue, ton, ce qu'il ne faut pas faire."
+            },
+            {
+              "l": "Il occupe du contexte à chaque session : le garder court (sous 200 lignes)."
+            },
+            {
+              "l": "Les autres outils ont leur équivalent (voir « Selon l'outil »)."
+            }
+          ]
+        },
+        {
+          "t": "/clear",
+          "k": [
+            {
+              "l": "Conversation vide. À utiliser quand on <strong>change de sujet</strong>."
+            }
+          ]
+        },
+        {
+          "t": "/compact",
+          "k": [
+            {
+              "l": "Remplace l'historique par un résumé. Même sujet, conversation longue."
+            },
+            {
+              "l": "Ex. : <code>/compact Garde les décisions prises</code>"
+            }
+          ]
+        },
+        {
+          "t": "Modèles (/model)",
+          "k": [
+            {
+              "l": "<strong>Haiku</strong> : tâches simples, rapide, peu coûteux"
+            },
+            {
+              "l": "<strong>Sonnet</strong> : travail courant, équilibré"
+            },
+            {
+              "l": "<strong>Opus</strong> : raisonnement complexe, décisions importantes"
+            }
+          ]
+        },
+        {
+          "t": "Prompt préparé hors de l'outil",
+          "k": [
+            {
+              "l": "Dans un bloc-notes : contexte, demande, format de réponse attendu. Relire, puis copier dans Claude Code."
+            }
+          ]
+        },
+        {
+          "t": "Recouper avec Perplexity",
+          "k": [
+            {
+              "l": "Une seconde source pour vérifier un terme ou une réponse."
+            }
+          ]
+        },
+        {
+          "t": "Pause de réflexion",
+          "k": [
+            {
+              "l": "Se lever, marcher 5 minutes, revenir avec une phrase qui dit ce qu'on veut obtenir."
+            },
+            {
+              "l": "À faire avant un prompt ou un workflow complexe, et en cas de blocage."
+            }
+          ]
+        },
+        {
+          "t": "Selon l'outil",
+          "note": "Contrôlé le 2026-11-01.",
+          "k": [
+            {
+              "t": "Claude Code",
+              "k": [
+                {
+                  "l": "Instructions : <code>CLAUDE.md</code>"
+                },
+                {
+                  "l": "Vider : <code>/clear</code> · Résumer : <code>/compact</code>"
+                },
+                {
+                  "l": "Modèle : <code>/model</code> · Usage : <code>/usage</code>, <code>/context</code>"
+                }
+              ]
+            },
+            {
+              "t": "Codex",
+              "k": [
+                {
+                  "l": "Instructions : <code>AGENTS.md</code> (source tierce)"
+                },
+                {
+                  "l": "Vider : <code>/clear</code> ou <code>/new</code> · Résumer : <code>/compact</code>"
+                },
+                {
+                  "l": "Modèle : <code>/model</code> · Usage : <code>/status</code>"
+                }
+              ]
+            },
+            {
+              "t": "OpenCode",
+              "k": [
+                {
+                  "l": "Instructions : <code>AGENTS.md</code> (source tierce, peu détaillée)"
+                },
+                {
+                  "l": "Vider : <code>/new</code> (alias <code>/clear</code>) · Résumer : <code>/compact</code>"
+                },
+                {
+                  "l": "Modèle : <code>/models</code>"
+                }
+              ]
+            },
+            {
+              "t": "Antigravity",
+              "k": [
+                {
+                  "l": "Instructions : <code>GEMINI.md</code> ou <code>AGENTS.md</code>"
+                },
+                {
+                  "l": "Vider : Ctrl+N"
+                },
+                {
+                  "l": "Usage : <code>/usage</code>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "t": "Pièges fréquents",
+          "k": [
+            {
+              "l": "<code>/clear</code> ne supprime pas le travail : les fichiers restent."
+            },
+            {
+              "l": "<code>/clear</code> en plein sujet fait perdre le fil : préférer <code>/compact</code>."
+            },
+            {
+              "l": "Opus par défaut pour tout : plus coûteux, utile aux tâches difficiles."
+            },
+            {
+              "l": "Coller des informations personnelles de tiers dans un prompt ou Perplexity."
+            },
+            {
+              "l": "Croire une réponse sans la recouper."
+            }
+          ]
+        },
+        {
+          "t": "Sources (consultées le 2026-11-01)",
+          "k": [
+            {
+              "l": "<a href='https://code.claude.com/docs/en/costs'>Claude Code, coûts</a>"
+            },
+            {
+              "l": "<a href='https://code.claude.com/docs/en/model-config'>Claude Code, modèles</a> (100 000 premiers caractères lus)"
+            },
+            {
+              "l": "<a href='https://learn.chatgpt.com/docs/developer-commands?surface=cli'>Codex, commandes</a>"
+            },
+            {
+              "l": "<a href='https://opencode.ai/docs/tui/'>OpenCode, TUI</a>"
+            },
+            {
+              "l": "<a href='https://antigravity.google/docs/getting-started'>Antigravity, démarrage</a>"
+            },
+            {
+              "l": "Tierces, non officielles : <a href='https://inventivehq.com/blog/claude-md-vs-agents-md-vs-gemini-md'>inventivehq</a>, <a href='https://thepromptshelf.dev/blog/google-antigravity-agents-md-rules-guide-2026'>thepromptshelf</a>"
+            }
+          ]
+        }
+      ],
+      "guide": "agents",
+      "partie": 2,
+      "parties": 5,
+      "description": "Les bases de la création d'agents : guide pratique pour créer et organiser des agents IA avec Claude Code."
+    },
+    {
+      "slug": "creation-agent",
+      "titre": "Création d'agent",
+      "h1": "Création d'<em>agent</em>",
+      "T": [
+        {
+          "t": "1. Un agent : un dossier et un fichier",
+          "k": [
+            {
+              "l": "Un agent est un dossier <code>AG_&lt;NOM&gt;</code> (en majuscules) qui contient un fichier <code>agent_role.md</code>."
+            },
+            {
+              "l": "Claude lit ce fichier pour savoir quelle est sa mission et où on en est."
+            },
+            {
+              "l": "Un agent = une mission. Deux missions = deux agents."
+            },
+            {
+              "l": "Un nom court qui dit la mission. Exemple : <code>AG_COMMUNICATION</code>."
+            },
+            {
+              "l": "<code>CLAUDE.md</code> : les règles générales, valables partout. <code>agent_role.md</code> : une mission précise, avec son état."
+            }
+          ]
+        },
+        {
+          "t": "2. Le fichier agent_role.md",
+          "k": [
+            {
+              "l": "<strong>Rôle</strong> : ce que fait l'agent, et ce qu'il ne fait pas."
+            },
+            {
+              "l": "<strong>État</strong> : où on en est, ce qui a été fait à la dernière session."
+            },
+            {
+              "l": "<strong>Actions</strong> : les prochaines choses à faire."
+            },
+            {
+              "l": "Modèle minimal :<pre># Rôle\nCe que fait l'agent. Ce qu'il ne fait pas.\n\n# État\nOù on en est.\n\n# Actions\n- Prochaine action</pre>"
+            },
+            {
+              "l": "Rédiger la partie Rôle à la main la première fois, pour comprendre ce qu'elle change. Ensuite seulement, demander à Claude de l'améliorer."
+            }
+          ]
+        },
+        {
+          "t": "3. Les commandes : un fichier texte",
+          "k": [
+            {
+              "l": "Le besoin : ne plus retaper les mêmes consignes au début et à la fin de chaque session."
+            },
+            {
+              "l": "Une commande est un fichier texte rangé dans <code>.claude/commands/</code>, dans le dossier du projet. Le nom du fichier est le nom de la commande."
+            },
+            {
+              "l": "Taper <code>/nom</code> exécute les consignes écrites dans le fichier."
+            },
+            {
+              "l": "Dans le fichier, <code>$ARGUMENTS</code> est remplacé par ce qui suit la commande. Avec <code>/nom COMMUNICATION</code>, <code>$ARGUMENTS</code> devient <code>COMMUNICATION</code>."
+            }
+          ]
+        },
+        {
+          "t": "4. La commande /start",
+          "k": [
+            {
+              "l": "Fichier : <code>.claude/commands/start.md</code>. Elle reprend là où on s'était arrêté."
+            },
+            {
+              "l": "Contenu minimal :<pre>1. Cherche le dossier AG_$ARGUMENTS et lis\n   son agent_role.md.\n2. S'il n'existe pas, propose de le créer avec\n   trois parties : Rôle, État, Actions.\n3. Résume l'état en 3 lignes.\n4. Propose la prochaine action.</pre>"
+            }
+          ]
+        },
+        {
+          "t": "5. La commande /close",
+          "k": [
+            {
+              "l": "Fichier : <code>.claude/commands/close.md</code>. Elle garde la trace de la session."
+            },
+            {
+              "l": "Contenu minimal :<pre>1. Mets à jour la partie État de\n   AG_$ARGUMENTS/agent_role.md : ce qui a été fait.\n2. Mets à jour la partie Actions : ce qui reste.\n3. Résume la session en 3 lignes.</pre>"
+            },
+            {
+              "l": "La boucle : <code>/close</code> écrit l'état, <code>/start</code> le relit à la session suivante."
+            }
+          ]
+        },
+        {
+          "t": "6. Créer le premier agent",
+          "k": [
+            {
+              "l": "Taper <code>/start COMMUNICATION</code> : la commande propose de créer le dossier et son <code>agent_role.md</code>."
+            },
+            {
+              "l": "Écrire la partie Rôle soi-même."
+            },
+            {
+              "l": "Travailler avec l'agent sur une vraie tâche."
+            },
+            {
+              "l": "Taper <code>/close COMMUNICATION</code> : l'état et les actions sont mis à jour. Relire ce que Claude a écrit."
+            },
+            {
+              "l": "Vérifier la continuité : nouvelle conversation, <code>/start COMMUNICATION</code>. L'agent doit résumer la session précédente."
+            }
+          ]
+        },
+        {
+          "t": "7. Faire évoluer ses commandes",
+          "k": [
+            {
+              "l": "Partir minimal. Ajouter une étape seulement quand un problème revient."
+            },
+            {
+              "l": "Noter chaque changement : le problème, la raison, la modification."
+            },
+            {
+              "l": "Économiser les tokens : lire seulement le fichier utile, demander une réponse courte."
+            }
+          ]
+        },
+        {
+          "t": "8. Un agent de création d'agents",
+          "k": [
+            {
+              "l": "Un agent dont la mission est de créer d'autres agents. Exemple de nom : <code>AG_CREATION_AGENTS</code>."
+            },
+            {
+              "l": "Il pose des questions : mission, limites, premières actions."
+            },
+            {
+              "l": "Il crée le dossier <code>AG_&lt;NOM&gt;</code> et son <code>agent_role.md</code> à partir du modèle de l'étape 2."
+            },
+            {
+              "l": "Son propre rôle : créer des agents à partir du modèle. Ne jamais modifier un agent existant sans accord."
+            },
+            {
+              "l": "Relire l'agent créé, puis le lancer avec <code>/start &lt;NOM&gt;</code>."
+            }
+          ]
+        },
+        {
+          "t": "Pièges fréquents",
+          "k": [
+            {
+              "l": "Un rôle trop large : l'agent fait tout et mal."
+            },
+            {
+              "l": "Plusieurs missions dans le même fichier."
+            },
+            {
+              "l": "Des agents qui se recouvrent, ou sans limites claires dans leur rôle."
+            },
+            {
+              "l": "Un état jamais mis à jour : l'agent repart de zéro."
+            },
+            {
+              "l": "Oublier <code>/close</code> en fin de session."
+            },
+            {
+              "l": "Laisser Claude effacer des informations sans relire."
+            },
+            {
+              "l": "Une commande qui lit trop de fichiers « au cas où »."
+            },
+            {
+              "l": "Des étapes ajoutées sans problème réel à résoudre."
+            }
+          ]
+        }
+      ],
+      "guide": "agents",
+      "partie": 3,
+      "parties": 5,
+      "description": "Création d'agent : guide pratique pour créer et organiser des agents IA avec Claude Code."
+    },
+    {
+      "slug": "sauvegarder-son-travail",
+      "titre": "Sauvegarder son travail",
+      "h1": "<em>Sauvegarder</em> son travail",
+      "T": [
+        {
+          "t": "Pourquoi",
+          "k": [
+            {
+              "l": "Les fichiers des agents représentent des heures de travail : une panne ou une erreur peut les effacer."
+            }
+          ]
+        },
+        {
+          "t": "Le principe",
+          "k": [
+            {
+              "l": "Une archive ZIP protégée par un mot de passe, puis une copie sur Google Drive."
+            },
+            {
+              "l": "Outil et fréquence : à définir avec la personne accompagnée."
+            }
+          ]
+        },
+        {
+          "t": "Chiffrer l'archive",
+          "k": [
+            {
+              "l": "Avec un logiciel d'archivage qui chiffre (par exemple 7-Zip, chiffrement AES-256)."
+            },
+            {
+              "l": "Une archive non chiffrée ne doit pas partir sur un cloud."
+            }
+          ]
+        },
+        {
+          "t": "Le mot de passe",
+          "k": [
+            {
+              "l": "Long, unique, rangé dans un gestionnaire de mots de passe."
+            },
+            {
+              "l": "Jamais écrit dans le dossier sauvegardé."
+            }
+          ]
+        },
+        {
+          "t": "Tester la restauration",
+          "k": [
+            {
+              "l": "Ouvrir l'archive une fois, sur une copie : une sauvegarde jamais testée n'est pas une sauvegarde."
+            }
+          ]
+        },
+        {
+          "t": "Pièges fréquents",
+          "k": [
+            {
+              "l": "Mot de passe perdu : l'archive est irrécupérable."
+            },
+            {
+              "l": "Sauvegarde faite une fois, puis oubliée."
+            }
+          ]
+        }
+      ],
+      "guide": "agents",
+      "partie": 4,
+      "parties": 5,
+      "description": "Sauvegarder son travail : guide pratique pour créer et organiser des agents IA avec Claude Code."
+    },
+    {
+      "slug": "decouper-agent-role",
+      "titre": "Découper agent_role.md",
+      "h1": "Découper <em>agent_role.md</em>",
+      "T": [
+        {
+          "t": "Quand le faire",
+          "k": [
+            {
+              "l": "Quand le fichier devient long : <code>/start</code> le lit en entier, ce qui coûte des tokens."
+            },
+            {
+              "l": "Quand on cherche longtemps une information dedans."
+            },
+            {
+              "l": "Pas avant : découper trop tôt complique sans rien gagner."
+            }
+          ]
+        },
+        {
+          "t": "Le principe",
+          "k": [
+            {
+              "l": "<code>agent_role.md</code> garde le rôle. Le reste part dans un dossier <code>_contexte/</code> de l'agent."
+            }
+          ]
+        },
+        {
+          "t": "Un découpage possible",
+          "k": [
+            {
+              "l": "<pre>AG_&lt;NOM&gt;/\n  agent_role.md      rôle\n  _contexte/\n    etat.md          où on en est\n    actions.md       ce qui reste à faire\n    archive.md       historique, rarement lu</pre>"
+            }
+          ]
+        },
+        {
+          "t": "Adapter /start et /close",
+          "k": [
+            {
+              "l": "<code>/start</code> lit <code>agent_role.md</code> et <code>etat.md</code>."
+            },
+            {
+              "l": "<code>/close</code> écrit dans <code>etat.md</code> et <code>actions.md</code>. L'archive n'est lue qu'au besoin."
+            }
+          ]
+        },
+        {
+          "t": "Pièges fréquents",
+          "k": [
+            {
+              "l": "La même information dans deux fichiers, qui finissent par se contredire."
+            },
+            {
+              "l": "Oublier de mettre à jour <code>/start</code> et <code>/close</code> après le découpage."
+            }
+          ]
+        }
+      ],
+      "guide": "agents",
+      "partie": 5,
+      "parties": 5,
+      "description": "Découper agent_role.md : guide pratique pour créer et organiser des agents IA avec Claude Code."
+    },
+    {
+      "slug": "creer-des-images",
+      "guide": "images",
+      "titre": "Créer des images avec l'IA",
+      "h1": "Créer des <em>images</em> avec l'IA",
+      "mention": false,
+      "description": "Créer des images avec l'IA : une méthode simple et éco-responsable, et la recette d'une bonne consigne.",
+      "T": [
+        {
+          "t": "La méthode éco-responsable en 3 étapes",
+          "k": [
+            {
+              "l": "Une idée claire dès le départ évite de multiplier les essais, donc les images générées pour rien."
+            },
+            {
+              "l": "<strong>1.</strong> Ouvrez le Bloc-notes de l'ordinateur, écrivez votre idée, relisez-la et corrigez-la."
+            },
+            {
+              "l": "<strong>2.</strong> Passez-la au Chat de Mistral en lui demandant de la reformuler en consigne (« prompt ») pour un générateur d'images."
+            },
+            {
+              "l": "<strong>3.</strong> Collez la consigne reformulée dans le générateur d'images de votre choix."
+            }
+          ]
+        },
+        {
+          "t": "La recette d'une bonne consigne (prompt)",
+          "k": [
+            {
+              "l": "Cinq ingrédients : le sujet, le décor, le style, la lumière et l'ambiance, les détails. Voici un exemple en trois étapes."
+            },
+            {
+              "l": "<strong>Consigne simple</strong> : « Un renard dans une forêt. »"
+            },
+            {
+              "l": "<strong>+ décor et style</strong> : « Un renard roux assis dans une forêt brumeuse d'automne, lumière dorée à travers les arbres, style peinture aquarelle. »"
+            },
+            {
+              "l": "<strong>+ ambiance et autre style</strong> : « Un renard roux assis dans une forêt brumeuse d'automne à l'aube, lumière dorée à contre-jour, lucioles lumineuses, style estampe japonaise, contours marqués, composition dramatique. »"
+            }
+          ]
+        },
+        {
+          "t": "Créer ses images sur son ordinateur",
+          "k": [
+            {
+              "l": "Un modèle d'images ouvert comme Qwen-Image 2.1 tourne sur votre ordinateur, sans internet ni envoi de données."
+            },
+            {
+              "l": "Il est plus lent que les outils en ligne et demande une carte graphique dédiée."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ia-locale-open-source",
+      "guide": "ia-locale",
+      "titre": "IA locale open source : un choix militant ?",
+      "h1": "IA locale open source : <em>un choix militant</em> ?",
+      "mention": false,
+      "description": "IA locale open source : ce que l'ouverture change, ses limites, et comment choisir entre une IA locale et un service en ligne.",
+      "T": [
+        {
+          "t": "Pourquoi « militant » ?",
+          "k": [
+            {
+              "l": "Pour moi, « militant » ne veut pas dire « radical » ni « anti-technologie ». Cela veut dire choisir plus de contrôle sur mes données, mes usages et mes dépendances."
+            },
+            {
+              "l": "Une IA locale fonctionne sur votre propre matériel : vous maîtrisez ce qui entre, ce qui sort et ce qui reste chez vous."
+            }
+          ]
+        },
+        {
+          "t": "Ce que « open source » change",
+          "k": [
+            {
+              "l": "La CNIL rappelle que la notion d'« open source » se confond souvent avec celle de « logiciel libre », qui offre quatre libertés : utiliser le programme, étudier son code, le modifier et le distribuer."
+            },
+            {
+              "l": "Elle note aussi que, pour un modèle ouvert, les membres de la communauté peuvent réaliser un audit du modèle et l'améliorer."
+            },
+            {
+              "l": "L'ouverture a ses limites : la CNIL évoque aussi des risques, notamment liés à la confidentialité des données publiées."
+            },
+            {
+              "l": "Local ne veut pas dire « magiquement conforme » au RGPD : cela change l'endroit où vos données circulent, pas vos obligations."
+            }
+          ]
+        },
+        {
+          "t": "Local ou en ligne : comment choisir ?",
+          "k": [
+            {
+              "l": "Quatre questions à vous poser : vos données doivent-elles rester chez vous ? Avez-vous besoin de fonctionner hors ligne ? Voulez-vous pouvoir auditer le système ? Disposez-vous d'un environnement technique minimal pour le faire vivre ?"
+            },
+            {
+              "l": "Si la réponse est « oui » à plusieurs de ces questions, une IA locale mérite d'être étudiée."
+            },
+            {
+              "l": "Tout ne doit pas passer en local : pour un usage ponctuel, simple ou peu sensible, un service en ligne peut rester plus pratique."
+            },
+            {
+              "l": "Une IA locale demande du temps pour l'installer et la faire vivre."
+            },
+            {
+              "l": "Vous débutez ? Commencez par un usage simple et non critique, sur un petit volume de documents, avant d'en faire un outil central."
+            }
+          ]
+        },
+        {
+          "t": "Ce que je ne dis pas",
+          "k": [
+            {
+              "l": "Je ne dis pas qu'une IA locale ne consomme rien : je n'ai aucune mesure de ma propre consommation."
+            }
+          ]
+        },
+        {
+          "t": "Source (consultée le 2026-11-04)",
+          "k": [
+            {
+              "l": "<a href='https://www.cnil.fr/sites/cnil/files/2024-06/note_d_analyse_sur_les_pratiques_open_source_en_ia.pdf'>CNIL, « Les pratiques open source en intelligence artificielle »</a>, note d'analyse, 2024."
+            },
+            {
+              "l": "Limite : cette note décrit les bénéfices et les risques de l'ouverture en IA ; elle ne traite pas de la souveraineté numérique, et l'environnement n'y est évoqué qu'en passant. Les affirmations de la rubrique « Local ou en ligne » sont mes recommandations, pas celles de la CNIL."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

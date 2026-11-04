@@ -1,5 +1,16 @@
 # Changelog
 
+## v0.9 — 2026-11-04
+
+### Ajouté
+- Section « Ressources » (`/ressources/`, URL unique, accordéons natifs, 0 JS) : guide agents IA avec Claude Code (5 parties), guide « Créer des images avec l'IA », article « IA locale open source » ; données dans `src/_data/ressources.json`, macro `src/_includes/arbre.njk` ; lien depuis Se former et le pied de page.
+- Accueil : accroche de positionnement, bandeau « Ils en parlent » (témoignages Réseau Toiles et Jean Luc, image `temoignages.webp` générée avec Qwen par `scripts/gen_bandeau.py`), étiquettes « Parcours » et « Pratiques » sur les cartes.
+- À propos : récit de marque, anecdote d'ancrage, indépendance. En pratique : « Mes pratiques ». Sources : liens CNIL (fiche IA générative, opposition à la réutilisation des données).
+
+### Modifié
+- Marque « SérénIA Tech » partout ; ton « je » et vouvoiement (Mes sources, Mes règles, Ma méthode, Écrivez-moi) ; quatre cartes d'accueil de même hauteur.
+- Artefact de revue republié (version 23).
+
 ## v0.8 — 2026-10-24
 
 ### Ajouté
