@@ -139,3 +139,23 @@ Recueillir le retour de l'utilisateur sur les cartes de Comprendre, vérifier le
 
 ## Question bloquante pour la session suivante
 Votre formule (« Une IA humaniste est une IA au service de l'autonomie humaine… ») devient-elle la définition officielle du site ?
+
+---
+# Session du 2026-10-24
+
+## Décisions prises
+- Sortie du build 11ty passée de `_site/` à `dist/` pour un déploiement Netlify ; `netlify.toml` créé (build `npm run build`, publication `dist`).
+
+## Livrables produits ou modifiés
+- `.eleventy.js`, `.gitignore`, `scripts/build_revue.js`, `scripts/test_phase2.js`, `README.md` : sortie `dist/` ; `netlify.toml` : créé
+- Build (20 pages, 384 Ko) et `npm test` OK ; `CHANGELOG.md` (v0.8), `roadmap_portail_ia.md`, `contexte.md` : mis à jour
+
+## Hypothèses validées / invalidées
+- VALIDE : build et `npm test` passent avec `dist/`.
+- EN ATTENTE : déploiement Netlify non effectué ni testé ; `build_revue.js` non relancé après le changement de dossier.
+
+## Prochaine étape exacte
+Choisir le mode de déploiement Netlify (dépôt relié ou glisser-déposer de `dist/`) et trancher Netlify vs Vercel ; sinon recueillir le retour sur les cartes de Comprendre, vérifier le +17 % sur iea.org, faire valider la formule humaniste.
+
+## Question bloquante pour la session suivante
+Votre formule (« Une IA humaniste est une IA au service de l'autonomie humaine… ») devient-elle la définition officielle du site ?

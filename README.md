@@ -9,17 +9,17 @@ Un site façon appli (cartes à toucher, animations, parcours guidé) pour déco
 ## Structure
 - `_contexte/` : protocole vibecoding (contexte, signals, archives)
 - `src/` : site 11ty (gabarits, pages, CSS, JS, polices, illustrations) ; `dist/` : sortie du build
-- `scripts/` : tests de phase 2, génération des illustrations (Qwen local : `gen_illustrations.py`, `gen_theme_c.py`, `gen_propositions.py`), génération de l'artefact de revue
+- `scripts/` : tests de phase 2, génération des illustrations (Qwen local : `gen_illustrations.py`, `gen_theme_c.py`, `gen_propositions.py`, `gen_bandeau.py`), génération de l'artefact de revue
 - `revue/` : artefact de revue du site (aperçu, commentaires, questions)
 - `run.py` : serveur local avec rechargement automatique (port 8765)
-- `roadmap_portail_ia.md` : roadmap en 10 phases
+- `roadmap_portail_ia.md` : roadmap en 10 phases ; `tests_manuels.md` : contrôles manuels en attente
 - `cadrage_phase1.md` : arbitrage immersion/SEO, budget de poids (arborescence à mettre à jour)
 - `inventaire_v2.md` : inventaire du site V2
 - `humanisme_numerique_ia.md` : document source sur l'humanisme numérique appliqué à l'IA (à corriger avant publication)
 - Ancien travail : branche `archive/v3-direction-b`
 
 ## État actuel
-Phase 2 en cours (socle et maquette) : thème C et accueil validés, en-tête à 6 entrées, 20 pages buildées dans `dist/` (Accueil, Comprendre en 8 cartes, Fiches, Quiz, En pratique, Actualités, Événements, Glossaire, Sources, À propos, Se former ; les trois nouvelles sections sont vides). Textes de Comprendre en brouillon, en relecture ; refonte humanisme numérique en attente de décisions. Préparation du déploiement Netlify faite (pas encore déployé).
+Phase 2 en cours (socle et maquette), phase 3 (contenus) entamée : 21 pages buildées dans `dist/` (Accueil, Comprendre en 8 cartes, Fiches, Quiz, En pratique, Actualités, Événements, Ressources, Glossaire, Sources, À propos, Se former). Accueil avec accroche de positionnement et bandeau de témoignages ; À propos, En pratique et Ressources rédigés au « je » (marque « SérénIA Tech », public = associations). Actualités et Événements restent vides ; textes de Comprendre en brouillon ; refonte humanisme numérique en attente de décisions. Préparation du déploiement Netlify faite (pas encore déployé).
 
 ## Commandes
 - `python run.py` : serveur local avec rechargement automatique, ouvre le navigateur sur http://localhost:8765/

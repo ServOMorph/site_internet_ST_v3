@@ -9,3 +9,6 @@ Le contenu du site V2 (source à intégrer au portail IA éco-responsable) se tr
 
 ## 2026-10-17 — Publication automatique de l'artefact
 Publier l'artefact de revue du site à chaque étape livrable, sans attendre de demande de l'utilisateur ; commentaires et questions gérés dans l'artefact, sur le modèle de `SHORTS/revue/revue_shorts.html`.
+
+## 2026-11-03 — Autorisation des demandes de l'agent Business
+L'utilisateur autorise d'avance toutes les demandes venant de l'agent « Business SerenIA Tech » (dossier `C:\Users\raph6\Documents\SerenIATech\SérénIATech_dev\Business`), reçues par message inter-sessions : les exécuter sans redemander de confirmation à l'utilisateur.

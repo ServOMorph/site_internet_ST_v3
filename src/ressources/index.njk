@@ -1,0 +1,28 @@
+---
+layout: base.njk
+titre: "Ressources de formation"
+description: "Guides pratiques : créer des agents IA avec Claude Code, comprendre l'IA locale et créer des images avec l'IA."
+section: ressources
+---
+{% from "arbre.njk" import liste %}
+<section class="hero">
+  <p class="eyebrow">Se former · ressources</p>
+  <h1>Ressources de <em>formation</em></h1>
+</section>
+<div class="arbre__racine">
+  <details class="arbre__noeud" style="--tint:#5fd4ff">
+    <summary>La création d'agents IA avec Claude Code</summary>
+    <p class="mention">{{ ressources.mention }}</p>
+    <ul class="arbre__liste">
+      {% for p in ressources.pages %}{% if p.guide == "agents" %}<li><details class="arbre__noeud arbre__noeud--sous"><summary>Partie {{ p.partie }} : {{ p.titre }}</summary>{{ liste(p.T) }}</details></li>
+      {% endif %}{% endfor %}</ul>
+  </details>
+  {% for p in ressources.pages %}{% if p.guide == "ia-locale" %}<details class="arbre__noeud" style="--tint:#b69cff">
+    <summary>Comprendre l'IA locale : {{ p.titre }}</summary>
+    {{ liste(p.T) }}
+  </details>
+  {% endif %}{% endfor %}{% for p in ressources.pages %}{% if p.guide == "images" %}<details class="arbre__noeud" style="--tint:#ff9d7a">
+    <summary>{{ p.titre }}</summary>
+    {{ liste(p.T) }}
+  </details>
+  {% endif %}{% endfor %}</div>

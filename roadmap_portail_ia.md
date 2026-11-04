@@ -23,6 +23,7 @@ Attendre sa réponse écrite. Ne pas commencer la phase suivante sans confirmati
 - [x] Direction visuelle : thème C (sombre, feuille-circuit, vert néon, illustrations Qwen, particules CSS) validé par l'utilisateur le 2026-10-22, mode sombre uniquement
 - [x] Arborescence refondue : Comprendre (8 cartes dont « L'IA locale » et « Garder la main », sommaire = liste des cartes, textes éco-responsabilité et humanisme en brouillon), Fiches, Quiz, Sources, Glossaire, À propos ; Explorer supprimé ; titre « IA éco-responsable et humaniste »
 - [x] Accueil : carte « En pratique », cartes pleine largeur « Actualités » et « Événements » (pages vides), validé par l'utilisateur le 2026-10-22
+- [x] Accueil (2026-11-04) : accroche de positionnement sous le titre, bandeau « Ils en parlent » (2 témoignages, image de fond Qwen), quatre cartes de même hauteur avec étiquette ; rendu vu avec Playwright sur PC
 - [ ] Refonte humanisme numérique : page « Notre approche », étiquettes de thème des fiches, bloc « Un principe », quiz à deux axes, glossaire enrichi (décisions en attente, voir `signals.md`)
 - [x] Tests : build, poids de page, HTML lisible sans JavaScript (`scripts/test_phase2.js`) ; rendu mobile / PC vu avec Playwright ; contrôles visuels restants dans `tests_manuels.md`
 
@@ -33,11 +34,16 @@ Attendre sa réponse écrite. Ne pas commencer la phase suivante sans confirmati
 
 ## Phase 3 — Contenus réécrits [TODO]
 - [ ] Textes écrits avec l'utilisateur, faits validés un par un (Comprendre : brouillon des 8 cartes écrit, cartes 1, 4, 6, 7 et 8 retouchées le 2026-10-23, relecture de l'utilisateur en cours)
-- [ ] Reprise du contenu V2 réorganisé (formations, services, ressources, portfolio, fiches, événement) ; peu de texte, textes courts
-- [ ] Sections « En pratique » (pratiques de SérénIATech, fournies par l'utilisateur), « Actualités » (veille à mettre en place) et « Événements » : gabarit d'entrée, contenus réels uniquement
+- [x] Positionnement (S-01, 2026-11-04) : marque « SérénIA Tech » partout, accroche d'accueil, ton « je » et vouvoiement sur tout le site (plus de « nous »)
+- [x] Récit de marque (S-02, 2026-11-04) : « À propos » (parcours, anecdote d'ancrage anonyme, indépendance, promesse) ; paragraphe « indépendance » validé
+- [x] Section « En pratique » rédigée (« Mes pratiques » : sobriété, humanisme, liberté de penser, sans chiffre)
+- [x] Témoignages Réseau Toiles et Jean Luc (accord de publication déclaré par l'utilisateur, mention de l'Espace L'Invariable retirée) en bandeau sur l'accueil
+- [x] Section « Ressources » (`/ressources/`, URL unique, 0 JS, accordéons natifs, lien depuis Se former et le pied) : guide agents IA avec Claude Code (5 parties, mention de cadrage), guide « Créer des images avec l'IA », article « IA locale open source » (réécrit, sources CNIL lues) ; liens CNIL repris dans Sources, Futura écarté ; non repris : guide SEO, tarifs, Gumroad, 2 autres articles du blog V2
+- [ ] Reprise du reste du contenu V2 réorganisé (formations, services, portfolio, fiches) ; peu de texte, textes courts
+- [ ] « Actualités » (veille à mettre en place) et « Événements » : gabarit d'entrée, contenus réels uniquement (pages encore vides)
 - [ ] Événement « 1 jour moins numérique » (8 nov. 2026) dans `/evenements/` : date, lieu, titre, avec accord du client
-- [ ] Reprendre tarifs de formation, mention OPCO et témoignage Réseau Toiles (validés le 2026-10-17, voir `_contexte/archive_decisions.md`) ; autres prestations « sur devis »
-- [ ] Chiffres sur l'impact énergétique : sources retenues dans `_contexte/archive_decisions.md` et page Sources du site (AIE, Arcep, Epoch AI), citées avec date et limites
+- [ ] Reprendre tarifs de formation et mention OPCO (validés le 2026-10-17, voir `_contexte/archive_decisions.md`) ; autres prestations « sur devis » (le témoignage Réseau Toiles est fait)
+- [x] Chiffres sur l'impact énergétique : page Sources du site (AIE, Arcep, Epoch AI, + CNIL), citées avec date et limites ; le +17 % de l'AIE reste à relire sur iea.org (voir `signals.md`)
 - [ ] Tests : liens internes, SEO de base, JSON-LD, accessibilité
 
 **⏸ Checkpoint** — Demander à l'utilisateur de faire `/compact` avant de continuer.
