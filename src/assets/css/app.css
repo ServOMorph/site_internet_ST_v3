@@ -112,7 +112,7 @@ progress::-moz-progress-bar{background:linear-gradient(90deg,var(--accent-2),var
 .bandeau__liste blockquote{margin:0;color:var(--text)}
 .bandeau__liste blockquote p{margin:0}
 .bandeau__liste figcaption{margin-top:.5rem;font-size:.875rem;color:var(--accent-2)}
-@media (min-width:60rem){.bandeau__liste{grid-template-columns:1fr 1fr}}
+@media (min-width:60rem){.bandeau__liste{grid-template-columns:1fr 1fr}.bandeau__liste figure:last-child:nth-child(odd){grid-column:1/-1}}
 .stat__valeur{margin:.25rem 0;font:700 clamp(3.5rem,18vw,6rem)/1 var(--font-title);color:var(--accent);text-shadow:0 0 36px rgb(155 255 122 / .45)}
 .stat__num{counter-reset:n var(--n);animation:compte 2.2s cubic-bezier(.2,.7,.2,1) both}
 .stat__num::before{content:counter(n)}
@@ -165,3 +165,16 @@ h2{font-family:var(--font-title);font-size:1.35rem;margin:2rem 0 .75rem}
 }
 @keyframes apparition{from{opacity:0;transform:translateY(2.25rem) scale(.95)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after,::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important;transition:none!important}}
+.autres{display:none}
+.arbre__racine:has(details:target)>details:not(:target){display:none}
+.arbre__racine:has(details:target)~.autres{display:block}
+body:has(#agents:target) .autres [data-r=agents],body:has(#ia-locale:target) .autres [data-r=ia-locale],body:has(#images:target) .autres [data-r=images]{display:none}
+.offre{margin:1.5rem 0;padding:1.25rem 1.5rem;border-radius:var(--radius);border:1px solid var(--line);background:linear-gradient(160deg,rgb(26 52 37 / .55),rgb(9 20 14 / .6))}
+.offre h2{margin-top:0}
+.offre ul{margin:.5rem 0;padding-left:1.25rem;color:var(--muted)}
+.offre__prix{margin:.75rem 0 0;font-weight:700;color:var(--accent)}
+.offre__note{color:var(--muted);font-size:.875rem}
+.offre::after{content:"";display:block;clear:both}
+.offre__img{float:right;width:5rem;height:5rem;margin:0 0 .5rem 1rem;border-radius:12px}
+.res__img{width:2.5rem;height:2.5rem;margin-right:.75rem;border-radius:8px;vertical-align:middle}
+@media (min-width:40rem){.offre__img{width:8rem;height:8rem}}

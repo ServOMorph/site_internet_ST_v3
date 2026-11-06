@@ -6,23 +6,33 @@ section: ressources
 ---
 {% from "arbre.njk" import liste %}
 <section class="hero">
-  <p class="eyebrow">Se former · ressources</p>
+  <p class="eyebrow">Formations · ressources</p>
   <h1>Ressources de <em>formation</em></h1>
 </section>
 <div class="arbre__racine">
-  <details class="arbre__noeud" style="--tint:#5fd4ff">
-    <summary>La création d'agents IA avec Claude Code</summary>
+  <details class="arbre__noeud" id="agents" style="--tint:#5fd4ff">
+    <summary><img class="res__img" src="/assets/img/res-agents.webp" alt="" width="480" height="480" loading="lazy">La création d'agents IA avec Claude Code : économiser les tokens, donc l'énergie</summary>
     <p class="mention">{{ ressources.mention }}</p>
     <ul class="arbre__liste">
       {% for p in ressources.pages %}{% if p.guide == "agents" %}<li><details class="arbre__noeud arbre__noeud--sous"><summary>Partie {{ p.partie }} : {{ p.titre }}</summary>{{ liste(p.T) }}</details></li>
       {% endif %}{% endfor %}</ul>
   </details>
-  {% for p in ressources.pages %}{% if p.guide == "ia-locale" %}<details class="arbre__noeud" style="--tint:#b69cff">
-    <summary>Comprendre l'IA locale : {{ p.titre }}</summary>
+  {% for p in ressources.pages %}{% if p.guide == "ia-locale" %}<details class="arbre__noeud" id="ia-locale" style="--tint:#b69cff">
+    <summary><img class="res__img" src="/assets/img/res-ia-locale.webp" alt="" width="480" height="480" loading="lazy">Comprendre l'IA locale : {{ p.titre }}</summary>
     {{ liste(p.T) }}
   </details>
-  {% endif %}{% endfor %}{% for p in ressources.pages %}{% if p.guide == "images" %}<details class="arbre__noeud" style="--tint:#ff9d7a">
-    <summary>{{ p.titre }}</summary>
+  {% endif %}{% endfor %}{% for p in ressources.pages %}{% if p.guide == "images" %}<details class="arbre__noeud" id="images" style="--tint:#ff9d7a">
+    <summary><img class="res__img" src="/assets/img/res-images.webp" alt="" width="480" height="480" loading="lazy">{{ p.titre }} : une méthode simple et éco-responsable</summary>
     {{ liste(p.T) }}
   </details>
   {% endif %}{% endfor %}</div>
+<section class="autres" aria-labelledby="autres-titre">
+  <h2 id="autres-titre">Les autres ressources</h2>
+  <ul>
+    <li data-r="agents"><a href="/ressources/#agents">La création d'agents IA avec Claude Code : économiser les tokens, donc l'énergie</a> : guide pratique en cinq parties.</li>
+    <li data-r="ia-locale"><a href="/ressources/#ia-locale">IA locale open source : un choix militant ?</a> : ce que l'ouverture change, ses limites.</li>
+    <li data-r="images"><a href="/ressources/#images">Créer des images avec l'IA</a> : une méthode simple et éco-responsable.</li>
+  </ul>
+  <p><a href="/ressources/">Toutes les ressources</a></p>
+</section>
+<script src="/assets/js/ouvrir-ancre.js" defer></script>

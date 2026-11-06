@@ -24,6 +24,19 @@ ITEMS = [
     ("evenements", "a stage spotlight beam shining down onto a small glowing leaf on a dark floor, scattered particles of light", "warm amber and coral"),
     ("garder-main-a", "a human hand gently holding a small glowing leaf whose veins are circuit lines", "coral and warm peach"),
     ("garder-main-b", "a level balance scale with a glowing leaf on one side and a small glowing circuit chip on the other", "coral and warm peach"),
+    ("atelier", "a round table seen from the side with several leaf-shaped speech bubbles floating above it, linked by thin lines", "lime green and mint"),
+    ("conference", "a podium microphone with concentric sound waves spreading out and a small glowing leaf", "warm amber and orange"),
+    ("formation-groupe", "a small staircase of stones climbing up to a glowing leaf at the top", "mint and cyan"),
+    ("res-agents", "a small round helper robot tending a tiny glowing sprout with a watering can", "electric blue and cyan"),
+    ("res-ia-locale", "a small house whose window glows with a computer chip shaped like a leaf", "teal and aqua"),
+    ("res-images", "an empty picture frame with a glowing paintbrush drawing a leaf inside it", "violet and lilac"),
+    ("actualites-b", "a folded newspaper with a small glowing leaf rising from its fold, thin lines of light around it", "cyan and mint"),
+    ("evenements-b", "a string of glowing paper lanterns hanging over a night garden, one lantern shaped like a leaf", "warm amber and coral"),
+    ("formation-b", "a classroom chalkboard with a glowing leaf drawn in chalk and a piece of chalk resting below", "mint and lime"),
+    ("essayer-b", "a question mark made of a curved vine ending in a small glowing leaf", "golden yellow and lime"),
+    ("formation-c", "a young plant in a small pot on a desk beside an open notebook and a pencil, a glowing leaf above the plant", "mint and lime"),
+    ("formation-groupe-c", "three round wooden stools in a circle around a softly glowing lamp shaped like a leaf", "mint and cyan"),
+    ("res-images-c", "a camera lens with a glowing green leaf reflected in the glass, soft rays of light", "violet and lilac"),
 ]
 
 

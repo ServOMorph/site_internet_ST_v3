@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "eleventy",
+    "build:ressources-claudecode": "node scripts/build_ressources_autonome.js",
     "start": "eleventy --serve --port=5000",
     "test": "node scripts/test_phase2.js"
   },

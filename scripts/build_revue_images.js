@@ -1,0 +1,110 @@
+const fs = require("fs");
+const path = require("path");
+
+const ROOT = path.join(__dirname, "..");
+const IMG = path.join(ROOT, "src", "assets", "img");
+const SORTIE = path.join(ROOT, "revue", "revue_images.html");
+
+const TOUTES = [];
+
+const ACTUELLES = [];
+const exclues = new Set(process.argv.slice(2));
+const images = TOUTES.concat(ACTUELLES).filter((i) => !exclues.has(i.id) && fs.existsSync(path.join(IMG, i.id + ".webp"))).map((i) => ({
+  ...i,
+  src: "data:image/webp;base64," + fs.readFileSync(path.join(IMG, i.id + ".webp")).toString("base64"),
+}));
+
+const html = `<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Revue des illustrations | SérénIA Tech</title>
+<style>
+:root{--bg:#050d08;--card:#0d1a13;--line:#1f3a2a;--text:#e8f5ec;--muted:#9bb5a4;--accent:#9bff7a;--ko:#ff9d7a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:56rem;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+h1{font-size:1.5rem;margin:0 0 .25rem}
+.sub{color:var(--muted);margin:0 0 1.5rem}
+.notice{padding:.75rem 1rem;border:1px solid var(--ko);border-radius:10px;color:var(--ko);margin-bottom:1rem}
+.grille{display:grid;gap:1.25rem}
+.fiche{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1rem;display:grid;gap:.75rem}
+.fiche[data-statut=valide]{border-color:var(--accent)}
+.fiche[data-statut=invalide]{border-color:var(--ko)}
+.fiche img{width:100%;max-width:26rem;height:auto;border-radius:10px;justify-self:center;background:#000}
+.lieu{margin:0;font-weight:600}
+.row{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
+button{font:inherit;cursor:pointer;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--text);padding:.5rem 1rem;min-height:2.75rem}
+button.ok[aria-pressed=true]{background:var(--accent);color:#04120a;border-color:var(--accent)}
+button.ko[aria-pressed=true]{background:var(--ko);color:#1a0a04;border-color:var(--ko)}
+textarea{width:100%;min-height:4.5rem;border-radius:10px;border:1px solid var(--line);background:#07130c;color:var(--text);padding:.6rem;font:inherit}
+.etat{color:var(--muted);font-size:.875rem}
+.vide{color:var(--muted);text-align:center;padding:2rem}
+</style>
+</head>
+<body>
+<main>
+<h1>Revue des illustrations</h1>
+<p class="sub">Pour chaque image : Valider ou Invalider, avec un commentaire si besoin. Dites-le-moi ensuite dans la conversation : je retire les images validées de cette page.</p>
+<div class="notice" id="notice" hidden>L'enregistrement des avis n'est pas disponible dans cette vue (connexion requise). Les images restent visibles.</div>
+<div class="grille" id="grille"></div>
+</main>
+<script>
+(function(){
+  var IMAGES = ${JSON.stringify(images)};
+  var avis = {}, db = null, timers = {};
+  var grille = document.getElementById("grille");
+  function el(t, c, x){ var e = document.createElement(t); if (c) e.className = c; if (x) e.textContent = x; return e; }
+  function save(id, patch){
+    var cur = avis[id] || {};
+    var data = { statut: patch.statut !== undefined ? patch.statut : (cur.statut || ""), commentaire: patch.commentaire !== undefined ? patch.commentaire : (cur.commentaire || ""), maj: Date.now() };
+    avis[id] = data;
+    if (db) db.doc("validations/" + id).set(data).catch(function(){ document.getElementById("notice").hidden = false; });
+    refresh(id);
+  }
+  var cartes = {};
+  function refresh(id){
+    var c = cartes[id], a = avis[id] || {};
+    c.root.dataset.statut = a.statut || "";
+    c.ok.setAttribute("aria-pressed", a.statut === "valide");
+    c.ko.setAttribute("aria-pressed", a.statut === "invalide");
+    if (document.activeElement !== c.txt) c.txt.value = a.commentaire || "";
+    c.etat.textContent = a.statut === "valide" ? "Validée." : a.statut === "invalide" ? "Invalidée." : "En attente d'avis.";
+  }
+  if (!IMAGES.length) { grille.appendChild(el("p", "vide", "Aucune image à valider.")); }
+  IMAGES.forEach(function(im){
+    var root = el("section", "fiche");
+    var img = el("img"); img.src = im.src; img.alt = "Illustration proposée : " + im.lieu;
+    var lieu = el("p", "lieu", im.lieu);
+    var row = el("div", "row");
+    var ok = el("button", "ok", "Valider"); ok.type = "button";
+    var ko = el("button", "ko", "Invalider"); ko.type = "button";
+    var etat = el("span", "etat");
+    row.appendChild(ok); row.appendChild(ko); row.appendChild(etat);
+    var txt = el("textarea"); txt.placeholder = "Commentaire (par exemple : trop sombre, remplacer le robot par un livre)"; txt.setAttribute("aria-label", "Commentaire : " + im.lieu);
+    root.appendChild(img); root.appendChild(lieu); root.appendChild(row); root.appendChild(txt);
+    grille.appendChild(root);
+    cartes[im.id] = { root: root, ok: ok, ko: ko, txt: txt, etat: etat };
+    ok.addEventListener("click", function(){ save(im.id, { statut: (avis[im.id] || {}).statut === "valide" ? "" : "valide" }); });
+    ko.addEventListener("click", function(){ save(im.id, { statut: (avis[im.id] || {}).statut === "invalide" ? "" : "invalide" }); });
+    txt.addEventListener("input", function(){ clearTimeout(timers[im.id]); timers[im.id] = setTimeout(function(){ save(im.id, { commentaire: txt.value }); }, 600); });
+    refresh(im.id);
+  });
+  if (window.claude && window.claude.use) {
+    window.claude.use("db").then(function(d){
+      if (!d) { document.getElementById("notice").hidden = false; return; }
+      db = d;
+      db.collection("validations").onSnapshot(function(s){
+        s.docs.forEach(function(x){ if (cartes[x.id]) { avis[x.id] = x.data(); refresh(x.id); } });
+      }, function(){ document.getElementById("notice").hidden = false; });
+    });
+  } else { document.getElementById("notice").hidden = false; }
+})();
+</script>
+</body>
+</html>
+`;
+
+fs.writeFileSync(SORTIE, html);
+console.log("Genere : " + SORTIE + " (" + images.length + " images, " + Math.round(html.length / 1024) + " Ko)");
