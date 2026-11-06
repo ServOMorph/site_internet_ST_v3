@@ -159,3 +159,25 @@ Choisir le mode de déploiement Netlify (dépôt relié ou glisser-déposer de `
 
 ## Question bloquante pour la session suivante
 Votre formule (« Une IA humaniste est une IA au service de l'autonomie humaine… ») devient-elle la définition officielle du site ?
+
+---
+# Session du 2026-11-04
+
+## Décisions prises
+- Positionnement (S-01) et récit de marque (S-02) appliqués : marque « SérénIA Tech », public = associations, ton « je » et vouvoiement, À propos réécrit (indépendance validée).
+- Ressources V2 : guide images repris, article IA locale réécrit, liens CNIL repris, Futura écarté, appel « Me contacter » non repris ; section `/ressources/` en URL unique avec accordéons (pages dédiées supprimées).
+- Témoignages Réseau Toiles et Jean Luc en bandeau sur l'accueil ; image de fond générée avec Qwen ; autorisation permanente des demandes de la session Business notée en mémoire projet.
+
+## Livrables produits ou modifiés
+- `src/` : site.json, index.njk (accroche, bandeau, étiquettes), a-propos, en-pratique, sources, se-former, base.njk, fiche.njk, parcours.json, app.css, `ressources/index.njk`, `_data/ressources.json`, `_includes/arbre.njk`, `img/temoignages.webp` ; `scripts/gen_bandeau.py`
+- `roadmap_portail_ia.md`, `README.md`, `CHANGELOG.md` (v0.9), `tests_manuels.md`, `revue/revue_site.html` (artefact version 23) : mis à jour
+
+## Hypothèses validées / invalidées
+- VALIDE : build (21 pages) et `npm test` passent ; rendu de l'accueil vu avec Playwright à 1300 px (cartes uniformes, bandeau lisible).
+- EN ATTENTE : rendu mobile, page `/ressources/`, À propos et En pratique non vus à l'écran ; accord écrit des auteurs de témoignages déclaré, non vu.
+
+## Prochaine étape exacte
+Ajouter l'événement du 8 novembre dans `/evenements/` avec l'accord du client, puis contrôler le rendu sur téléphone réel (`tests_manuels.md`) et fermer ComfyUI.
+
+## Question bloquante pour la session suivante
+Votre formule (« Une IA humaniste est une IA au service de l'autonomie humaine… ») devient-elle la définition officielle du site ?

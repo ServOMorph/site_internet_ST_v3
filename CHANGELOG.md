@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.0 — 2026-11-06
+
+### Ajouté
+- Page Formations (atelier, conférence, formation, tarifs), liens « Pour aller plus loin » vers chaque ressource ; `/ressources/` n'affiche que la ressource ciblée, avec liens vers les autres (`src/assets/js/ouvrir-ancre.js`).
+- Neuf illustrations Qwen validées via un artefact de revue (`scripts/build_revue_images.js`) ; témoignage de Valérie ; contact par e-mail (À propos) ; dossier autonome du guide agents (`scripts/build_ressources_autonome.js`) ; commande `/telephone`.
+
+### Modifié
+- « Se former » renommé « Formations » partout ; titre du guide agents (économie de tokens et d'énergie) ; En pratique (outils IA locales précisés).
+- Événement du 8 novembre abandonné.
+
 ## v0.9 — 2026-11-04
 
 ### Ajouté
