@@ -39,3 +39,10 @@
 - À propos : texte long (parcours, anecdote, indépendance) lisible ; En pratique : listes lisibles.
 - Page Formations : les trois offres (atelier, conférence, formation) sont lisibles sur téléphone, sans débordement ; la mention « Tarif sur devis » apparaît une seule fois, avec le lien « écrivez-moi » vers À propos, et aucun prix n'est affiché.
 - À propos, section Contact : le lien e-mail ouvre la messagerie du téléphone avec la bonne adresse ; depuis Formations, « écrivez-moi » mène à cette section.
+
+## Pages légales et navigation (S-08, téléphone réel)
+- Barre basse à 5 entrées (Accueil, Comprendre, En pratique, Quiz, Formations) : libellés lisibles, rien de coupé ; accueil sans cartes Actualités et Événements, bloc « Un principe » lisible.
+- Pied de page : liens Mentions légales et Confidentialité ; relecture du contenu juridique par Raphaël en préproduction ; hébergeur à renseigner dans `/mentions-legales/`.
+
+## Liens externes de Comprendre (téléphone réel, avant mise en ligne)
+- Ouvrir `chat.mistral.ai` (403 sur requête automatique) et le Manifeste de Vienne (`dighum.ec.tuwien.ac.at/dighum-manifesto`, aucune réponse sur requête automatique) : retirer le lien s'il est mort.

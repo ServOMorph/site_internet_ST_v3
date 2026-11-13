@@ -5,11 +5,11 @@
     "resume": "L'impact de l'IA, avec des chiffres sourcés et leurs limites.",
     "image": "/assets/img/pourquoi.webp",
     "paragraphes": [
-      "Les centres de données ont consommé environ 415 TWh en 2024, soit environ 1,5&nbsp;% de l'électricité mondiale et environ les quatre cinquièmes de la consommation brute d'électricité de l'Allemagne en 2024 (environ 512 TWh).",
+      "Les centres de données ont consommé environ 415 TWh en 2024, soit environ 1,5&nbsp;% de l'électricité mondiale.",
       "En 2025, leur consommation a augmenté de 17&nbsp;%, alors que la demande mondiale d'électricité a crû d'environ 3&nbsp;%. L'AIE prévoit un doublement d'ici 2030, soit environ 945 TWh, un peu plus que la consommation électrique actuelle du Japon.",
       "Ces chiffres concernent les centres de données, pas l'IA seule : l'AIE ne donne pas de part distincte pour l'IA."
     ],
-    "sources": ["AIE, « Energy and AI », 2025", "AIE, « Key Questions on Energy and AI », avril 2026", "BDEW, consommation brute d'électricité en Allemagne, 2024 (estimation préliminaire)"]
+    "sources": ["AIE, « Energy and AI », 2025", "AIE, « Key Questions on Energy and AI », avril 2026"]
   },
   {
     "slug": "ia-locale",
@@ -30,7 +30,7 @@
     "image": "/assets/img/leviers.webp",
     "paragraphes": [
       "Les acteurs de l'IA publient peu leur empreinte environnementale, surtout pour l'usage courant.",
-      "Une requête texte typique consommerait environ 0,3 Wh selon Epoch AI (fourchette de 0,1 à 4 Wh). OpenAI a annoncé environ 0,34 Wh en juin 2025. Ce sont des ordres de grandeur, pas des mesures vérifiables.",
+      "Une requête texte typique consommerait environ 0,3 Wh selon Epoch AI (fourchette de 0,1 à 4 Wh). C'est un ordre de grandeur, pas une mesure vérifiable.",
       "Trois leviers : choisir un modèle adapté à la tâche, utiliser une IA locale quand c'est possible, et limiter les requêtes inutiles."
     ],
     "sources": ["Arcep, « IA générative : quels défis environnementaux ? », 21 mai 2026", "Epoch AI, « How much energy does ChatGPT use? », 7 février 2025"]
