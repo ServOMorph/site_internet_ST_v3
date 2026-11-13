@@ -45,4 +45,8 @@
 - Pied de page : liens Mentions légales et Confidentialité ; relecture du contenu juridique par Raphaël en préproduction ; hébergeur à renseigner dans `/mentions-legales/`.
 
 ## Liens externes de Comprendre (téléphone réel, avant mise en ligne)
-- Ouvrir `chat.mistral.ai` (403 sur requête automatique) et le Manifeste de Vienne (`dighum.ec.tuwien.ac.at/dighum-manifesto`, aucune réponse sur requête automatique) : retirer le lien s'il est mort.
+- Ouvrir `chat.mistral.ai` (403 sur requête automatique) et le Manifeste de Vienne (`caiml.org/dighum/dighum-manifesto/`) : retirer le lien s'il est mort.
+
+## Corrections de mise en forme du 2026-11-13 (téléphone réel)
+- Barre basse : « En pratique » et « Formations » sur une seule ligne, rien de coupé.
+- Formations : images en fond des trois offres, titres centrés lisibles ; « Pour aller plus loin » en trois blocs cliquables.
