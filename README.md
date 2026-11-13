@@ -19,7 +19,7 @@ Un site façon appli (cartes à toucher, animations, parcours guidé) pour déco
 - Ancien travail : branche `archive/v3-direction-b`
 
 ## État actuel
-Phase 2 en cours (socle et maquette), phase 3 (contenus) entamée : 21 pages buildées dans `dist/` (Accueil, Comprendre en 8 cartes, Fiches, Quiz, En pratique, Actualités, Événements, Ressources, Glossaire, Sources, À propos, Formations). Accueil avec bandeau de 3 témoignages ; Formations, À propos, En pratique et Ressources rédigés au « je » (marque « SérénIA Tech », public = associations) ; contact par e-mail. Actualités et Événements restent vides ; textes de Comprendre en brouillon ; refonte humanisme numérique en attente de décisions. Déploiement Netlify du site complet non fait (le guide agents est déployé à part).
+Phase 2 en cours (socle et maquette), phase 3 (contenus) entamée : 21 pages buildées dans `dist/` (Accueil, Comprendre en 8 cartes, Fiches, Quiz, En pratique, Actualités, Événements, Ressources, Glossaire, Sources, À propos, Formations). Accueil avec bandeau de 3 témoignages ; Formations (sans prix : « Tarif sur devis »), À propos, En pratique et Ressources rédigés au « je » (marque « SérénIA Tech », public = associations) ; contact par e-mail. Actualités et Événements restent vides ; textes de Comprendre en brouillon ; refonte humanisme numérique en attente de décisions. Déploiement Netlify du site complet non fait (le guide agents est déployé à part).
 
 ## Commandes
 - `python run.py` : serveur local avec rechargement automatique, ouvre le navigateur sur http://localhost:8765/

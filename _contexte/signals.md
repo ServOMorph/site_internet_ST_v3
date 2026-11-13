@@ -1,4 +1,4 @@
-# Signals — site_st   (MAJ 2026-11-06)
+# Signals — site_st   (MAJ 2026-11-13)
 
 ## Actions ouvertes
 - [P1|ouvert] Recueillir le retour de l'utilisateur sur les 8 cartes de Comprendre (texte en brouillon dans `src/_data/parcours.json` ; cartes 1, 4, 6, 7 et 8 retouchées le 2026-10-23, aucune validation formelle exprimée ; cartes 3 et 5 non relues) ; sourcer la définition de l'IA locale et les descriptions des outils (carte 7) si l'utilisateur le veut
@@ -16,7 +16,7 @@
 - [P2|ouvert] Déployer le site complet sur Netlify (préproduction) : choisir entre dépôt Git relié (build par `netlify.toml`) et glisser-déposer de `dist/` ; trancher Netlify vs Vercel (roadmap phase 5) ; textes de Comprendre en brouillon et +17 % non lu sur iea.org, donc URL non publique. Le dossier autonome du guide agents (`dist_ressources_claudecode/`) est déjà déployé par l'utilisateur, avec l'ancien titre (non régénéré)
   - fait quand: site en ligne sur une URL Netlify de préproduction, ou décision d'hébergeur actée ; `npm run build:ressources-claudecode` relancé si le titre du guide doit être aligné.
   - réf: `netlify.toml`, `.eleventy.js`, `scripts/build_ressources_autonome.js`, `roadmap_portail_ia.md` Phase 5.
-- [P2|ouvert] Compléter le reste du contenu V2 : services, portfolio ; page Formations rédigée (3 offres, tarifs S-07 fournis par la session Business) ; mention OPCO non reprise ; témoignage de Valérie ajouté
+- [P2|ouvert] Compléter le reste du contenu V2 : services, portfolio ; page Formations rédigée (3 offres, prix retirés le 2026-11-12 : « Tarif sur devis ») ; mention OPCO non reprise ; témoignage de Valérie ajouté
   - fait quand: pages services et portfolio rédigées au « je » avec accord de l'utilisateur.
   - réf: V2 `pages/services.html`, `pages/portfolio.html`, `docs/guides/TARIFS.md`, `inventaire_v2.md`, `roadmap_portail_ia.md` Phase 3.
 - [P2|ouvert] Définir le gabarit d'entrée et l'alimentation des sections « Actualités » (veille, publication manuelle d'abord) et « Événements » ; pages « Contenu à venir » ; l'événement du 8 novembre est abandonné (rien à supprimer dans `src/`) ; aucune entrée inventée
@@ -43,6 +43,9 @@
 - [P3|ouvert] Corriger l'hébergeur OVH dans les pages légales (V3) ; trancher Gmail vs SendGrid en lisant `server.js` V2 (phase 4) ; vérifier l'orthographe « SérénIA Tech » dans l'image du logo (non vérifiée) ; le contact actuel est un lien e-mail (À propos), pas un formulaire
   - fait quand: mentions légales V3 indiquent l'hébergeur réel ; messagerie du contact identifiée ; logo contrôlé.
   - réf: `_contexte/archive_decisions.md` (hébergement V2), V2 `render.yaml`, `server.js`, `src/assets/img/logo.webp`.
+- [P3|ouvert] Prix de la page Formations : retirés en attendant le réalignement de la grille avec le référentiel tarifaire (session Business) ; les rétablir seulement sur demande de Business ; classe CSS `.offre__prix` désormais inutilisée
+  - fait quand: grille alignée transmise par Business (prix rétablis) ou « Tarif sur devis » confirmé comme définitif (classe CSS supprimée).
+  - réf: `src/se-former/index.njk`, `src/assets/css/app.css` (ligne 175), `.claude/memory.md` (autorisation Business).
 - [P3|ouvert] Backlog `/telephone` : aucune correction de format de l'utilisateur relevée dans cette session ; la commande a été copiée depuis VibeObs (`.claude/commands/telephone.md`)
   - fait quand: sans objet tant qu'aucune correction n'est exprimée.
   - réf: `.claude/commands/telephone.md`.
@@ -56,21 +59,20 @@
 - Chiffres éco (sources secondaires) : AIE 415 TWh (2024), environ 945 TWh (2030), +17 % en 2025 ; Epoch AI 0,3 Wh ; Arcep (21 mai 2026). Source brésilienne divergente (15 %, 485 TWh) non retenue.
 - V2 reste en ligne jusqu'à la bascule. Branche `archive/v3-direction-b` sur `bc53de8`.
 
-## Dernière session (2026-11-06)
-# Session du 2026-11-06
+## Dernière session (2026-11-13)
+# Session du 2026-11-13
 
 ## Décisions prises
-- Événement « 1 jour moins numérique » abandonné ; carte « Se former » renommée « Formations » (étiquette « Avec moi »), nom appliqué partout ; ressources reliées depuis la page Formations, chaque lien ouvrant seule la ressource ciblée avec liens vers les autres.
-- Neuf illustrations Qwen validées par l'utilisateur via l'artefact et en place : atelier, conférence, formation de groupe, trois miniatures de ressources, cartes d'accueil Actualités, Événements, Formations, Quiz (l'image Quiz sert aussi la carte 6 de Comprendre).
-- Guide agents : titre « économiser les tokens, donc l'énergie » ; dossier autonome `dist_ressources_claudecode/` généré ; offres de formations et tarifs (S-07), témoignage de Valérie, contact par e-mail repris de la session Business ; commande `/telephone` installée.
+- Prix retirés de la page Formations, mention unique « Tarif sur devis » avec renvoi vers le contact (S-07) : décision de l'utilisateur du 2026-11-12 relayée par la session Business, confirmée dans cette session avant modification ; motif : grille en réalignement avec le référentiel tarifaire.
 
 ## Livrables produits ou modifiés
-- `src/` (index, se-former, ressources, a-propos, en-pratique, base.njk, parcours.json, app.css, `assets/js/ouvrir-ancre.js`, 9 images) ; `scripts/` (gen_theme_c.py, build_ressources_autonome.js, build_revue_images.js) ; `package.json`, `.gitignore`, `tests_manuels.md`, `.claude/commands/telephone.md`, `revue/revue_images.html` : modifiés
-- `npm test` : 21 pages, tous les contrôles passent.
+- `src/se-former/index.njk` : prix retirés (offres, liste de la formation, note) ; commit `0c33e05` poussé sur `origin/main`
+- `tests_manuels.md`, `roadmap_portail_ia.md`, `README.md`, `CHANGELOG.md` (v1.1), `_contexte/` : mis à jour
+- `npm run build` et `npm test` lancés : 21 pages, tous les contrôles passent ; aucun « € » dans `dist/*.html`.
 
 ## Hypothèses validées / invalidées
-- VALIDE : build et `npm test` après remplacement des images.
-- EN ATTENTE : rendu visuel des nouvelles images, page Formations, Ressources et contact sur téléphone réel (`tests_manuels.md`) ; dossier autonome déployé avec l'ancien titre.
+- VALIDE : build et `npm test` après le retrait des prix.
+- EN ATTENTE : contrôles sur téléphone réel (`tests_manuels.md`) ; effet du push sur un éventuel déploiement Netlify non contrôlé.
 
 ## Prochaine étape exacte
 Faire les contrôles manuels sur téléphone (accueil en premier), puis reprendre la relecture des cartes de Comprendre et trancher la formule humaniste.

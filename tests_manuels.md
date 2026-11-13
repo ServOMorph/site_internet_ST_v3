@@ -37,5 +37,5 @@
 ## Ressources, À propos, En pratique (téléphone réel et PC)
 - `/ressources/` : les trois blocs se déplient sans second clic, sous-blocs imbriqués lisibles, blocs de code et liens sans débordement horizontal.
 - À propos : texte long (parcours, anecdote, indépendance) lisible ; En pratique : listes lisibles.
-- Page Formations : les trois offres (atelier, conférence, formation) et leurs prix sont lisibles sur téléphone, sans débordement.
+- Page Formations : les trois offres (atelier, conférence, formation) sont lisibles sur téléphone, sans débordement ; la mention « Tarif sur devis » apparaît une seule fois, avec le lien « écrivez-moi » vers À propos, et aucun prix n'est affiché.
 - À propos, section Contact : le lien e-mail ouvre la messagerie du téléphone avec la bonne adresse ; depuis Formations, « écrivez-moi » mène à cette section.

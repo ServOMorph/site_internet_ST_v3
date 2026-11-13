@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.1 — 2026-11-13
+
+### Modifié
+- Page Formations : tous les prix retirés (atelier, conférence, formation, dégressif, parcours sur mesure, note de prix), remplacés par la mention unique « Tarif sur devis » avec renvoi vers le contact (S-07, `src/se-former/index.njk`).
+
 ## v1.0 — 2026-11-06
 
 ### Ajouté

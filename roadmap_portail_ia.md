@@ -43,7 +43,7 @@ Attendre sa réponse écrite. Ne pas commencer la phase suivante sans confirmati
 - [ ] Reprise du reste du contenu V2 réorganisé (services, portfolio, fiches) ; peu de texte, textes courts
 - [ ] « Actualités » (veille à mettre en place) et « Événements » : gabarit d'entrée, contenus réels uniquement (pages encore vides)
 - [x] Événement « 1 jour moins numérique » (8 nov. 2026) : abandonné le 2026-11-06, rien publié
-- [x] Page Formations (2026-11-06) : atelier, conférence, formation et tarifs fournis par la session Business (S-07) ; mention OPCO non reprise ; autres prestations « sur devis » restent à rédiger
+- [x] Page Formations (2026-11-06) : atelier, conférence, formation fournis par la session Business (S-07) ; mention OPCO non reprise ; prix retirés le 2026-11-12, remplacés par « Tarif sur devis » (grille en réalignement) ; autres prestations « sur devis » restent à rédiger
 - [x] Chiffres sur l'impact énergétique : page Sources du site (AIE, Arcep, Epoch AI, + CNIL), citées avec date et limites ; le +17 % de l'AIE reste à relire sur iea.org (voir `signals.md`)
 - [ ] Tests : liens internes, SEO de base, JSON-LD, accessibilité
 

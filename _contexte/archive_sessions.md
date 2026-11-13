@@ -181,3 +181,25 @@ Ajouter l'événement du 8 novembre dans `/evenements/` avec l'accord du client,
 
 ## Question bloquante pour la session suivante
 Votre formule (« Une IA humaniste est une IA au service de l'autonomie humaine… ») devient-elle la définition officielle du site ?
+
+---
+# Session du 2026-11-06
+
+## Décisions prises
+- Événement « 1 jour moins numérique » abandonné ; carte « Se former » renommée « Formations » (étiquette « Avec moi »), nom appliqué partout ; ressources reliées depuis la page Formations, chaque lien ouvrant seule la ressource ciblée avec liens vers les autres.
+- Neuf illustrations Qwen validées par l'utilisateur via l'artefact et en place : atelier, conférence, formation de groupe, trois miniatures de ressources, cartes d'accueil Actualités, Événements, Formations, Quiz (l'image Quiz sert aussi la carte 6 de Comprendre).
+- Guide agents : titre « économiser les tokens, donc l'énergie » ; dossier autonome `dist_ressources_claudecode/` généré ; offres de formations et tarifs (S-07), témoignage de Valérie, contact par e-mail repris de la session Business ; commande `/telephone` installée.
+
+## Livrables produits ou modifiés
+- `src/` (index, se-former, ressources, a-propos, en-pratique, base.njk, parcours.json, app.css, `assets/js/ouvrir-ancre.js`, 9 images) ; `scripts/` (gen_theme_c.py, build_ressources_autonome.js, build_revue_images.js) ; `package.json`, `.gitignore`, `tests_manuels.md`, `.claude/commands/telephone.md`, `revue/revue_images.html` : modifiés
+- `npm test` : 21 pages, tous les contrôles passent.
+
+## Hypothèses validées / invalidées
+- VALIDE : build et `npm test` après remplacement des images.
+- EN ATTENTE : rendu visuel des nouvelles images, page Formations, Ressources et contact sur téléphone réel (`tests_manuels.md`) ; dossier autonome déployé avec l'ancien titre.
+
+## Prochaine étape exacte
+Faire les contrôles manuels sur téléphone (accueil en premier), puis reprendre la relecture des cartes de Comprendre et trancher la formule humaniste.
+
+## Question bloquante pour la session suivante
+Votre formule (« Une IA humaniste est une IA au service de l'autonomie humaine… ») devient-elle la définition officielle du site ?
