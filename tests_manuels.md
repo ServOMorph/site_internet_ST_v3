@@ -50,3 +50,7 @@
 ## Corrections de mise en forme du 2026-11-13 (téléphone réel)
 - Barre basse : « En pratique » et « Formations » sur une seule ligne, rien de coupé.
 - Formations : images en fond des trois offres, titres centrés lisibles ; « Pour aller plus loin » en trois blocs cliquables.
+
+## Compteur de l'accueil et confidentialité (iPhone réel)
+- Accueil : le chiffre monte de 0 à 415 en environ 2 secondes (nouveau script `compteur.js`, remplace l'animation CSS qui sautait à 415 sur iPhone).
+- `/confidentialite/` : relire base juridique, destinataires (Google, Vercel), transferts hors UE ; relecture juridique par Raphaël.

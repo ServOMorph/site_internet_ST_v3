@@ -86,7 +86,6 @@ progress::-moz-progress-bar{background:linear-gradient(90deg,var(--accent-2),var
 .carte--tint{background:linear-gradient(160deg,color-mix(in srgb,var(--tint) 14%,rgb(10 22 15 / .85)),rgb(9 20 14 / .85));border:1px solid color-mix(in srgb,var(--tint) 35%,transparent);border-radius:var(--radius);padding:1.25rem;box-shadow:0 0 50px color-mix(in srgb,var(--tint) 14%,transparent)}
 .carte--tint .eyebrow{color:var(--tint)}
 .carte__img{display:block;width:100%;max-width:22rem;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:center 55%;border-radius:12px;margin:0 auto 1rem;-webkit-mask-image:linear-gradient(#000 78%,transparent);mask-image:linear-gradient(#000 78%,transparent)}
-@property --n{syntax:"<integer>";initial-value:415;inherits:false}
 .stat,.bandeau{margin:1.5rem 0;padding:1.5rem;border-radius:var(--radius);border:1px solid var(--line);background:linear-gradient(160deg,rgb(26 52 37 / .55),rgb(9 20 14 / .6));text-align:center}
 .mention{max-width:40rem;margin:.75rem 0 1.25rem;padding:.75rem 1rem;border-left:3px solid var(--accent-2);color:var(--muted)}
 .sommaire{list-style:none;margin:1.5rem 0;padding:0;display:grid;gap:.75rem}
@@ -114,10 +113,7 @@ progress::-moz-progress-bar{background:linear-gradient(90deg,var(--accent-2),var
 .bandeau__liste figcaption{margin-top:.5rem;font-size:.875rem;color:var(--accent-2)}
 @media (min-width:60rem){.bandeau__liste{grid-template-columns:1fr 1fr}.bandeau__liste figure:last-child:nth-child(odd){grid-column:1/-1}}
 .stat__valeur{margin:.25rem 0;font:700 clamp(3.5rem,18vw,6rem)/1 var(--font-title);color:var(--accent);text-shadow:0 0 36px rgb(155 255 122 / .45)}
-.stat__num{counter-reset:n var(--n);animation:compte 2.2s cubic-bezier(.2,.7,.2,1) both}
-.stat__num::before{content:counter(n)}
 .stat__unite{font-size:.4em;color:var(--accent-2);text-shadow:none}
-@keyframes compte{from{--n:0}to{--n:415}}
 .stat__texte{max-width:32rem;margin:.5rem auto;color:var(--text)}
 .stat__source{margin:.5rem 0 0;font-size:.8125rem;color:var(--muted)}
 .pied{max-width:46rem;margin:0 auto;padding:1.5rem 1.25rem 2rem;border-top:1px solid var(--line);font-size:.875rem;color:var(--muted)}
