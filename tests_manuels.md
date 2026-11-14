@@ -35,10 +35,3 @@
 ## Ressources, À propos, En pratique (téléphone réel et PC)
 - `/ressources/` : les trois blocs se déplient sans second clic, sous-blocs imbriqués lisibles, blocs de code et liens sans débordement horizontal.
 - À propos : texte long (parcours, anecdote, indépendance) lisible ; En pratique : listes lisibles.
-
-## Relecture juridique avant mise en ligne (Raphaël, préproduction)
-- `/mentions-legales/` et `/confidentialite/` : relire le contenu (base juridique « intérêt légitime », destinataires Google et Vercel, transferts hors UE, téléphone de l'hébergeur = ligne de l'agent DMCA de Vercel).
-- Facultatif : déclarer l'exemption d'accessibilité sur demarche.numerique.gouv.fr.
-
-## Liens externes de Comprendre (téléphone réel, avant mise en ligne)
-- Ouvrir le Manifeste de Vienne (`caiml.org/dighum/dighum-manifesto/`) : retirer le lien s'il est mort.

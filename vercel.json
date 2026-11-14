@@ -1,4 +1,24 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "dist"
+  "outputDirectory": "dist",
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.serenia-tech.fr" }],
+      "destination": "https://serenia-tech.fr/$1",
+      "statusCode": 308
+    },
+    { "source": "/pages/about.html", "destination": "/a-propos/", "statusCode": 308 },
+    { "source": "/pages/contact.html", "destination": "/a-propos/#contact", "statusCode": 308 },
+    { "source": "/pages/formations.html", "destination": "/se-former/", "statusCode": 308 },
+    { "source": "/pages/atelier.html", "destination": "/se-former/", "statusCode": 308 },
+    { "source": "/pages/atelier", "destination": "/se-former/", "statusCode": 308 },
+    { "source": "/pages/services.html", "destination": "/se-former/", "statusCode": 308 },
+    { "source": "/pages/ressources.html", "destination": "/ressources/", "statusCode": 308 },
+    { "source": "/pages/blog.html", "destination": "/ressources/", "statusCode": 308 },
+    { "source": "/pages/blog/ia-locale-open-source.html", "destination": "/ressources/", "statusCode": 308 },
+    { "source": "/pages/legal/mentions-legales.html", "destination": "/mentions-legales/", "statusCode": 308 },
+    { "source": "/pages/legal/politique-confidentialite.html", "destination": "/confidentialite/", "statusCode": 308 },
+    { "source": "/pages/legal/cookies.html", "destination": "/confidentialite/", "statusCode": 308 }
+  ]
 }
