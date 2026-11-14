@@ -171,4 +171,7 @@ Lire `.claude/zones.md` pour obtenir la table des alias → dossiers réels.
 <!-- Convention : toute règle liée à une étape précise de la Procédure ci-dessus doit la
      référencer explicitement par son numéro (ex: "Étape 6 : ..."), plutôt que compter sur la
      position physique de cette zone (toujours en fin de fichier). -->
+- Étapes 3, 4 et 5 : si `_contexte/journal_session.md` n'est pas vide, le lire avant la synthèse et l'intégrer à `signals.md` (étape 4) et `contexte.md` (étape 5).
+- Étape 13 : vider `_contexte/journal_session.md` (le fichier est conservé vide) seulement une fois le commit réussi, jamais avant.
+- Étape 15 : ne pas signaler `_contexte/journal_session.md` (gitignoré) parmi les résidus.
 <!-- SPECIFICITES PROJET : FIN -->

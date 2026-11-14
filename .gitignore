@@ -14,3 +14,4 @@ credentials*.json
 .playwright-mcp/
 src/assets/brut/
 __pycache__/
+_contexte/journal_session.md

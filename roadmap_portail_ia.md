@@ -33,7 +33,7 @@ Attendre sa réponse écrite. Ne pas commencer la phase suivante sans confirmati
 ---
 
 ## Phase 3 — Contenus réécrits [TODO]
-- [ ] Textes écrits avec l'utilisateur, faits validés un par un (Comprendre : brouillon des 8 cartes écrit, cartes 1, 4, 6, 7 et 8 retouchées le 2026-10-23, relecture de l'utilisateur en cours)
+- [x] Textes écrits avec l'utilisateur, faits validés un par un : Comprendre, 8 cartes relues et validées le 2026-11-13 (cartes 1 et 3 corrigées : comparaison Allemagne et phrase OpenAI retirées)
 - [x] Accueil (2026-11-06) : 3 témoignages (Valérie ajoutée), neuf illustrations Qwen validées (cartes d'accueil, Formations, miniatures Ressources), contact par e-mail dans À propos
 - [x] Positionnement (S-01, 2026-11-04) : marque « SérénIA Tech » partout, accroche d'accueil, ton « je » et vouvoiement sur tout le site (plus de « nous »)
 - [x] Récit de marque (S-02, 2026-11-04) : « À propos » (parcours, anecdote d'ancrage anonyme, indépendance, promesse) ; paragraphe « indépendance » validé
@@ -41,10 +41,10 @@ Attendre sa réponse écrite. Ne pas commencer la phase suivante sans confirmati
 - [x] Témoignages Réseau Toiles et Jean Luc (accord de publication déclaré par l'utilisateur, mention de [nom retiré] retirée) en bandeau sur l'accueil
 - [x] Section « Ressources » (`/ressources/`, URL unique, 0 JS, accordéons natifs, lien depuis Se former et le pied) : guide agents IA avec Claude Code (5 parties, mention de cadrage), guide « Créer des images avec l'IA », article « IA locale open source » (réécrit, sources CNIL lues) ; liens CNIL repris dans Sources, Futura écarté ; non repris : guide SEO, tarifs, Gumroad, 2 autres articles du blog V2
 - [ ] Reprise du reste du contenu V2 réorganisé (services, portfolio, fiches) ; peu de texte, textes courts
-- [ ] « Actualités » (veille à mettre en place) et « Événements » : gabarit d'entrée, contenus réels uniquement (pages encore vides)
+- [ ] « Actualités » (veille à mettre en place) et « Événements » : gabarit d'entrée, contenus réels uniquement (pages vides, retirées de la barre et de l'accueil pour la V1)
 - [x] Événement « 1 jour moins numérique » (8 nov. 2026) : abandonné le 2026-11-06, rien publié
 - [x] Page Formations (2026-11-06) : atelier, conférence, formation fournis par la session Business (S-07) ; mention OPCO non reprise ; prix retirés le 2026-11-12, remplacés par « Tarif sur devis » (grille en réalignement) ; autres prestations « sur devis » restent à rédiger
-- [x] Chiffres sur l'impact énergétique : page Sources du site (AIE, Arcep, Epoch AI, + CNIL), citées avec date et limites ; le +17 % de l'AIE reste à relire sur iea.org (voir `signals.md`)
+- [x] Chiffres sur l'impact énergétique : page Sources du site (AIE, Arcep, Epoch AI, + CNIL), citées avec date et limites ; le +17 % de l'AIE et le doublement d'ici 2030 sont lus sur le communiqué iea.org du 16 avril 2026
 - [ ] Tests : liens internes, SEO de base, JSON-LD, accessibilité
 
 **⏸ Checkpoint** — Demander à l'utilisateur de faire `/compact` avant de continuer.
@@ -54,7 +54,8 @@ Attendre sa réponse écrite. Ne pas commencer la phase suivante sans confirmati
 
 ## Phase 4 — Contact et pages légales [TODO]
 - [ ] Formulaire contact relié au backend Express existant (Render)
-- [ ] Mentions légales, confidentialité, cookies, CGV mises à jour
+- [x] Mentions légales et confidentialité (V1, 2026-11-14, hébergeur Vercel ; relecture juridique de l'utilisateur en attente)
+- [ ] CGV : à rédiger avant la première vente (offres réservées aux structures)
 - [ ] Tests : envoi réel du formulaire (ajouté à `tests_manuels.md`), liens légaux
 
 **⏸ Checkpoint** — Demander à l'utilisateur de faire `/compact` avant de continuer.
@@ -63,7 +64,7 @@ Attendre sa réponse écrite. Ne pas commencer la phase suivante sans confirmati
 ---
 
 ## Phase 5 — Mise en ligne sur serenia-tech.fr [TODO]
-- [ ] Hébergeur à trancher (Vercel prévu, Netlify demandé le 2026-10-24 : `netlify.toml` et `dist/` prêts) ; projet relié au dépôt (préproduction d'abord)
+- [x] Hébergeur : Vercel retenu le 2026-11-14 (Netlify écarté) ; projet `site-internet-st-v3` relié au dépôt GitHub, préproduction en ligne (`vercel.json`)
 - [ ] Redirections 301/308 des URLs V2 vers les nouvelles (préserver le SEO)
 - [ ] Bascule du domaine, V2 conservé en repli
 - [ ] Tests manuels : formulaire en production, Search Console, redirections

@@ -1,5 +1,14 @@
 # Changelog
 
+## v2.0 — 2026-11-14
+
+### Ajouté
+- Périmètre V1 (S-08) : bloc « Un principe » (formule humaniste) sur l'accueil ; pages Mentions légales et Confidentialité (hébergeur Vercel, base juridique, destinataires, transferts hors UE) liées depuis le pied de page ; `vercel.json` ; compteur de l'accueil en JS (`src/assets/js/compteur.js`) ; journal de session gitignoré (`_contexte/journal_session.md`) et règles associées dans `close.md`, `start.md`, `CLAUDE.md`.
+
+### Modifié
+- Barre à 5 entrées (Formations ajoutée, Actualités et Événements retirés de la barre et de l'accueil) et plus compacte sur téléphone ; offres de Formations avec image en fond, « Pour aller plus loin » en blocs ; ligne « Formation individuelle » retirée ; cartes 1 et 3 de Comprendre corrigées ; lien du Manifeste de Vienne remplacé.
+- Mention « Maquette » retirée du pied de page.
+
 ## v1.1 — 2026-11-13
 
 ### Modifié

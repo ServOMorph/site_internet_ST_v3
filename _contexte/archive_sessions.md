@@ -203,3 +203,25 @@ Faire les contrôles manuels sur téléphone (accueil en premier), puis reprendr
 
 ## Question bloquante pour la session suivante
 Votre formule (« Une IA humaniste est une IA au service de l'autonomie humaine… ») devient-elle la définition officielle du site ?
+
+---
+
+# Session du 2026-11-13
+
+## Décisions prises
+- Prix retirés de la page Formations, mention unique « Tarif sur devis » avec renvoi vers le contact (S-07) : décision de l'utilisateur du 2026-11-12 relayée par la session Business, confirmée dans cette session avant modification ; motif : grille en réalignement avec le référentiel tarifaire.
+
+## Livrables produits ou modifiés
+- `src/se-former/index.njk` : prix retirés (offres, liste de la formation, note) ; commit `0c33e05` poussé sur `origin/main`
+- `tests_manuels.md`, `roadmap_portail_ia.md`, `README.md`, `CHANGELOG.md` (v1.1), `_contexte/` : mis à jour
+- `npm run build` et `npm test` lancés : 21 pages, tous les contrôles passent ; aucun « € » dans `dist/*.html`.
+
+## Hypothèses validées / invalidées
+- VALIDE : build et `npm test` après le retrait des prix.
+- EN ATTENTE : contrôles sur téléphone réel (`tests_manuels.md`) ; effet du push sur un éventuel déploiement Netlify non contrôlé.
+
+## Prochaine étape exacte
+Faire les contrôles manuels sur téléphone (accueil en premier), puis reprendre la relecture des cartes de Comprendre et trancher la formule humaniste.
+
+## Question bloquante pour la session suivante
+Votre formule (« Une IA humaniste est une IA au service de l'autonomie humaine… ») devient-elle la définition officielle du site ?

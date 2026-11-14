@@ -4,7 +4,7 @@
 Un site façon appli (cartes à toucher, animations, parcours guidé) pour découvrir l'IA éco-responsable et l'humanisme numérique. But : référence, public : les associations. Intègre le contenu du site V2, réorganisé et réécrit avec l'auteur.
 
 ## Stack
-11ty (site statique), HTML/CSS/JS minimal, Vercel ou Netlify (frontend, à trancher ; `netlify.toml` prêt), Express sur Render (contact). Une URL HTML par carte, JavaScript en amélioration seulement.
+11ty (site statique), HTML/CSS/JS minimal, Vercel (frontend, `vercel.json` ; Netlify écarté), Express sur Render (contact). Une URL HTML par carte, JavaScript en amélioration seulement.
 
 ## Structure
 - `_contexte/` : protocole vibecoding (contexte, signals, archives)
@@ -19,7 +19,7 @@ Un site façon appli (cartes à toucher, animations, parcours guidé) pour déco
 - Ancien travail : branche `archive/v3-direction-b`
 
 ## État actuel
-Phase 2 en cours (socle et maquette), phase 3 (contenus) entamée : 21 pages buildées dans `dist/` (Accueil, Comprendre en 8 cartes, Fiches, Quiz, En pratique, Actualités, Événements, Ressources, Glossaire, Sources, À propos, Formations). Accueil avec bandeau de 3 témoignages ; Formations (sans prix : « Tarif sur devis »), À propos, En pratique et Ressources rédigés au « je » (marque « SérénIA Tech », public = associations) ; contact par e-mail. Actualités et Événements restent vides ; textes de Comprendre en brouillon ; refonte humanisme numérique en attente de décisions. Déploiement Netlify du site complet non fait (le guide agents est déployé à part).
+Périmètre V1 (S-08) en préproduction sur Vercel (`site-internet-st-v3.vercel.app`) : 23 pages dans `dist/` (Accueil, Comprendre en 8 cartes validées, Fiches, Quiz, En pratique, Ressources, Glossaire, Sources, À propos, Formations réservées aux structures, Mentions légales, Confidentialité). Barre à 5 entrées ; Actualités et Événements retirés de la navigation. Reste la relecture juridique, puis les redirections V2 et la bascule de `serenia-tech.fr`.
 
 ## Commandes
 - `python run.py` : serveur local avec rechargement automatique, ouvre le navigateur sur http://localhost:8765/
