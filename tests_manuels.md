@@ -7,12 +7,10 @@
 - Avec « réduire les animations » activé dans le système : aucune animation ne se joue et le chiffre affiche 415.
 
 ## En-tête et Comprendre (téléphone réel et PC)
-- Barre basse à 6 entrées (Accueil, Comprendre, En pratique, Quiz, Actualités, Événements) : libellés lisibles, rien de coupé ; sur PC, en-tête sans retour à la ligne.
 - Page Comprendre : titre « Comprendre l'IA éco-responsable et humaniste » avec « éco-responsable » sur une seule ligne ; liste des 8 cartes.
 - Cartes du parcours : bloc « Sources » en petit sous un filet, une source par ligne ; Précédent / Suivant / Sommaire ; lecture des textes en brouillon (retour de l'utilisateur en cours).
 
 ## Liens et mise en forme des cartes (téléphone réel)
-- Carte 7 : ouvrir les liens Ollama, ComfyUI et Vibe-Mistral (`chat.mistral.ai`) et vérifier qu'ils mènent aux bons sites.
 - Carte 8 : ouvrir les liens Formations, À propos (ancre `#contact`), Arcep, CNIL, UNESCO et TU Wien ; lisibilité de la liste de sites séparés par des retours à la ligne.
 - Carte 6 : les trois étapes de la méthode s'affichent chacune sur leur ligne.
 
@@ -37,20 +35,10 @@
 ## Ressources, À propos, En pratique (téléphone réel et PC)
 - `/ressources/` : les trois blocs se déplient sans second clic, sous-blocs imbriqués lisibles, blocs de code et liens sans débordement horizontal.
 - À propos : texte long (parcours, anecdote, indépendance) lisible ; En pratique : listes lisibles.
-- Page Formations : les trois offres (atelier, conférence, formation) sont lisibles sur téléphone, sans débordement ; la mention « Tarif sur devis » apparaît une seule fois, avec le lien « écrivez-moi » vers À propos, et aucun prix n'est affiché.
-- À propos, section Contact : le lien e-mail ouvre la messagerie du téléphone avec la bonne adresse ; depuis Formations, « écrivez-moi » mène à cette section.
 
-## Pages légales et navigation (S-08, téléphone réel)
-- Barre basse à 5 entrées (Accueil, Comprendre, En pratique, Quiz, Formations) : libellés lisibles, rien de coupé ; accueil sans cartes Actualités et Événements, bloc « Un principe » lisible.
-- Pied de page : liens Mentions légales et Confidentialité ; relecture du contenu juridique par Raphaël en préproduction ; hébergeur à renseigner dans `/mentions-legales/`.
+## Relecture juridique avant mise en ligne (Raphaël, préproduction)
+- `/mentions-legales/` et `/confidentialite/` : relire le contenu (base juridique « intérêt légitime », destinataires Google et Vercel, transferts hors UE, téléphone de l'hébergeur = ligne de l'agent DMCA de Vercel).
+- Facultatif : déclarer l'exemption d'accessibilité sur demarche.numerique.gouv.fr.
 
 ## Liens externes de Comprendre (téléphone réel, avant mise en ligne)
-- Ouvrir `chat.mistral.ai` (403 sur requête automatique) et le Manifeste de Vienne (`caiml.org/dighum/dighum-manifesto/`) : retirer le lien s'il est mort.
-
-## Corrections de mise en forme du 2026-11-13 (téléphone réel)
-- Barre basse : « En pratique » et « Formations » sur une seule ligne, rien de coupé.
-- Formations : images en fond des trois offres, titres centrés lisibles ; « Pour aller plus loin » en trois blocs cliquables.
-
-## Compteur de l'accueil et confidentialité (iPhone réel)
-- Accueil : le chiffre monte de 0 à 415 en environ 2 secondes (nouveau script `compteur.js`, remplace l'animation CSS qui sautait à 415 sur iPhone).
-- `/confidentialite/` : relire base juridique, destinataires (Google, Vercel), transferts hors UE ; relecture juridique par Raphaël.
+- Ouvrir le Manifeste de Vienne (`caiml.org/dighum/dighum-manifesto/`) : retirer le lien s'il est mort.
