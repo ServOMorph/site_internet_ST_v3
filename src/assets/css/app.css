@@ -117,6 +117,8 @@ progress::-moz-progress-bar{background:linear-gradient(90deg,var(--accent-2),var
 .stat__texte{max-width:32rem;margin:.5rem auto;color:var(--text)}
 .stat__source{margin:.5rem 0 0;font-size:.6875rem;color:var(--muted)}
 .stat__source a{white-space:nowrap}
+.nw{white-space:nowrap}
+.titre__type{color:var(--accent)}
 .pied{max-width:46rem;margin:0 auto;padding:1.5rem 1.25rem 2rem;border-top:1px solid var(--line);font-size:.875rem;color:var(--muted)}
 .pied nav{display:flex;flex-wrap:wrap;gap:.5rem 1.25rem}
 .pied a{color:var(--muted)}

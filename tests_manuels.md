@@ -1,10 +1,7 @@
 # Tests manuels en attente
 
-## Transitions entre pages
-- Sur un navigateur compatible, vérifier que le passage d'une page à l'autre est fluide (`@view-transition`).
-
 ## Arborescence
-- Parcourir Accueil (dont les cartes En pratique, Actualités et Événements, sur téléphone réel), Comprendre, Fiches et les liens du pied de page (Sources, Glossaire, À propos, Formations) ; vérifier que rien ne manque ou ne prête à confusion.
+- Parcourir Accueil (dont les cartes Comprendre, En pratique et Formations, sur téléphone réel), Comprendre, Fiches et les liens du pied de page (Sources, Glossaire, À propos, Formations) ; vérifier que rien ne manque ou ne prête à confusion.
 
 ## Accueil : bandeau et cartes (téléphone réel)
 - Bandeau « Ils en parlent » : lisibilité des trois témoignages sur l'image de fond (bulles derrière le texte), une colonne sur téléphone, deux colonnes sur PC avec le dernier (Réseau Toiles) en pleine largeur.
@@ -12,7 +9,7 @@
 - Trois cartes (Comprendre, En pratique, Formations) : même hauteur, étiquette et titre alignés ; accroche sous le titre lisible.
 
 ## Nouvelles illustrations (téléphone réel et PC)
-- Accueil : cartes Actualités, Événements, Quiz et Formations avec leurs nouvelles images ; Comprendre, carte 6 : image Quiz mise à jour.
+- Accueil : carte Formations avec sa nouvelle image ; Comprendre, carte 6 : image de la carte « Essayer » mise à jour.
 - Page Formations : images atelier, conférence et formation (flottantes à droite, sans déborder) ; Ressources : miniatures des trois titres lisibles.
 
 ## Ressources, À propos, En pratique (téléphone réel et PC)
