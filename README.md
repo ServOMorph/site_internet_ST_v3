@@ -19,7 +19,7 @@ Un site façon appli (cartes à toucher, animations, parcours guidé) pour déco
 - Ancien travail : branche `archive/v3-direction-b`
 
 ## État actuel
-Périmètre V1 (S-08) en préproduction sur Vercel (`site-internet-st-v3.vercel.app`) : 22 pages dans `dist/` (Accueil, Comprendre en 8 cartes validées, Fiches, En pratique, Ressources, Glossaire, Sources, À propos, Formations réservées aux structures, Mentions légales, Confidentialité). Barre à 5 entrées ; Actualités et Événements retirés de la navigation. Reste la relecture juridique, puis les redirections V2 et la bascule de `serenia-tech.fr`.
+Périmètre V1 (S-08) en préproduction sur Vercel (`site-internet-st-v3.vercel.app`) : 22 pages dans `dist/` (Accueil, Comprendre en 8 cartes validées, Fiches, En pratique, Ressources, Glossaire, Sources, À propos, Formations réservées aux structures, Mentions légales, Confidentialité). Barre à 4 entrées (quiz, Actualités et Événements retirés de la V1). Pages légales relues ; redirections V2 vers V3 en place dans `vercel.json`. Reste les contrôles manuels sur téléphone, puis la bascule de `serenia-tech.fr`.
 
 ## Commandes
 - `python run.py` : serveur local avec rechargement automatique, ouvre le navigateur sur http://localhost:8765/

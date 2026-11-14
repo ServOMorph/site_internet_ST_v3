@@ -1,5 +1,16 @@
 # Changelog
 
+## v2.1 — 2026-11-14
+
+### Ajouté
+- Redirections 308 des anciennes URL V2 vers V3 dans `vercel.json` (about, contact, formations, atelier, services, ressources, blog, article IA locale, mentions légales, confidentialité, cookies) et renvoi `www` vers apex ; portfolio, blog WhatsApp et wifi, CGV laissés en 404.
+
+### Modifié
+- Quiz retiré de la V1 (page, barre, carte d'accueil) ; accueil à trois cartes ; barre à 4 entrées espacées à parts égales.
+- Page En pratique renommée « Mon approche » (carte d'accueil et page) ; section Humanisme réécrite (relecture objective, vérification, pas de compagnon) ; question avant le prompt ajoutée à « Liberté de penser ».
+- Formations : type de l'offre en accent, « IA éco-responsable » insécable, agents IA en dernier de « Pour aller plus loin » ; témoignages et sources en police réduite ; « 1,5 % », « À propos » et « la formation » insécables.
+- Pages légales relues et validées ; mention « Maquette » retirée de la page Sources.
+
 ## v2.0 — 2026-11-14
 
 ### Ajouté

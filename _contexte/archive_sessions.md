@@ -225,3 +225,29 @@ Faire les contrôles manuels sur téléphone (accueil en premier), puis reprendr
 
 ## Question bloquante pour la session suivante
 Votre formule (« Une IA humaniste est une IA au service de l'autonomie humaine… ») devient-elle la définition officielle du site ?
+
+---
+
+# Session du 2026-11-14
+
+## Décisions prises
+- Périmètre V1 (S-08, ordre de l'utilisateur relayé par Business) appliqué : formule humaniste en bloc « Un principe », barre à 5 entrées (Formations ajoutée, Actualités et Événements retirées), mention « Maquette » retirée, pages Mentions légales et Confidentialité créées.
+- Hébergeur retenu : Vercel (nouveau projet de préproduction) ; téléphone de Vercel Inc. = ligne de l'agent DMCA, gardé par l'utilisateur.
+- Offres vendues uniquement à des structures : pas de médiateur de la consommation ; ligne « Formation individuelle : sur demande » retirée. Cartes de Comprendre relues et validées (cartes 1 et 3 corrigées).
+- Règle de journal de session (demande VibeObs) appliquée avec l'accord de l'utilisateur.
+
+## Livrables produits ou modifiés
+- `src/` (accueil, `_includes/base.njk`, `mentions-legales/`, `confidentialite/`, `se-former/`, `assets/css/app.css`, `assets/js/compteur.js`, `_data/parcours.json`), `vercel.json`, `tests_manuels.md` : commités et poussés (dernier avant clôture : `c51d525`).
+- `.claude/CLAUDE.md`, `.claude/commands/close.md` et `start.md`, `.gitignore`, `_contexte/journal_session.md` (gitignoré) : commités au /close.
+- Build 23 pages et `npm test` : tous les contrôles passent.
+
+## Hypothèses validées / invalidées
+- VALIDE : +17 % et doublement d'ici 2030 lus sur iea.org ; contrôles sur iPhone réel de l'accueil, de la barre, de Formations, du contact et des pages légales ; compteur de l'accueil (réécrit en JS).
+- INVALIDE : lien `dighum.ec.tuwien.ac.at` (domaine mort) -> remplacé par `caiml.org/dighum/dighum-manifesto/`, à confirmer.
+- EN ATTENTE : relecture juridique par l'utilisateur ; bascule du domaine ; CGV ; avis d'un juriste sur le médiateur.
+
+## Prochaine étape exacte
+Attendre la relecture juridique de l'utilisateur, puis, sur son instruction, dresser la liste des redirections V2 vers V3 et basculer le domaine `serenia-tech.fr` du projet `sereniatech` vers `site-internet-st-v3`.
+
+## Question bloquante pour la session suivante
+Aucune

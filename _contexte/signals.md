@@ -1,28 +1,28 @@
 # Signals — site_st   (MAJ 2026-11-14)
 
 ## Actions ouvertes
-- [P1|ouvert] Relecture juridique de `/mentions-legales/` et `/confidentialite/` par l'utilisateur en préproduction (base « intérêt légitime », Google et Vercel nommés comme prestataires, transferts hors UE, téléphone de l'hébergeur = ligne de l'agent DMCA de Vercel, validée par lui) ; facultatif : déclarer l'exemption d'accessibilité sur demarche.numerique.gouv.fr
-  - fait quand: relecture faite par l'utilisateur et corrections éventuelles appliquées.
-  - réf: `src/mentions-legales/index.njk`, `src/confidentialite/index.njk`, `tests_manuels.md`.
-- [P1|ouvert] Mise en ligne de la V1 sur serenia-tech.fr, sur instruction explicite de l'utilisateur : redirections V2 vers V3 (liste des anciennes URL à établir), bascule du domaine (remplace la V2 en ligne), puis signaler la mise en ligne à la session Business pour qu'elle passe S-08 à FAIT (la session Business s'est close : message à envoyer à sa réouverture ou via l'utilisateur)
-  - fait quand: site V3 servi sur serenia-tech.fr, redirections testées, Business informée.
+- [P1|ouvert] Mise en ligne de la V1 sur serenia-tech.fr, sur instruction explicite de l'utilisateur : bascule du domaine (remplace la V2 en ligne) du projet Vercel `sereniatech` vers `site-internet-st-v3` (Settings > Domains, dans le tableau de bord Vercel : à guider clic par clic), puis tester la règle `www` vers apex et les redirections sur le domaine réel, puis signaler la mise en ligne à la session Business pour qu'elle passe S-08 à FAIT (la session Business s'est close : message à envoyer à sa réouverture ou via l'utilisateur)
+  - fait quand: site V3 servi sur serenia-tech.fr, redirections testées sur le domaine, Business informée.
   - réf: `vercel.json`, `roadmap_portail_ia.md` Phase 5, Business `site_maj_a_transmettre.md` (S-08).
-- [P2|ouvert] Préparer les CGV avant la première vente (offres réservées aux structures, aucune vente en ligne sur le site) avec le référentiel tarifaire ; confirmer par un juriste ou la DGCCRF qu'aucun médiateur de la consommation n'est requis pour une clientèle de structures (textes complets non lus : `economie.gouv.fr` en 403)
-  - fait quand: CGV rédigées et validées par l'utilisateur, ou décision actée de s'en passer.
-  - réf: `src/se-former/index.njk`, `_contexte/contexte.md` (décision du 2026-11-14).
-- [P2|ouvert] Confirmer le lien du Manifeste de Vienne (`https://caiml.org/dighum/dighum-manifesto/`, carte 8, répond 200, contenu non lu) sur téléphone ; l'ancien domaine `dighum.ec.tuwien.ac.at` ne répond plus
-  - fait quand: lien ouvert par l'utilisateur et conforme, ou retiré de `src/_data/parcours.json`.
-  - réf: `src/_data/parcours.json`, `tests_manuels.md`.
-- [P3|ouvert] Après la mise en ligne : contrôles restants de `tests_manuels.md` (Comprendre, quiz, transitions, Ressources, À propos, arborescence, illustrations), puis clore la phase 2
+- [P2|ouvert] Contrôles manuels restants de `tests_manuels.md`, à reprendre à la prochaine session : « Accueil : bandeau et cartes », « Nouvelles illustrations », « Ressources, À propos, En pratique » ; vérifier aussi sur téléphone les derniers correctifs poussés et non validés (bandeau de témoignages : texte 15 px et signature 12 px ; ordre de « Pour aller plus loin » avec agents IA en dernier ; carte et page « Mon approche »), puis clore la phase 2
   - fait quand: `tests_manuels.md` vidé et Phase 2 marquée [FAIT] dans la roadmap.
   - réf: `tests_manuels.md`, `roadmap_portail_ia.md` Phase 2.
+- [P2|ouvert] Préparer les CGV avant la première vente (offres réservées aux structures, aucune vente en ligne sur le site) avec le référentiel tarifaire ; confirmer par un juriste ou la DGCCRF qu'aucun médiateur de la consommation n'est requis pour une clientèle de structures (textes complets non lus : `economie.gouv.fr` en 403) ; la page V2 `/pages/legal/cgv.html` renvoie 404 en V3 : vérifier qu'aucun devis ou e-mail existant n'y renvoie
+  - fait quand: CGV rédigées et validées par l'utilisateur, ou décision actée de s'en passer ; absence de lien vers l'ancienne page CGV confirmée par l'utilisateur.
+  - réf: `src/se-former/index.njk`, `_contexte/contexte.md` (décisions du 2026-11-14).
+- [P3|ouvert] Trancher le libellé « En pratique » : la carte d'accueil et la page disent « Mon approche » (option 1 retenue le 2026-11-14) mais la barre de navigation (`src/_includes/base.njk`) et le titre d'onglet de la page (`titre: "En pratique"`) disent encore « En pratique » ; l'URL `/en-pratique/` est inchangée
+  - fait quand: libellé de la barre et du titre d'onglet décidé et appliqué, ou conservé volontairement.
+  - réf: `src/_includes/base.njk`, `src/en-pratique/index.njk`, `src/index.njk`.
+- [P3|ouvert] Facultatif : déclarer l'exemption d'accessibilité sur demarche.numerique.gouv.fr (mentionné dans la relecture juridique, non fait)
+  - fait quand: déclaration faite par l'utilisateur ou décision de ne pas la faire.
+  - réf: `src/mentions-legales/index.njk`.
 - [P3|ouvert] Améliorer les images en fond des offres de la page Formations : elles doivent occuper tout le cadre de chaque offre (demande de l'utilisateur, 2026-11-13) ; voile et `object-fit` à revoir
   - fait quand: images en plein cadre validées sur téléphone.
   - réf: `src/assets/css/app.css` (`.offre`, `.offre__img`), `src/se-former/index.njk`.
-- [P3|ouvert] Refonte « humanisme numérique » reportée hors V1 : page « Notre approche », étiquettes de thème des fiches, quiz à deux axes, glossaire enrichi ; la formule officielle est appliquée (bloc « Un principe » de l'accueil, S-08)
+- [P3|ouvert] Refonte « humanisme numérique » reportée hors V1 : page « Notre approche », étiquettes de thème des fiches, quiz à deux axes (le quiz actuel a été retiré le 2026-11-14 ; la question 3 « images ou vidéos » avait un conseil sans consigne pour « Souvent » ; sa page est récupérable dans git avant `16c31c0`), glossaire enrichi ; la formule officielle est appliquée (bloc « Un principe » de l'accueil, S-08)
   - fait quand: décision de reprendre la refonte actée et éléments en maquette dans l'artefact de revue.
   - réf: `humanisme_numerique_ia.md`, artefact de revue, `roadmap_portail_ia.md` Phase 2.
-- [P3|ouvert] Compléter le reste du contenu V2 (services, portfolio) et définir le gabarit des sections « Actualités » et « Événements » (retirées de la barre et de l'accueil, pages encore présentes mais non liées) ; aucune entrée inventée
+- [P3|ouvert] Compléter le reste du contenu V2 (services, portfolio) et définir le gabarit des sections « Actualités » et « Événements » (retirées de la barre et de l'accueil, pages encore présentes mais non liées) ; aucune entrée inventée ; redirections en place : services V2 vers `/se-former/`, portfolio V2 en 404
   - fait quand: pages services et portfolio rédigées au « je » avec accord de l'utilisateur ; gabarit d'entrée en maquette et premières entrées réelles, ou décision de masquer les pages.
   - réf: V2 `pages/services.html`, `pages/portfolio.html`, `inventaire_v2.md`, `src/actualites/`, `src/evenements/`.
 - [P3|ouvert] Trancher le nom de la section « Fiches » (proposition « Questions ») et l'URL `/fiches/` ; trancher l'URL `/parcours/` ou `/comprendre/` ; mettre à jour `cadrage_phase1.md` pour la nouvelle arborescence
@@ -49,41 +49,40 @@
 - [P3|ouvert] Backlog `/telephone` : aucune correction de format relevée dans cette session ; la commande a été copiée depuis VibeObs (`.claude/commands/telephone.md`)
   - fait quand: sans objet tant qu'aucune correction n'est exprimée.
   - réf: `.claude/commands/telephone.md`.
-- [P3|ouvert] Règle de journal de session demandée par le kit VibeObs (message du 2026-11-14) et appliquée avec l'accord de l'utilisateur : suivre sa première utilisation au prochain `/start` et `/close`, signaler à VibeObs les écarts
-  - fait quand: un cycle `/start` puis `/close` complet a utilisé le journal sans écart.
+- [P3|ouvert] Règle de journal de session (demande VibeObs) : premier cycle `/start` puis `/close` mené le 2026-11-14 avec un écart à signaler à VibeObs : le journal n'a reçu que 10 lignes, et de nombreuses modifications de contenu (page En pratique, « Mon approche », témoignages, sources, titres de Formations, ordre des liens) n'y ont pas été écrites au moment de l'événement ; la synthèse a été reconstituée depuis la conversation
+  - fait quand: écart signalé à VibeObs et un cycle complet réalisé sans écart.
   - réf: `.claude/CLAUDE.md` (Spécificités projet), `.claude/commands/close.md`, `.claude/commands/start.md`, `_contexte/journal_session.md`.
 
 ## Contexte chaud
-- Préproduction : projet Vercel `site-internet-st-v3`, URL https://site-internet-st-v3.vercel.app/, relié au dépôt GitHub `ServOMorph/site_internet_ST_v3` (branche `main`, redéploiement à chaque push), réglages dans `vercel.json` (build `npm run build`, sortie `dist/`). Un autre projet Vercel, `sereniatech`, sert `serenia-tech.fr`, `www.serenia-tech.fr` et `sereniatech.vercel.app` en Production (capture de l'utilisateur ; probablement la V2, non confirmé) : ne jamais le relier au dépôt V3 avant la bascule voulue. Netlify écarté (`netlify.toml` conservé).
+- Préproduction : projet Vercel `site-internet-st-v3`, URL https://site-internet-st-v3.vercel.app/, relié au dépôt GitHub `ServOMorph/site_internet_ST_v3` (branche `main`, redéploiement à chaque push), réglages et redirections 308 V2 vers V3 dans `vercel.json` (testées sur la préproduction ; la règle `www` vers apex ne joue qu'après la bascule). Un autre projet Vercel, `sereniatech`, sert `serenia-tech.fr`, `www.serenia-tech.fr` et `sereniatech.vercel.app` en Production (capture de l'utilisateur ; probablement la V2, non confirmé) : ne jamais le relier au dépôt V3 avant la bascule voulue. Netlify écarté (`netlify.toml` conservé).
 - Session « Business SerenIA Tech » close le 2026-11-13 : S-08 (périmètre V1) lui a été rendu compte ; l'utilisateur poursuit la mise en ligne directement avec cette session. Demandes de Business autorisées d'avance (`.claude/memory.md`).
 - Contrôle visuel sans extension navigateur : Chrome headless depuis `C:\Program Files\Google\Chrome\Application\chrome.exe`, avec une page enveloppe contenant une iframe de 375 px (la fenêtre minimale de Chrome rogne sinon la mise en page) ; l'animation du compteur est figée dans ces captures.
-- Artefact de revue du site (URL stable) : https://claude.ai/artifact/J4AEiAdJgip9J1Y6WetTZg (version 23, non régénéré depuis le 2026-11-04). Artefact de revue des illustrations : https://claude.ai/artifact/RaK8TrUF322Nw8F6LZoH8X (vidé).
-- Serveur local : `python run.py` (port 8765, sortie `dist/`). ComfyUI-Qwen (port 8189) arrêté ; `scripts/gen_theme_c.py <ids>` génère les illustrations.
+- Artefact de revue du site (URL stable) : https://claude.ai/artifact/J4AEiAdJgip9J1Y6WetTZg (version 23, non régénéré depuis le 2026-11-04 : ne reflète plus le site ; la règle de publication de `.claude/memory.md` n'a pas été appliquée pendant la session du 2026-11-14). Artefact de revue des illustrations : https://claude.ai/artifact/RaK8TrUF322Nw8F6LZoH8X (vidé).
+- Serveur local : `python run.py` (port 8765, sortie `dist/`). Le build 11ty ne vide pas `dist/` : supprimer à la main un dossier retiré (ex. `dist/quiz/`) avant `npm test`. ComfyUI-Qwen (port 8189) arrêté ; `scripts/gen_theme_c.py <ids>` génère les illustrations.
 - Chiffres éco : AIE 415 TWh (2024), environ 945 TWh (2030) ; +17 % en 2025 et doublement d'ici 2030 lus sur le communiqué AIE du 16 avril 2026 (iea.org), qui ne donne pas le niveau de 2025 ; Epoch AI 0,3 Wh ; Arcep (21 mai 2026). Comparaison avec l'Allemagne et source BDEW retirées de la carte 1 ; phrase OpenAI (0,34 Wh) retirée de la carte 3.
-- Humanisme numérique : source lue = Manifeste de Vienne (mai 2019). UNESCO Recommandation 2021 : texte officiel non lu. Non vérifiées : phrase de la version grand public, chapitre Springer.
+- Humanisme numérique : source lue = Manifeste de Vienne (mai 2019 ; lien `caiml.org` confirmé par l'utilisateur le 2026-11-14). UNESCO Recommandation 2021 : texte officiel non lu. Non vérifiées : phrase de la version grand public, chapitre Springer. Non vérifié dans les sources : l'exclusion des images des estimations citées (texte du conseil du quiz retiré).
 - V2 reste en ligne jusqu'à la bascule. Branche `archive/v3-direction-b` sur `bc53de8`.
 
 ## Dernière session (2026-11-14)
 # Session du 2026-11-14
 
 ## Décisions prises
-- Périmètre V1 (S-08, ordre de l'utilisateur relayé par Business) appliqué : formule humaniste en bloc « Un principe », barre à 5 entrées (Formations ajoutée, Actualités et Événements retirées), mention « Maquette » retirée, pages Mentions légales et Confidentialité créées.
-- Hébergeur retenu : Vercel (nouveau projet de préproduction) ; téléphone de Vercel Inc. = ligne de l'agent DMCA, gardé par l'utilisateur.
-- Offres vendues uniquement à des structures : pas de médiateur de la consommation ; ligne « Formation individuelle : sur demande » retirée. Cartes de Comprendre relues et validées (cartes 1 et 3 corrigées).
-- Règle de journal de session (demande VibeObs) appliquée avec l'accord de l'utilisateur.
+- Pages légales relues et validées par l'utilisateur ; lien du Manifeste de Vienne (`caiml.org`) confirmé.
+- Redirections 308 V2 vers V3 dans `vercel.json` (11 pages, `www` vers apex) ; portfolio, blog WhatsApp et wifi, CGV laissés en 404 ; testées sur la préproduction.
+- Quiz retiré de la V1 ; à retravailler avec la refonte. Carte et page En pratique renommées « Mon approche » ; humanisme réécrit (relecture, vérification, pas de compagnon).
+- Contrôles manuels validés : accueil, Comprendre, cartes, transitions, arborescence.
 
 ## Livrables produits ou modifiés
-- `src/` (accueil, `_includes/base.njk`, `mentions-legales/`, `confidentialite/`, `se-former/`, `assets/css/app.css`, `assets/js/compteur.js`, `_data/parcours.json`), `vercel.json`, `tests_manuels.md` : commités et poussés (dernier avant clôture : `c51d525`).
-- `.claude/CLAUDE.md`, `.claude/commands/close.md` et `start.md`, `.gitignore`, `_contexte/journal_session.md` (gitignoré) : commités au /close.
-- Build 23 pages et `npm test` : tous les contrôles passent.
+- `vercel.json`, `src/` (accueil, en-pratique, se-former, sources, base.njk, app.css, parcours.json), `src/quiz/` supprimé, `tests_manuels.md`, `README.md` : commités et poussés (dernier avant clôture : `10e2591`).
+- `_contexte/`, `roadmap_portail_ia.md`, `CHANGELOG.md` (v2.1) : commités au /close. Build 22 pages et `npm test` : tous les contrôles passent.
 
 ## Hypothèses validées / invalidées
-- VALIDE : +17 % et doublement d'ici 2030 lus sur iea.org ; contrôles sur iPhone réel de l'accueil, de la barre, de Formations, du contact et des pages légales ; compteur de l'accueil (réécrit en JS).
-- INVALIDE : lien `dighum.ec.tuwien.ac.at` (domaine mort) -> remplacé par `caiml.org/dighum/dighum-manifesto/`, à confirmer.
-- EN ATTENTE : relecture juridique par l'utilisateur ; bascule du domaine ; CGV ; avis d'un juriste sur le médiateur.
+- VALIDE : redirections en 308 vers la bonne destination sur la préproduction (`curl`), 404 pour portfolio et CGV ; pages légales ; lien du Manifeste.
+- INVALIDE : aucune.
+- EN ATTENTE : bascule du domaine ; contrôles restants (témoignages, illustrations, Ressources, À propos, En pratique) ; CGV ; libellé de la barre de navigation.
 
 ## Prochaine étape exacte
-Attendre la relecture juridique de l'utilisateur, puis, sur son instruction, dresser la liste des redirections V2 vers V3 et basculer le domaine `serenia-tech.fr` du projet `sereniatech` vers `site-internet-st-v3`.
+Reprendre les contrôles manuels restants de `tests_manuels.md` sur téléphone, puis, sur instruction explicite, guider la bascule de `serenia-tech.fr` vers `site-internet-st-v3` dans Vercel.
 
 ## Question bloquante pour la session suivante
-Aucune
+La barre de navigation et le titre d'onglet doivent-ils aussi passer de « En pratique » à « Mon approche » ?

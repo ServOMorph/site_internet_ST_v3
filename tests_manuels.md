@@ -1,8 +1,5 @@
 # Tests manuels en attente
 
-## Arborescence
-- Parcourir Accueil (dont les cartes Comprendre, En pratique et Formations, sur téléphone réel), Comprendre, Fiches et les liens du pied de page (Sources, Glossaire, À propos, Formations) ; vérifier que rien ne manque ou ne prête à confusion.
-
 ## Accueil : bandeau et cartes (téléphone réel)
 - Bandeau « Ils en parlent » : lisibilité des trois témoignages sur l'image de fond (bulles derrière le texte), une colonne sur téléphone, deux colonnes sur PC avec le dernier (Réseau Toiles) en pleine largeur.
 - Page Formations : bloc « Pour aller plus loin » lisible ; chaque lien ouvre `/ressources/` avec seule la ressource choisie dépliée et, en bas, « Les autres ressources » (sans la ressource courante) ; `/ressources/` sans ancre affiche les trois blocs.

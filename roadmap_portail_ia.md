@@ -21,7 +21,7 @@ Attendre sa réponse écrite. Ne pas commencer la phase suivante sans confirmati
 ## Phase 2 — Socle et maquette appli [EN COURS]
 - [x] Socle 11ty, gabarit mobile-first, navigation type appli (cartes, transitions CSS)
 - [x] Direction visuelle : thème C (sombre, feuille-circuit, vert néon, illustrations Qwen, particules CSS) validé par l'utilisateur le 2026-10-22, mode sombre uniquement
-- [x] Arborescence refondue : Comprendre (8 cartes dont « L'IA locale » et « Garder la main », sommaire = liste des cartes, textes éco-responsabilité et humanisme en brouillon), Fiches, Quiz, Sources, Glossaire, À propos ; Explorer supprimé ; titre « IA éco-responsable et humaniste »
+- [x] Arborescence refondue : Comprendre (8 cartes dont « L'IA locale » et « Garder la main », sommaire = liste des cartes, textes éco-responsabilité et humanisme en brouillon), Fiches, Quiz (retiré de la V1 le 2026-11-14), Sources, Glossaire, À propos ; Explorer supprimé ; titre « IA éco-responsable et humaniste »
 - [x] Accueil : carte « En pratique », cartes pleine largeur « Actualités » et « Événements » (pages vides), validé par l'utilisateur le 2026-10-22
 - [x] Accueil (2026-11-04) : accroche de positionnement sous le titre, bandeau « Ils en parlent » (2 témoignages, image de fond Qwen), quatre cartes de même hauteur avec étiquette ; rendu vu avec Playwright sur PC
 - [ ] Refonte humanisme numérique : page « Notre approche », étiquettes de thème des fiches, bloc « Un principe », quiz à deux axes, glossaire enrichi (décisions en attente, voir `signals.md`)
@@ -37,7 +37,7 @@ Attendre sa réponse écrite. Ne pas commencer la phase suivante sans confirmati
 - [x] Accueil (2026-11-06) : 3 témoignages (Valérie ajoutée), neuf illustrations Qwen validées (cartes d'accueil, Formations, miniatures Ressources), contact par e-mail dans À propos
 - [x] Positionnement (S-01, 2026-11-04) : marque « SérénIA Tech » partout, accroche d'accueil, ton « je » et vouvoiement sur tout le site (plus de « nous »)
 - [x] Récit de marque (S-02, 2026-11-04) : « À propos » (parcours, anecdote d'ancrage anonyme, indépendance, promesse) ; paragraphe « indépendance » validé
-- [x] Section « En pratique » rédigée (« Mes pratiques » : sobriété, humanisme, liberté de penser, sans chiffre)
+- [x] Section « En pratique » rédigée (page « Mon approche » depuis le 2026-11-14 : sobriété, humanisme réécrit autour de la relecture et de la vérification, liberté de penser, sans chiffre ; URL `/en-pratique/`)
 - [x] Témoignages Réseau Toiles et Jean Luc (accord de publication déclaré par l'utilisateur, mention de [nom retiré] retirée) en bandeau sur l'accueil
 - [x] Section « Ressources » (`/ressources/`, URL unique, 0 JS, accordéons natifs, lien depuis Se former et le pied) : guide agents IA avec Claude Code (5 parties, mention de cadrage), guide « Créer des images avec l'IA », article « IA locale open source » (réécrit, sources CNIL lues) ; liens CNIL repris dans Sources, Futura écarté ; non repris : guide SEO, tarifs, Gumroad, 2 autres articles du blog V2
 - [ ] Reprise du reste du contenu V2 réorganisé (services, portfolio, fiches) ; peu de texte, textes courts
@@ -54,7 +54,7 @@ Attendre sa réponse écrite. Ne pas commencer la phase suivante sans confirmati
 
 ## Phase 4 — Contact et pages légales [TODO]
 - [ ] Formulaire contact relié au backend Express existant (Render)
-- [x] Mentions légales et confidentialité (V1, 2026-11-14, hébergeur Vercel ; relecture juridique de l'utilisateur en attente)
+- [x] Mentions légales et confidentialité (V1, 2026-11-14, hébergeur Vercel ; relecture juridique validée par l'utilisateur le 2026-11-14)
 - [ ] CGV : à rédiger avant la première vente (offres réservées aux structures)
 - [ ] Tests : envoi réel du formulaire (ajouté à `tests_manuels.md`), liens légaux
 
@@ -65,7 +65,7 @@ Attendre sa réponse écrite. Ne pas commencer la phase suivante sans confirmati
 
 ## Phase 5 — Mise en ligne sur serenia-tech.fr [TODO]
 - [x] Hébergeur : Vercel retenu le 2026-11-14 (Netlify écarté) ; projet `site-internet-st-v3` relié au dépôt GitHub, préproduction en ligne (`vercel.json`)
-- [ ] Redirections 301/308 des URLs V2 vers les nouvelles (préserver le SEO)
+- [x] Redirections 308 des URLs V2 vers les nouvelles (`vercel.json`, testées sur la préproduction le 2026-11-14 ; portfolio, blog WhatsApp et wifi, CGV laissés en 404 ; la règle `www` vers apex ne joue qu'après la bascule)
 - [ ] Bascule du domaine, V2 conservé en repli
 - [ ] Tests manuels : formulaire en production, Search Console, redirections
 
