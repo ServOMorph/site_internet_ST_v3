@@ -108,9 +108,9 @@ progress::-moz-progress-bar{background:linear-gradient(90deg,var(--accent-2),var
 .bandeau{text-align:left;background:linear-gradient(160deg,rgb(9 20 14 / .6),rgb(9 20 14 / .55)),url(/assets/img/temoignages.webp) center/cover no-repeat}
 .bandeau__liste{display:grid;gap:1.25rem;margin:.75rem 0 0}
 .bandeau__liste figure{margin:0}
-.bandeau__liste blockquote{margin:0;color:var(--text)}
+.bandeau__liste blockquote{margin:0;color:var(--text);font-size:.9375rem}
 .bandeau__liste blockquote p{margin:0}
-.bandeau__liste figcaption{margin-top:.5rem;font-size:.875rem;color:var(--accent-2)}
+.bandeau__liste figcaption{margin-top:.5rem;font-size:.75rem;color:var(--accent-2)}
 @media (min-width:60rem){.bandeau__liste{grid-template-columns:1fr 1fr}.bandeau__liste figure:last-child:nth-child(odd){grid-column:1/-1}}
 .stat__valeur{margin:.25rem 0;font:700 clamp(3.5rem,18vw,6rem)/1 var(--font-title);color:var(--accent);text-shadow:0 0 36px rgb(155 255 122 / .45)}
 .stat__unite{font-size:.4em;color:var(--accent-2);text-shadow:none}
