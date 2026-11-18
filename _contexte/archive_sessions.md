@@ -251,3 +251,28 @@ Attendre la relecture juridique de l'utilisateur, puis, sur son instruction, dre
 
 ## Question bloquante pour la session suivante
 Aucune
+
+---
+
+# Session du 2026-11-14
+
+## Décisions prises
+- Pages légales relues et validées par l'utilisateur ; lien du Manifeste de Vienne (`caiml.org`) confirmé.
+- Redirections 308 V2 vers V3 dans `vercel.json` (11 pages, `www` vers apex) ; portfolio, blog WhatsApp et wifi, CGV laissés en 404 ; testées sur la préproduction.
+- Quiz retiré de la V1 ; à retravailler avec la refonte. Carte et page En pratique renommées « Mon approche » ; humanisme réécrit (relecture, vérification, pas de compagnon).
+- Contrôles manuels validés : accueil, Comprendre, cartes, transitions, arborescence.
+
+## Livrables produits ou modifiés
+- `vercel.json`, `src/` (accueil, en-pratique, se-former, sources, base.njk, app.css, parcours.json), `src/quiz/` supprimé, `tests_manuels.md`, `README.md` : commités et poussés (dernier avant clôture : `10e2591`).
+- `_contexte/`, `roadmap_portail_ia.md`, `CHANGELOG.md` (v2.1) : commités au /close. Build 22 pages et `npm test` : tous les contrôles passent.
+
+## Hypothèses validées / invalidées
+- VALIDE : redirections en 308 vers la bonne destination sur la préproduction (`curl`), 404 pour portfolio et CGV ; pages légales ; lien du Manifeste.
+- INVALIDE : aucune.
+- EN ATTENTE : bascule du domaine ; contrôles restants (témoignages, illustrations, Ressources, À propos, En pratique) ; CGV ; libellé de la barre de navigation.
+
+## Prochaine étape exacte
+Reprendre les contrôles manuels restants de `tests_manuels.md` sur téléphone, puis, sur instruction explicite, guider la bascule de `serenia-tech.fr` vers `site-internet-st-v3` dans Vercel.
+
+## Question bloquante pour la session suivante
+La barre de navigation et le titre d'onglet doivent-ils aussi passer de « En pratique » à « Mon approche » ?

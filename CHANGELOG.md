@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.2 — 2026-11-18
+
+### Modifié
+- Historique git réécrit (36 commits) : anciens tarifs, nom d'un lieu client et chemin local masqués par des mentions neutres ; `main` force-poussé après sauvegarde. Aucun changement du site.
+- `.claude/memory.md` retiré du suivi git (ajouté au `.gitignore`), conservé en local.
+
 ## v2.1 — 2026-11-14
 
 ### Ajouté
